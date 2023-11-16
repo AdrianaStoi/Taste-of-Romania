@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Open+Sans&display=swap');
+
+html {
+    height: 100%;
+}
+
+h1, h2 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.nav-img{
+    height: 70px;
+}
+
+.i-nav{
+    color: #090601;
+}
+
+.home-image {
+    margin-top: 5%;
+    overflow: hidden;
+    
+}
+
+.text-home{
+    background-color: #090601;
+    color: white;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    top: 40%;
+}
+
+.black-container{
+    background-color: #090601;
+}
+
+.see-products-button {
+    background-color: #8b181e;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
