@@ -2,6 +2,7 @@
 
 html {
     height: 100%;
+   
 }
 
 h1, h2 {
@@ -12,9 +13,10 @@ h1, h2 {
     height: 70px;
 }
 
-.i-nav{
-    color: #090601;
+.text-black {
+    color: #090601 !important;
 }
+
 
 .home-image {
     margin-top: 5%;
@@ -36,6 +38,10 @@ h1, h2 {
 }
 
 .see-products-button {
+    background-color: #8b181e;
+}
+
+.bg-threshold {
     background-color: #8b181e;
 }
 
