@@ -54,6 +54,9 @@ h1, h2 {
     width: 1.5rem;
 }
 
+footer {
+    background-color: #090601;
+}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
