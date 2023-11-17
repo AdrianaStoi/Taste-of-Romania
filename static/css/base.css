@@ -5,7 +5,11 @@ html {
    
 }
 
-h1, h2 {
+body {
+    font-family: 'Open Sans', sans-serif ;
+}
+
+h1, h2, h4 {
     font-family: 'Amaranth', sans-serif;
 }
 
@@ -41,7 +45,7 @@ h1, h2 {
     background-color: #8b181e;
 }
 
-.bg-threshold {
+.bg-threshold, .ship-container {
     background-color: #8b181e;
 }
 
