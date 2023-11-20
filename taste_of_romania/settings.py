@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6cfh1tqlw!n-n5a(3que*elsk%paw^qm+_gzr=i^mq3f2k4s-^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-adrianastoi-tasteofroma-bi9qohc9vfg.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['taste-of-romania-5dd5a29030c4.herokuapp.com','8000-adrianastoi-tasteofroma-bi9qohc9vfg.ws-eu106.gitpod.io']
 
 
 # Application definition
