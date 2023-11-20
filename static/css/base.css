@@ -34,8 +34,8 @@ h1, h2, h4, h5 {
     background-color: #8b181e;
 }
 
-.bg-threshold, .ship-container, .aboutus-paragraph {
-    background-color: #8b181e;
+.bg-threshold, .ship-container, .aboutus-paragraph, .card-footer {
+    background-color: #8b181e !important;
 }
 
 /*Style about us section*/
@@ -58,6 +58,17 @@ h1, h2, h4, h5 {
 
 footer {
     background-color: #090601;
+}
+
+/* Style overlay container for all products page */
+.cover-container{
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: #ffffff;
+	z-index: -1;
 }
 
 /* Slightly larger container on xl screens */
