@@ -71,6 +71,10 @@ footer {
 	z-index: -1;
 }
 
+.card-img-top {
+    object-fit: cover !important;
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {

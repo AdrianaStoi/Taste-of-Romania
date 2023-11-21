@@ -11,7 +11,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'sku', 'category','price','slug', 
                     'created_on', 'image')
     prepopulated_fields = {'slug': ('name',)}
-    list_filter = ('created_on', 'name')
+    list_filter = ('created_on', 'category')
     search_fields = ['name', 'description', 'category']
     ordering =('sku',)
 

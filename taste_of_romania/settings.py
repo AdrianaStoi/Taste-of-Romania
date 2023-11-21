@@ -13,7 +13,6 @@ from pathlib import Path
 import os
 import dj_database_url
 
-from os import path 
 if os.path.isfile('env.py'):
     import env
 
@@ -28,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['taste-of-romania-5dd5a29030c4.herokuapp.com','8000-adrianastoi-tasteofroma-bi9qohc9vfg.ws-eu106.gitpod.io']
 

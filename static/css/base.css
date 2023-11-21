@@ -34,7 +34,7 @@ h1, h2, h4, h5 {
     background-color: #8b181e;
 }
 
-.bg-threshold, .ship-container, .aboutus-paragraph, .card-footer {
+.bg-threshold, .ship-container, .aboutus-paragraph, .card-footer, .card-body-text {
     background-color: #8b181e !important;
 }
 
@@ -43,9 +43,7 @@ h1, h2, h4, h5 {
     margin-top: 2%;
     margin-bottom: 2%;
     font-weight: bold;
-    
 }
-
 
 /* from Bulma */
 .icon {
@@ -60,6 +58,19 @@ footer {
     background-color: #090601;
 }
 
+/*Style image containers for product app*/
+.img-product {
+    object-fit: cover;
+    width: 100%;
+    height: 22vw;
+    margin: 0;
+}
+
+.detail-product {
+    object-fit: contain;
+    height: 25vw;
+}
+
 /* Style overlay container for all products page */
 .cover-container{
     height: 100%;
@@ -69,6 +80,10 @@ footer {
 	position: fixed;
 	background: #ffffff;
 	z-index: -1;
+}
+
+.btn-dark {
+    background-color: rgba(9, 6, 1, 0.8);
 }
 
 /* Slightly larger container on xl screens */
