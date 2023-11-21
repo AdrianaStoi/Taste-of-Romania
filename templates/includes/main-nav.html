@@ -17,17 +17,17 @@
                 Romanian specialties
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specialties-link">
-                <a href="" class="dropdown-item">Cheese</a>
-                <a href="" class="dropdown-item">Meat products</a>
-                <a href="" class="dropdown-item">Sweets</a>
-                <a href="" class="dropdown-item">Snacks</a>
-                <a href="" class="dropdown-item">Food Cupboard</a>
-                <a href="" class="dropdown-item">All Romanian specialties</a>
+                <a href="{% url 'products' %}?category=cheese" class="dropdown-item">Cheese</a>
+                <a href="{% url 'products' %}?category=meat_products" class="dropdown-item">Meat products</a>
+                <a href="{% url 'products' %}?category=sweets" class="dropdown-item">Sweets</a>
+                <a href="{% url 'products' %}?category=snacks" class="dropdown-item">Snacks</a>
+                <a href="{% url 'products' %}?category=food_cupboard" class="dropdown-item">Food Cupboard</a>
+                <a href="{% url 'products' %}?category=cheese, meat_products,sweets,snacks,food_cupboard" class="dropdown-item">All Romanian specialties</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="drinks-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="{% url 'products' %}?category=drinks" id="drinks-link" class="logo-font font-weight-bold nav-link text-black mr-5" aria-haspopup="true" aria-expanded="false">
                 Drinks
             </a>
         </li>
@@ -37,10 +37,10 @@
                 Artisanal products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Traditional clothing</a>
-                <a href="" class="dropdown-item">Handmade pottery</a>
-                <a href="" class="dropdown-item">Handmade bracelet</a>
-                <a href="" class="dropdown-item">All Artisanal Products</a>
+                <a href="{% url 'products' %}?category=traditional_clothing" class="dropdown-item">Traditional clothing</a>
+                <a href="{% url 'products' %}?category=handmade_pottery" class="dropdown-item">Handmade pottery</a>
+                <a href="{% url 'products' %}?category=handmade_bracelet" class="dropdown-item">Handmade bracelet</a>
+                <a href="{% url 'products' %}?category=traditional_clothing,handmade_pottery,handmade_bracelet" class="dropdown-item">All Artisanal Products</a>
             </div>
         </li>
     </ul>

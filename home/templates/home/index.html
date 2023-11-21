@@ -59,8 +59,8 @@
             <div class="card h-75">
                 <img src="{% static 'media/sweets_and_savory.png' %}" class="card-img-top h-100" alt="">
                 <div class="card-body">
-                    <a href="" class="text-decoration-none">
-                        <h5 class="card-title ">Sweet and Savory</h5>
+                    <a href="{% url 'products' %}?category=cheese, meat_products,sweets,snacks,food_cupboard" class="text-decoration-none">
+                        <h5 class="card-title">Sweet and Savory</h5>
                     </a>
                 </div>
             </div>
@@ -69,7 +69,7 @@
             <div class="card h-75">
                 <img src="{% static 'media/drinks_category.png' %}" class="card-img-top h-100" alt="">
                 <div class="card-body">
-                    <a href="" class="text-decoration-none">
+                    <a href="{% url 'products' %}?category=drinks" class="text-decoration-none">
                         <h5 class="card-title"> Alcoholic Drinks</h5>
                     </a>
                 </div>
@@ -79,7 +79,7 @@
             <div class="card h-75">
                 <img src="{% static 'media/romanian_pottery.png' %}" class="card-img-top h-100" alt="">
                 <div class="card-body">
-                    <a href="" class="text-decoration-none">
+                    <a href="{% url 'products' %}?category=traditional_clothing,handmade_pottery,handmade_bracelet" class="text-decoration-none">
                         <h5 class="card-title"> Clothing and Handmade pottery </h5>
                     </a>
                 </div>
