@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Open+Sans&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h4, h5 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.nav-img{
+    height: 70px;
+}
+
+.text-black, .card-title {
+    color: #090601 !important;
+}
+
+.home-container{
+    margin-top: 50%;
+}
+
+/*Style container home page next to landing image*/
+.black-container {
+    background-color: #090601 !important;
+}
+
+.see-products-button {
+    background-color: #8b181e;
+}
+
+.bg-threshold, .ship-container, .aboutus-paragraph, .card-footer {
+    background-color: #8b181e !important;
+}
+
+/*Style about us section*/
+.aboutus-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    
+}
+
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+footer {
+    background-color: #090601;
+}
+
+/* Style overlay container for all products page */
+.cover-container{
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: #ffffff;
+	z-index: -1;
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
