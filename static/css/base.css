@@ -124,6 +124,15 @@ footer {
     font-weight: bolder;
 }
 
+.custom-hide {
+    display: none !important;
+}
+
+.custom-show {
+    display: initial !important;
+}
+
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
