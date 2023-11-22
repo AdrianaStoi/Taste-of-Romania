@@ -124,14 +124,16 @@ footer {
     font-weight: bolder;
 }
 
-.custom-hide {
-    display: none !important;
+.continue-shop-btn {
+    background: #ffffff;
+    color: #8b181e !important;
+    border: 1px solid #8b181e;
 }
 
-.custom-show {
-    display: initial !important;
+.btn-add-cart {
+    background: #090601 !important;
+    color: #ffffff;
 }
-
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
