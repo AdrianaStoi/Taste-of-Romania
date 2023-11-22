@@ -130,8 +130,13 @@ footer {
     border: 1px solid #8b181e;
 }
 
-.btn-add-cart {
-    background: #090601 !important;
+.btn-black-cart {
+    background: #090601;
+    color: #ffffff;
+}
+
+.btn-black-cart:hover {
+    background: #8b181e !important;
     color: #ffffff;
 }
 
