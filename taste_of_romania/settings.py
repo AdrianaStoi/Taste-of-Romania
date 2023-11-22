@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -192,5 +193,8 @@ if 'USE_AWS' in os.environ:
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+FREE_DELIVERY_THRESHOLD = 60
+STANDARD_DELIVERY_PERCENTAGE = 10
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
