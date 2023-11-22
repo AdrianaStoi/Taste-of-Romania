@@ -84,8 +84,9 @@ footer {
 	z-index: -1;
 }
 
+/*Style for products page*/
 .see-product-btn {
-    background-color: #291a1a; /*#f8f9fa, #ffd700*/
+    background-color: #291a1a;
     color: #ffffff;
     font-size: small;
     border: 1px solid #8b181e;
@@ -99,7 +100,6 @@ footer {
 .tag {
     background-color: #ffffff;
     border: 1px solid #8b181e;
-    opacity: 0.8;
     color: #8b181e;
     font-size: small;
     font-weight: bold;

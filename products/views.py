@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 
 # Create your views here.
@@ -27,12 +28,14 @@ def all_products(request):
 
             if sortkey in associate_keys:
                 products = products.annotate(**{annotated_key: Lower(sortkey)})
+
             if sortkey == 'category':
                sortkey = 'category__name'
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
-                    sortkey = f'-{annotated_key}'
+                    annotated_key = f'-{annotated_key}'
             products = products.order_by(annotated_key)
 
         if 'category' in request.GET:
@@ -46,10 +49,16 @@ def all_products(request):
                 messages.error(request, "No results found.")
                 return redirect(reverse('products'))
                 
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(excerpt__icontains=query) | Q(ingredients__icontains=query)
+            queries = (
+                Q(name__icontains=query) | 
+                Q(description__icontains=query) | 
+                Q(excerpt__icontains=query) | 
+                Q(ingredients__icontains=query) | 
+                Q(category__friendly_name__icontains=query)
+            )
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}' if direction else sort
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
