@@ -15,6 +15,11 @@
         <div class="row">
             <div class="col text-center mt-5">
                 <h2> All Products</h2>
+                {% for cat in current_categories %}
+                    <a class="text-decoration-none" href="{% url 'products' %}?category={{ cat.name }}">
+                        <span class="p-2 tag rounded border-2">{{ cat.friendly_name }}</span>
+                    </a>
+                 {% endfor %}
                 <hr class="w-50 mb-2">
             </div>
         </div>
@@ -31,14 +36,21 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body card-body-text mt-3 pb-0 text-start">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <p class="small mb-0">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer pt-0 border-0 text-left">
                                     <div class="row">
-                                        <div class="col mt-3">
+                                        <div class="col mt-1">
                                             <p class="lead mb-0 text-left">{{ product.price }}€</p>
+                                            {% if product.category %}
+                                            <p class="small mt-1 mb-2">
+                                                <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                         </div>
-                                        <div><a href="{% url 'product_information' product.id %}" class="btn btn-dark btn-sm mb-0 mt-3 mr-3"> See Product </a></div>
+                                        <div><a href="{% url 'product_information' product.id %}" class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product </a></div>
                                     </div>
                                 </div>
                             </div>

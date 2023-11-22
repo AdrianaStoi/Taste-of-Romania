@@ -84,8 +84,30 @@ footer {
 	z-index: -1;
 }
 
-.btn-dark {
-    background-color: rgba(9, 6, 1, 0.8);
+.see-product-btn {
+    background-color: #291a1a; /*#f8f9fa, #ffd700*/
+    color: #ffffff;
+    font-size: small;
+    border: 1px solid #8b181e;
+}
+
+.see-product-btn:hover{
+    background-color: #ffffff;
+    color: #8b181e;
+}
+
+.tag {
+    background-color: #090601;
+    opacity: 0.8;
+    color: #ffffff;
+    font-size: small;
+}
+
+.tag:hover {
+    background-color: #ffffff;
+    border: #8b181e;
+    color: #8b181e;
+    font-weight: bold;
 }
 
 /* Slightly larger container on xl screens */

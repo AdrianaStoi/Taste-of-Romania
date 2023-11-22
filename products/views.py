@@ -10,9 +10,30 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
-    categories = None
+    categories = Category.objects.all()
+    sort = None
+    direction = None
+
+    """ Dictionary used to associate sort keys with annotated key """
+    associate_keys = {
+        'name': 'lower_name',
+    }
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            annotated_key = associate_keys.get(sortkey, sortkey)
+
+            if sortkey in associate_keys:
+                products = products.annotate(**{annotated_key: Lower(sortkey)})
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{annotated_key}'
+            products = products.order_by(annotated_key)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -27,10 +48,13 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(excerpt__icontains=query) | Q(ingredients__icontains=query)
             products = products.filter(queries)
 
+    current_sorting = f'{sort}_{direction}' if direction else sort
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)
