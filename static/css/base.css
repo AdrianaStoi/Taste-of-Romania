@@ -111,6 +111,19 @@ footer {
     border: 1px solid #090601;
 }
 
+/* Register, login, logout style */
+.custom-container {
+    display:flex;
+    flex-direction: column;
+    margin-top: 17rem !important;
+    margin-bottom: 15rem;
+}
+
+.text-register-login {
+    color: #8b181e;
+    font-weight: bolder;
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
