@@ -140,6 +140,10 @@ footer {
     color: #ffffff;
 }
 
+.update-item, .remove-item {
+    cursor: pointer;
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
