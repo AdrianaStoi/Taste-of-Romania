@@ -148,7 +148,7 @@ footer {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 120px;
     right: 15px;
     z-index: 99999999999 !important;
 }
@@ -161,6 +161,11 @@ footer {
     height: 2px;
 }
 
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
