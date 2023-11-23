@@ -144,6 +144,24 @@ footer {
     cursor: pointer;
 }
 
+/* Style bootstrap toasts- style and classes taken from boutique-ado walthrough*/
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999 !important;
+}
+
+.custom-toast {
+    overflow: visible !important;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {

@@ -68,7 +68,11 @@
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center text-black">
                                 <div><i class="fas fa-user fa-lg"></i></div>
+                            {% if request.user.is_authenticated %}
+                                <p class="my-0">Hi, {{ request.user.username }} </p>  
+                            {% else %}
                                 <p class="my-0">My Account</p>
+                            {% endif %}
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -113,7 +117,21 @@
     </header>
 
     {% if messages %}
-        <div class="message-container"></div>
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% block page_header %}
@@ -126,6 +144,11 @@
     {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function(){
+            $('.toast').toast('show');
+        });
+    </script>
     {% endblock %}
 
   </body>

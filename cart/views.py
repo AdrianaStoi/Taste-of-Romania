@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+
+from products.models import Product
 
 # Create your views here.
 
@@ -10,7 +13,8 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart """
 
-    quantity = int(request.POST.get('quantity'))
+    product = Product.objects.get(pk=item_id)
+    quantity = int(request.POST.get('quantity', 1))
     redirect_url = request.POST.get('redirect_url', '/')
     size = None
     if 'product_size' in request.POST:
@@ -25,6 +29,7 @@ def add_to_cart(request, item_id):
                 cart[item_id]['items_by_size'][size] = quantity
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
+            messages.success(request, f'Added {product.name} to your shopping cart')
     else:
         if item_id in cart:
             cart[item_id] += quantity
