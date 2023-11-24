@@ -35,3 +35,22 @@
     color: #090601;
     border:  1px solid #090601;
 }
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b7c2c4dd;
+    z-index: 9999;
+}
+
+.spinner-load {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
