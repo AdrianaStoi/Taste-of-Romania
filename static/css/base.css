@@ -126,8 +126,14 @@ footer {
 
 .continue-shop-btn {
     background: #ffffff;
-    color: #8b181e !important;
+    color: #8b181e;
     border: 1px solid #8b181e;
+}
+
+.continue-shop-btn:hover {
+    background: #090601;
+    color: #ffffff;
+    border: 1px solid #090601;
 }
 
 .btn-black-cart {
