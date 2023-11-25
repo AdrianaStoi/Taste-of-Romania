@@ -14,6 +14,7 @@
                 <h2 class="card-title">{% trans "Register" %}</h2>
 
                 <p>{% blocktrans %}Already have an account? Then please <a class="text-decoration-none text-register-login" href="{{ login_url }}">Login</a>.{% endblocktrans %}</p>
+                <hr class="w-50 mb-2">
             </div>
             <div class="mb-3">
                 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
