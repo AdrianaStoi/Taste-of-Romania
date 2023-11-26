@@ -26,7 +26,7 @@ class Product(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
-    slug = models.SlugField(max_length=250, unique=True)
+    slug = models.SlugField(max_length=250, unique=True, null=True, blank=True)
     excerpt = models.TextField(blank=True)
     description = models.TextField()
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
