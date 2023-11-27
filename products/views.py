@@ -153,6 +153,37 @@ def edit_comment(request, comment_id):
     return render(request, 'products/editcomment.html', context)
 
 @login_required
+def delete_comment(request, comment_id):
+    """
+    This function allows comment owner
+    to delete their comment and save it.
+    User must be logged in to access it.
+    """
+    review = get_object_or_404(Review, pk=comment_id, user=request.user)
+    product_id = review.product.id
+    product = get_object_or_404(Product, id=product_id)
+   
+    if request.method == 'POST':
+        if request.user == review.user:
+            review.delete()
+            messages.success(
+                request,
+                'You have deleted the comment successfully.'
+            )
+            return redirect('product_information', product_id = product_id)
+        
+        else:
+            return redirect('product_information', product_id = product_id)
+
+    context = {
+        'review': review,
+        'product': product,
+    }
+
+    return render(request, 'products/confirm_deletecomment.html', context)
+
+
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
