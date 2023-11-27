@@ -19,6 +19,10 @@
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid detail-product" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid no-img-container" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
                     {% endif %}
                 </div>
             </div>

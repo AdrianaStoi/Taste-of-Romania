@@ -73,6 +73,12 @@ footer {
     min-height: 300px;
 }
 
+.no-img-container {
+    object-fit: contain;
+    height: 17vw;
+    min-height: 300px;
+}
+
 /* Style overlay container for all products page */
 .cover-container{
     height: 100%;
@@ -110,6 +116,7 @@ footer {
     color: #ffffff;
     border: 1px solid #090601;
 }
+
 
 /* Register, login, logout style */
 .custom-container {
@@ -173,12 +180,42 @@ footer {
     overflow-y: auto;
 }
 
+
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
     }
 }
+
+.btn-select-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-select-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #8b181e;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #8b181e;
+    border-color: #8b181e;
+    border-radius: 0;
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
