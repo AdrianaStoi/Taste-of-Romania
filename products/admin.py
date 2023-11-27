@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, Review
 
 # Register your models here.
 
@@ -22,3 +22,13 @@ class CategoryAdmin(admin.ModelAdmin):
     It displays the category name, creation date and update date.
     """
     list_display = ('friendly_name', 'name','created_on', 'updated_on')
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    """
+    This class allows admin to manage reviews on the admin panel.
+    """
+    list_display = ('product', 'user', 'comment', 'rating',
+                    'created_on', 'updated_on')
+    list_filter = ('created_on', 'product')
+    search_fields = ('user', 'comment', 'product')
