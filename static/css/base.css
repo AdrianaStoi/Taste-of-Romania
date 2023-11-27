@@ -58,6 +58,29 @@ footer {
     background-color: #090601;
 }
 
+#mc_embed_signup {
+    background: #090601;
+    clear: left;
+    font: 14px 'Open Sans', sans-serif;;
+    width: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+.subscribe-button:hover {
+    background-color: #ffffff !important;
+    color: #090601 !important;
+}
+
+.subscribe-button {
+    background-color: #8b181e !important;
+    color: #ffffff !important;
+}
+
+#mc_embed_signup form {
+    margin: 0 !important;
+}
+
 /*Style image containers for product app*/
 .img-product {
     object-fit: cover;
