@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!--Edit comment page-->
+<div class="container-fluid d-flex custom-container">
+    <div class="row ">
+        <div class="card-body">
+            <div class="mb-1">
+                <h3>Posting as:</h3> 
+                <p>{{ user.username }}</p>
+
+                <div class="col-md-6">
+                    <form method="post" style="margin-top: 1.3em;">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <button type="submit" class="btn btn-warning mt-3 mb-3 text-black"> Edit </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

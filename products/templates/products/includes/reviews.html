@@ -25,7 +25,7 @@
                         </p>
                         {{ comment.comment | linebreaks }}
                         {% if comment.user == user %}
-                            <button type="submit" class="btn btn-warning mt-3"><a class="text-decoration-none" href="">Edit</a></button>
+                            <button type="submit" class="btn btn-warning mt-3"><a class="text-decoration-none text-black" href="{% url 'editcomment' comment.id %}">Edit</a></button>
                             <a class="text-decoration-none" href=""><button type="submit" class="btn btn-danger mt-3">Delete</button></a>
                         {% endif %}
                     {% endfor %}

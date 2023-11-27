@@ -72,7 +72,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-@login_required
+
 def product_information(request, product_id):
     """ This view shows individual product information"""
 
@@ -85,22 +85,27 @@ def product_information(request, product_id):
         user_comment = Review.objects.filter(product=product, user=request.user).first()
 
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        stars = int(request.POST.get('stars', 0))
 
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.product = product
-            review.user = request.user
-            review.rating = stars
+        @login_required
+        def submit_review(request):
+            form = ReviewForm(request.POST)
+            stars = int(request.POST.get('stars', 0))
 
-            # save the review
-            review.save()
-            messages.success(request, 'Review added successfully')
-            return redirect('product_information', product_id = product_id)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.user = request.user
+                review.rating = stars
+
+                # save the review
+                review.save()
+                messages.success(request, 'Review added successfully')
+                return redirect('product_information', product_id = product_id)
         
-        else:
-            form = ReviewForm()
+        return submit_review(request)
+
+    else:
+        form = ReviewForm()
 
     context = {
         'product': product,
@@ -110,6 +115,42 @@ def product_information(request, product_id):
     }
 
     return render(request, 'products/product_information.html', context)
+
+@login_required
+def edit_comment(request, comment_id):
+    """
+    This function will allow comment owner
+    to edit their comment and save it.
+    User must be logged in to access it.
+    """
+    review = get_object_or_404(Review, pk=comment_id, user=request.user)
+    form = None
+    product_id = review.product.id
+    product = get_object_or_404(Product, id=product_id)
+    comments = Review.objects.filter(product=product)
+
+
+    if request.user == review.user:
+        if request.method == 'POST':
+            review_form = ReviewForm(request.POST, instance=review)
+            if review_form.is_valid():
+                review_form.save()
+                messages.success(
+                    request,
+                    'You have edited the comment successfully.'
+                )
+                return redirect('product_information', product_id = product_id)
+            else:
+                form = review_form
+        else:
+            form = ReviewForm(instance=review)
+
+    context = {
+        'form': form,
+        'review': review,
+        'comments':comments,
+    }
+    return render(request, 'products/editcomment.html', context)
 
 @login_required
 def add_product(request):
