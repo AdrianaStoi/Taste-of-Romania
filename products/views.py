@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
@@ -89,16 +89,13 @@ def product_information(request, product_id):
         @login_required
         def submit_review(request):
             form = ReviewForm(request.POST)
-            rating = int(request.POST.get('stars', 0))
 
             if form.is_valid():
                 review = form.save(commit=False)
                 review.product = product
                 review.user = request.user
-                review.rating = rating
-
-                # save the review
                 review.save()
+
                 messages.success(request, 'Review added successfully')
                 return redirect('product_information', product_id = product_id)
         
@@ -111,10 +108,12 @@ def product_information(request, product_id):
         'product': product,
         'comments': comments,
         'user_comment':user_comment,
-        'form': form,
+        'form': form
     }
 
     return render(request, 'products/product_information.html', context)
+
+
 
 @login_required
 def edit_comment(request, comment_id):
