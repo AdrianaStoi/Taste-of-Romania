@@ -17,6 +17,11 @@ h1, h2, h4, h5 {
     height: 70px;
 }
 
+.nav-bar {
+    background-color: #090601;
+    color: #ffffff;
+}
+
 .text-black, .card-title {
     color: #090601 !important;
 }
@@ -210,7 +215,8 @@ footer {
     .container {
         max-width: 80%;
     }
-}
+
+
 
 .btn-select-file {
     position: relative;
@@ -239,6 +245,7 @@ footer {
     border-radius: 0;
 }
 
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
