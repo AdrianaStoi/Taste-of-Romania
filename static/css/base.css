@@ -39,8 +39,12 @@ h1, h2, h4, h5 {
     background-color: #8b181e;
 }
 
-.bg-threshold, .ship-container, .aboutus-paragraph, .card-footer, .card-body-text {
-    background-color: #8b181e !important;
+.bg-threshold, .ship-container, .aboutus-paragraph {
+    background-color: #8b181e;
+}
+
+.card-footer, .card-body-text {
+    background-color: #090601;
 }
 
 /*Style about us section*/
@@ -67,7 +71,7 @@ footer {
     background: #090601;
     clear: left;
     font: 14px 'Open Sans', sans-serif;;
-    width: 600px;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -120,15 +124,16 @@ footer {
 
 /*Style for products page*/
 .see-product-btn {
-    background-color: #291a1a;
+    background-color: #8b181e; 
     color: #ffffff;
     font-size: small;
-    border: 1px solid #8b181e;
+    
 }
 
 .see-product-btn:hover{
     background-color: #ffffff;
     color: #8b181e;
+    border: 1px solid #8b181e;
 }
 
 .tag {

@@ -89,13 +89,13 @@ def product_information(request, product_id):
         @login_required
         def submit_review(request):
             form = ReviewForm(request.POST)
-            stars = int(request.POST.get('stars', 0))
+            rating = int(request.POST.get('stars', 0))
 
             if form.is_valid():
                 review = form.save(commit=False)
                 review.product = product
                 review.user = request.user
-                review.rating = stars
+                review.rating = rating
 
                 # save the review
                 review.save()
