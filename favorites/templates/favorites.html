@@ -14,71 +14,47 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-5">
-            <h2 class="mb-3"> Favorites </h2>
+            <h2 class="mb-3"> Your Favorites Products </h2>
             <hr class="w-50 mb-2">
         </div>
     </div>
-    <div class="row">
-        <div class="container">
-            <div class="row">
-                {% for product in products %}
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                        <div class="card border-0  p-0 h-100 text-white">
-                            {% if product.image %}
-                            <a href="{% url 'product_information' product.id %}">
-                                <img class="card-img-top img-product" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_information' product.id %}">
-                                <img class="card-img-top img-fluid img-product" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body card-body-text mt-3 pb-0 text-start">
-                                <p class="small mb-0">{{ product.name }}</p>
-                            </div>
-                            <div class="card-footer pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col mt-1">
-                                        <p class="lead mb-0 text-left">{{ product.price }}€</p>
-                                        {% if product.category %}
-                                        <p class="small mt-1 mb-2">
-                                            <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                            </a>
-                                        </p>
-                                        {% endif %}
-                                        {% if request.user.is_superuser %}
-                                        <small class="ml-3">
-                                            <a href="{% url 'edit_product' product.id %}" class="text-white text-decoration-none">Edit</a> | 
-                                            <a class="text-danger text-decoration-none" href="{% url 'delete_product' product.id %}">Delete</a>
-                                        </small>
-                                        {% endif %}
-                                    </div>
-                                    <div>
-                                        {% if request.user.is_authenticated %}
-                                            <a href="{% url 'add_to_favorites' product_id=product.id %}">
-                                                {% if is_favorite %}
-                                                    <i class="fa-solid fa-heart" style="color: #f4c61f;"></i>
-                                                {% else %}
-                                                    <i class="fa-regular fa-heart" style="color: #f4c61f;"></i>
-                                                {% endif %}
-                                            </a>
-                                        {% endif %}
-                                        <a href="{% url 'product_information' product.id %}" class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product</a>
-                                    </div>
-                                </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    {% for favorite in favorites %}
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
+                            <div class="card border-0  p-0 h-100 text-white">
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if is_favorite %}
+                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
+                                            <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                                        </button>
+                                    {% else %}
+                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
+                                            <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
+                                        </button>
+                                    {% endif %}
+                                </form>
+                                {% else %}
+                                    <p>You have not added any products to your favorites yet.</p>
+                                {% endif%}
                             </div>
                         </div>
-                    </div>
-                    {% if forloop.counter|divisibleby:4 %}
-                        <div class="col-12 mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                {% endfor %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
+    <p>You have not added any products to your favorites yet.</p>
 </div>
 
+{% endblock %}
+
+{% block scripts %}
 {% endblock %}

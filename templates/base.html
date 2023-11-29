@@ -90,12 +90,12 @@
                             {% endif %}
                         </div>
                     </li>
-                    <li class="list-inline-item">
-                        <a href="{% url 'favorites' %}">
+                    <li class="list-inline-item text-white">
+                        <a href="{% url 'favorites' %}" class="text-decoration-none">
                             <div class="text-center text-white">
                                 <i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i>
-                                <p class="my-0">{{ favorite_count }}</p>
                             </div>
+                            <p class="my-0 text-white">My Favorites {{ favorite_count }} </p>
                         </a>
                     </li>
                     <li class="list-inline-item">

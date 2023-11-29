@@ -78,14 +78,22 @@
                                             {% endif %}
                                         </div>
                                         <div>
-                                            {% if request.user.is_authenticated %}
-                                                <a href="{% url 'add_to_favorites' product_id=product.id %}">
-                                                    {% if is_favorite %}
-                                                        <i class="fa-solid fa-heart" style="color: #8b181e;"></i>
-                                                    {% else %}
-                                                        <i class="fa-regular fa-heart" style="color: #8b181e;"></i>
-                                                    {% endif %}
-                                                </a>
+                                            {% if user.is_authenticated %}
+                                            <form class="d-inline" action="{% url 'addtofavorites' product.id %}"
+                                                method="POST">
+                                                {% csrf_token %}
+                                                {% if is_favorite %}
+                                                <button type="submit" name="product_id" value="{{ product.id }}"
+                                                    class="btn">
+                                                    <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                </button>
+                                                {% else %}
+                                                <button type="submit" name="product_id" value="{{ product.id }}"
+                                                    class="btn">
+                                                    <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                </button>
+                                                {% endif %}
+                                            </form>
                                             {% endif %}
                                             <a href="{% url 'product_information' product.id %}" class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product</a>
                                         </div>
