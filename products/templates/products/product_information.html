@@ -37,7 +37,7 @@
                             {% csrf_token %}
                             {% if is_favorite %}
                                 <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
-                                    <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                                    <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;" ></i>
                                 </button>
                             {% else %}
                                 <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
@@ -46,8 +46,8 @@
                             {% endif %}
                         </form>
                         {% else %}
-                        <span class="text-secondary" onclick="showModal('')"><i class="fa-regular fa-heart fa-xl"
-                                style="color: #8b181e;"></i></span>
+                            <span class="text-secondary btn" onclick="showModal('')"><i class="fa-regular fa-heart fa-xl"
+                            style="color: #8b181e;"></i></span>
                         {% endif %}
                     </div>
                     </div>

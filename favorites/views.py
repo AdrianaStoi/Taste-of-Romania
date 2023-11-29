@@ -6,16 +6,26 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
 
 
-class FavoritesPage(generic.ListView, LoginRequiredMixin):
+class FavoritesPage(generic.ListView):
     """
     This view lists favorites products.
     """
     model = Favorites
     template_name = 'favorites.html'
-    context = {'favorites': Favorites.objects.all()}
-
+    context_object_name = 'favorites'
+    
+    def get_queryset(self):
+        if self.request.user.is_authenticated:
+            product_id = self.request.GET.get('product_id')
+            if product_id is not None:
+                return Favorites.objects.filter(product=product_id, user=self.request.user)
+            else:
+                return Favorites.objects.filter(user=self.request.user)
+        else:
+            return Favorites.objects.none()
 
 class AddtoFavorites(View, LoginRequiredMixin):
     """
@@ -27,30 +37,35 @@ class AddtoFavorites(View, LoginRequiredMixin):
         product = get_object_or_404(Product, id=product_id)
         user = request.user
 
-        if Favorites.objects.filter(user = user, product=product).exists():
-            Favorites.objects.filter(user = user, product=product).delete()
+        favorites, created = Favorites.objects.get_or_create(user=user, product=product)
+
+        if created or not favorites.is_favorite:
+            favorites.is_favorite = True
+            messages.success(
+                request,
+                'You have added the product to favorites successfully.'
+            )
+        else:
+            favorites.is_favorite = False
             messages.success(
                 request,
                 'You have removed the product from favorites successfully.'
-                )
-        else:
-           Favorites.objects.create(user=user,product=product, is_favorite=True)
-           messages.success(
-                request,
-                'You have added the product to favorites successfully.'
-                )
-        
+            )
+        favorites.save()
+
         favorite_count = Favorites.objects.filter(user=user, is_favorite=True).count()
 
         context = {
-            'is_favorite': Favorites.objects.filter(user=user, product=product, is_favorite=True).exists(),
-            'product': product, 
-            'favorite_count':favorite_count,
+            'is_favorite': favorites.is_favorite,
+            'product': product,
+            'favorite_count': favorite_count,
         }
 
-        return render(request, 'products/product_information.html', context)
+        """"return redirect(reverse('favorites'))"""
 
-        redirect_url = reverse('product_information', args=[product_id])
-        return HttpResponseRedirect(redirect_url)
-    
+        return render(request, 'products/product_information.html', context)
+        return redirect(reverse('product_information', args=[product_id]))
+
+        
+
  

@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -10,50 +12,116 @@
 {% endblock %}
 
 {% block content %}
-<div class="cover-container"></div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col text-center mt-5">
-            <h2 class="mb-3"> Your Favorites Products </h2>
-            <hr class="w-50 mb-2">
+    <div class="cover-container"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-5">
+                <h2 class="mb-3"> Your Favorite Products </h2>
+                <hr class="w-50 mb-2">
+            </div>
         </div>
-    </div>
         <div class="row">
             <div class="container">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-black text-muted mt-3 text-center text-md-left">
+                                <span class="small"><a href="{% url 'products' %}" class="text-decoration-none tag p-2 rounded border-1">Products Home</a>
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
-                    {% for favorite in favorites %}
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                            <div class="card border-0  p-0 h-100 text-white">
-                                {% if user.is_authenticated %}
-                                <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST">
-                                    {% csrf_token %}
-                                    {% if is_favorite %}
-                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
-                                            <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
-                                        </button>
+                    {% if favorites %}
+                        {% for favorite in favorites %}
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
+                                <div class="card border-0 p-0 h-100 text-white">
+                                    {% if favorite.product.image %}
+                                    <a href="{% url 'product_information' favorite.product.id %}">
+                                        <img class="card-img-top img-product" src="{{ favorite.product.image.url }}"
+                                            alt="{{ product.name }}">
+                                    </a>
                                     {% else %}
-                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
-                                            <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
-                                        </button>
+                                    <a href="{% url 'product_information' favorite.product.id %}">
+                                        <img class="card-img-top img-fluid img-product" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ product.name }}">
+                                    </a>
                                     {% endif %}
-                                </form>
-                                {% else %}
+                                    <div class="card-body card-body-text mt-3 pb-0 text-start">
+                                        <p class="small mb-0">{{ favorite.product.name }}</p>
+                                    </div>
+                                    <div class="card-footer pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col mt-1">
+                                                <p class="lead mb-0 text-left">{{ favorite.product.price }}€</p>
+                                                {% if favorite.product.category %}
+                                                <p class="small mt-1 mb-2">
+                                                    <a class="text-white"
+                                                        href="{% url 'products' %}?category={{ product.category.name }}">
+                                                        <i
+                                                            class="fas fa-tag mr-1"></i>{{ favorite.product.category.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_product' favorite.product.id %}"
+                                                        class="text-white text-decoration-none">Edit</a> |
+                                                    <a class="text-danger text-decoration-none"
+                                                        href="{% url 'delete_product' favorite.product.id %}">Delete</a>
+                                                </small>
+                                                {% endif %}
+                                            </div>
+                                            <div>
+                                                {% if user.is_authenticated %}
+                                                <form class="d-inline"
+                                                    action="{% url 'addtofavorites' favorite.product.id %}"
+                                                    method="POST">
+                                                    {% csrf_token %}
+                                                    {% if favorite.is_favorite %}
+                                                    <button type="submit" name="product_id"
+                                                        value="{{ favorite.product.id }}" class="btn">
+                                                        <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                    </button>
+                                                    {% else %}
+                                                    <button type="submit" name="product_id"
+                                                        value="{{ favorite.product.id }}" class="btn">
+                                                        <i class="fa-regular fa-heart fa-xl"
+                                                            style="color: #8b181e;"></i>
+                                                    </button>
+                                                    {% endif %}
+                                                </form>
+                                                {% endif %}
+                                                <a href="{% url 'product_information' favorite.product.id %}"
+                                                    class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                            {% if user.is_authenticated %}
+                                <div class="col-12 text-center mt-5">
                                     <p>You have not added any products to your favorites yet.</p>
-                                {% endif%}
+                                </div>
+                            {% else %}
+                                <div class="col-12 text-center mt-5">
+                                    <p>
+                                        <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
+                                        <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}">Register</a>
+                                        to save products to your favorites.
+                                    </p>
+                            {% endif %}
                             </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
-    <p>You have not added any products to your favorites yet.</p>
-</div>
-
+    </div>
 {% endblock %}
 
 {% block scripts %}
