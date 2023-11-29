@@ -41,17 +41,18 @@ class AddtoFavorites(View, LoginRequiredMixin):
 
         if created or not favorites.is_favorite:
             favorites.is_favorite = True
+            favorites.save()
             messages.success(
                 request,
                 'You have added the product to favorites successfully.'
             )
         else:
             favorites.is_favorite = False
+            favorites.delete()
             messages.success(
                 request,
                 'You have removed the product from favorites successfully.'
             )
-        favorites.save()
 
         favorite_count = Favorites.objects.filter(user=user, is_favorite=True).count()
 
@@ -61,11 +62,5 @@ class AddtoFavorites(View, LoginRequiredMixin):
             'favorite_count': favorite_count,
         }
 
-        """"return redirect(reverse('favorites'))"""
-
         return render(request, 'products/product_information.html', context)
-        return redirect(reverse('product_information', args=[product_id]))
-
-        
-
  

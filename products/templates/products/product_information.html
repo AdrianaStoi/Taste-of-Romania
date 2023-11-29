@@ -31,26 +31,28 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-2 mt-md-5">
                     <div class="d-flex mb-2 mt-2">
-                    <p class="mt-2 mb-2"><strong>{{ product.name }}</strong></p>
-                        {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST">
+                        <p class="mt-2 mb-2"><strong>{{ product.name }}</strong></p>
+                    {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST"> 
+                        {% csrf_token %}
+                        {% if is_favorite %}
+                            <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
+                                <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                            </button>
+                        </form>
+                        {% else %}
+                            <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST"> 
                             {% csrf_token %}
-                            {% if is_favorite %}
-                                <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
-                                    <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;" ></i>
-                                </button>
-                            {% else %}
                                 <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
                                     <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
                                 </button>
-                            {% endif %}
-                        </form>
-                        {% else %}
-                            <span class="text-secondary btn" onclick="showModal('')"><i class="fa-regular fa-heart fa-xl"
-                            style="color: #8b181e;"></i></span>
+                            </form>
                         {% endif %}
+                    {% else %}
+                        <span class="text-secondary btn" onclick="showModal('')"><i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i></span>
+                    {% endif %}
                     </div>
-                    </div>
+                </div>
                     <p class="lead mb-0 text-left font-weight-bold">{{ product.price }} €</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">

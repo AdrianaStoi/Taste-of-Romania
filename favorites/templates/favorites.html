@@ -72,23 +72,21 @@
                                             </div>
                                             <div>
                                                 {% if user.is_authenticated %}
-                                                <form class="d-inline"
-                                                    action="{% url 'addtofavorites' favorite.product.id %}"
-                                                    method="POST">
-                                                    {% csrf_token %}
-                                                    {% if favorite.is_favorite %}
-                                                    <button type="submit" name="product_id"
-                                                        value="{{ favorite.product.id }}" class="btn">
-                                                        <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                <form class="d-inline" action="{% url 'addtofavorites' favorite.product.id %}" method="POST"> 
+                                                {% csrf_token %}
+                                                {% if favorite.is_favorite %}
+                                                    <button type="submit" name="product_id" value="{{ favorite.product.id }}" class="btn">
+                                                            <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
                                                     </button>
-                                                    {% else %}
-                                                    <button type="submit" name="product_id"
-                                                        value="{{ favorite.product.id }}" class="btn">
-                                                        <i class="fa-regular fa-heart fa-xl"
-                                                            style="color: #8b181e;"></i>
-                                                    </button>
-                                                    {% endif %}
                                                 </form>
+                                                {% else %}
+                                                    <form class="d-inline" action="{% url 'addtofavorites' favorite.product.id %}" method="POST"> 
+                                                    {% csrf_token %}
+                                                        <button type="submit" name="product_id" value="{{ favorite.product.id }}" class="btn">
+                                                            <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                        </button>
+                                                    </form>
+                                                {% endif %}
                                                 {% endif %}
                                                 <a href="{% url 'product_information' favorite.product.id %}"
                                                     class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product</a>
@@ -96,27 +94,27 @@
                                         </div>
                                     </div>
                                 </div>
-                            {% if forloop.counter|divisibleby:4 %}
-                                <div class="col-12 mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}
+                                {% if forloop.counter|divisibleby:4 %}
+                                    <div class="col-12 mb-5">
+                                        <hr>
+                                    </div>
+                                {% endif %}
                             </div>
                         {% endfor %}
-                    {% else %}
-                            {% if user.is_authenticated %}
-                                <div class="col-12 text-center mt-5">
-                                    <p>You have not added any products to your favorites yet.</p>
-                                </div>
-                            {% else %}
-                                <div class="col-12 text-center mt-5">
-                                    <p>
-                                        <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
-                                        <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}">Register</a>
-                                        to save products to your favorites.
-                                    </p>
-                            {% endif %}
+                    {% else %} 
+                        {% if user.is_authenticated %}
+                            <div class="col-12 text-center mt-5">
+                                <p>You have not added any products to your favorites yet.</p>
                             </div>
+                        {% else %}
+                            <div class="col-12 text-center mt-5">
+                                <p>
+                                    <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
+                                    <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}">Register</a>
+                                        to save products to your favorites.
+                                </p>
+                            </div>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>
@@ -124,5 +122,3 @@
     </div>
 {% endblock %}
 
-{% block scripts %}
-{% endblock %}
