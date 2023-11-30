@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -22,7 +24,7 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">New Inquiry</p>
-                <form class="mt-3" action="{% url 'inquiries' %}" method="POST">
+                <form class="mt-5" action="{% url 'inquiries' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button class="btn btn-black-cart rounded text-uppercase float-right">Submit</button>
@@ -30,27 +32,29 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Inquiry History</p>
-                <div class="order-history table-responsive">
+                <div class="table-responsive">
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
+                                <th>Request number</th>
                                 <th>Order Number</th>
                                 <th>Date</th>
                                 <th>Subject</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% for inquiry in inquiries %}
-                                <tr>
-                                    <td>
-                                        <a href="">
-                                            {{ inquiry.order_number|truncatechars:6 }}
-                                        </a>
-                                    </td>
-                                    <td class="small text-black">{{ inquiry.subject }}</td>
-                                    <td class="small text-black">{{ inquiry.created_on }}</td>
-                                </tr>
-                            {% endfor %}
+                        {% for user_inquiry in inquiries %}
+                            <tr>
+                                <td class="text-black">{{ user_inquiry.id }}</td>
+                                <td class="text-black">
+                                    <a href="">
+                                        {{ user_inquiry.order_number_inquiry }}
+                                    </a>
+                                </td>
+                                <td class="text-black">{{ user_inquiry.subject }}</td>
+                                <td class="text-black">{{ user_inquiry.created_on }}</td>
+                            </tr>
+                         {% endfor %}
                         </tbody>
                     </table>
                 </div>
