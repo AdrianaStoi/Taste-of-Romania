@@ -94,6 +94,9 @@
                                                 </button>
                                                 {% endif %}
                                             </form>
+                                            {% else %}
+                                                <span class="text-secondary btn" onclick="showModal()"><i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i></span>
+                                                {% include 'products/includes/modal.html' %}
                                             {% endif %}
                                             <a href="{% url 'product_information' product.id %}" class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product</a>
                                         </div>
@@ -137,4 +140,5 @@
             }
         })
     </script>
+    {% include 'products/includes/modal_script.html' %}
 {% endblock %}

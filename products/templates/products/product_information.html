@@ -49,7 +49,8 @@
                             </form>
                         {% endif %}
                     {% else %}
-                        <span class="text-secondary btn" onclick="showModal('')"><i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i></span>
+                        <span class="text-secondary btn" onclick="showModal()"><i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i></span>
+                        {% include 'products/includes/modal.html' %}
                     {% endif %}
                     </div>
                 </div>
@@ -141,7 +142,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-
+    
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    {% include 'products/includes/quantity_input_script.html' %}
+    {% include 'products/includes/modal_script.html' %}
 {% endblock %}

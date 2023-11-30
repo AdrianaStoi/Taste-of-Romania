@@ -150,6 +150,17 @@ footer {
     border: 1px solid #090601;
 }
 
+/*Style modal popup for favorite icon when user is not logged in */
+.modal-body {
+    background-color: #8b181e;
+    font-weight: bolder;
+    color:#ffffff;
+}
+
+.modal-content {
+    background-color: #ffffff;
+}
+
 /* Register, login, logout style */
 .custom-container {
     display:flex;

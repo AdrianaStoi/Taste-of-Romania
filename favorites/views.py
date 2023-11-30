@@ -29,7 +29,7 @@ class FavoritesPage(generic.ListView):
 
 class AddtoFavorites(View, LoginRequiredMixin):
     """
-    This view will allow logged in users to
+    This view allows logged in users to
     add product to favorites or remove it from favorites.
     """
 

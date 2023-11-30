@@ -76,7 +76,7 @@
                                                 {% csrf_token %}
                                                 {% if favorite.is_favorite %}
                                                     <button type="submit" name="product_id" value="{{ favorite.product.id }}" class="btn">
-                                                            <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                        <i class="fa-solid fa-trash-can fa-xl" style="color: #8b181e;"></i>
                                                     </button>
                                                 </form>
                                                 {% else %}
