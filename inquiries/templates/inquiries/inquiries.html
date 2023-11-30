@@ -38,14 +38,18 @@
                             <tr>
                                 <th>Request number</th>
                                 <th>Order Number</th>
-                                <th>Date</th>
                                 <th>Subject</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
                         {% for user_inquiry in inquiries %}
                             <tr>
-                                <td class="text-black">{{ user_inquiry.id }}</td>
+                                <td class="text-black">
+                                    <a href="{% url 'inquiry' user_inquiry.id %}">
+                                        {{ user_inquiry.id }}
+                                    </a>
+                                </td>
                                 <td class="text-black">
                                     <a href="">
                                         {{ user_inquiry.order_number_inquiry }}
