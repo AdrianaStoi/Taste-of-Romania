@@ -32,32 +32,49 @@ def user_inquiry(request):
 @login_required
 def inquiry_details(request, inquiry_id):
     """ 
-    This view allows user to submit an update and reply
+    This view displays the inquiry details and 
+    allows user to add an update/reply
     to the same inquiry.
     """
+
     inquiry = get_object_or_404(Inquiry, pk=inquiry_id)
-    user_replies = None
+
+    # Split user_reply into a list of replies
+    user_replies = inquiry.user_reply.split('\n') if inquiry.user_reply else []
 
     if request.method == 'POST':
-        user_reply_form = UserReplyForm(request.POST, instance=user_replies)
+        user_reply_form = UserReplyForm(request.POST)
         if user_reply_form.is_valid():
             new_reply = user_reply_form.cleaned_data['user_reply']
             user_name = request.user.username
-
-            if inquiry.user_reply is None:
-                inquiry.user_reply += f"\n{user_name} {timezone.now()}: {new_reply}"
-
+            user_replies.append(f"{user_name}: {new_reply}")
+            inquiry.user_reply = '\n'.join(user_replies)
             inquiry.save()
+
             messages.success(request, 'Your reply was submitted successfully.')
-            return HttpResponseRedirect(reverse('inquiry', args=[inquiry_id]))
+            return redirect('inquiry', inquiry_id=inquiry.id)
     else:
         user_reply_form = UserReplyForm()
-
-    # Splits user_reply into a list of lines
-    user_replies = inquiry.user_reply.split('\n') if inquiry.user_reply else []
 
     return render(request, 'inquiries/inquiry_details.html', {
         'inquiry': inquiry,
         'user_replies': user_replies,
         'user_reply_form': user_reply_form,
     })
+
+@login_required
+def delete_inquiry(request, inquiry_id):
+    """ 
+    This deletes the inquiry.
+    """
+    inquiry = get_object_or_404(Inquiry, pk=inquiry_id)
+
+    if request.method == 'POST':
+        inquiry.delete()
+        messages.success(
+                request,
+                'You have deleted the inquiry successfully.'
+            )
+        return redirect('home')
+
+    return render(request, 'inquiries/inquiry_confirm_delete.html', {'inquiry':inquiry})
