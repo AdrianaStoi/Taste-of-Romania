@@ -17,7 +17,15 @@
                 <hr>
                 <h2 class="mb-4">Request Number {{ inquiry.id }}</h2>
                 <hr>
-                <p class="text-black">You can find below your request information: </p>
+                <p class="text-black">You can find below your request information. We will contact you within 24 hours with an update in the form below or by email. </p>
+            </div>
+            <div class="col-12 col-lg-6 text-right mt-5">
+                <a href="{% url 'inquiries' %}" class="btn btn-black-cart rounded my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase"> Back to My Inquiries</span>
+                </a>
             </div>
         </div>
 
@@ -71,35 +79,60 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Message</p>
                         </div>
-                        <div class="col-12 col-md-6 text-md-left">
-                            <p class="mb-0">{{ inquiry.user_message}}</p>
+                        <div class="col-12 col-md-8 text-md-left">
+                            <p class="mb-0"> {{ inquiry.user_message}}</p>
                         </div>
                     </div>
-                    {% if inquiry.image %}
-                    <div class="row img-product">
+                    {% if user_replies %}
+                    <div class="row mt-5">
+                        <div class="col-12 col-md-4 ">
+                            <p class="mb-0 text-black font-weight-bold">Your Replies</p>
+                        </div>
+                        <div class="col-12 col-md-8 ">
+                            {% for reply in user_replies %}
+                                <div>
+                                    <p> {{ reply }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
                     {% endif %}
+                {% if inquiry.admin_reply %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Taste of Romania message :</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-left"> 
+                            <p class="mb-0"> {{ inquiry.user_reply_date }} {{ inquiry.admin_reply | linebreaksbr }}</p>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Taste of Romania message : No update at this time.</p>
+                        </div>
+                    </div>
+                {% endif %}
                 </div>
             </div>
         </div>
         <div class="row">
-			<div class="col-12 col-lg-6 text-right">
-                <a href="{% url 'inquiries' %}" class="btn btn-black-cart rounded my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-angle-left"></i>
-                    </span>
-                    <span class="text-uppercase"> Back to My Inquiries</span>
-                </a>
-                <a href="" class="btn btn-black-cart rounded my-2">
-                    <span class="icon mr-2">
-                        <i class="fa-solid fa-reply"></i>
-                    </span>
-                    <span class="text-uppercase">Reply request</span>
-                </a>
+            <div class="col-12 col-lg-6 float-left">
+                <form class="mt-5" action="{% url 'inquiry' inquiry_id=inquiry.id %}" method="POST">
+                    {% csrf_token %}
+                    {{ user_reply_form | crispy }}
+                    <button type= "submit" class="btn btn-black-cart rounded text-uppercase float-right">
+                        <span class="icon mr-2">
+                            <i class="fa-solid fa-reply"></i>
+                        </span>
+                        Reply request
+                    </button>
+                </form>
 			</div>
 		</div>
     </div>
 {% endblock %}
+

@@ -6,8 +6,7 @@ class InquiryForm(forms.ModelForm):
     class Meta:
         model = Inquiry
         fields = ['name', 'email', 'phone_number', 
-            'subject', 'order_number_inquiry', 'user_message',
-            'image'
+            'subject', 'order_number_inquiry', 'user_message'
         ]
     order_number_inquiry = forms.CharField(label='Order Number')
 
@@ -23,3 +22,8 @@ class InquiryForm(forms.ModelForm):
             'phone_number': 'Phone Number',
             'subject': 'Subject',
         }
+
+class UserReplyForm(forms.ModelForm):
+    class Meta:
+        model = Inquiry
+        fields = ['user_reply']
