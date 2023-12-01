@@ -94,7 +94,7 @@
                             <div class="col-12 col-md-8 ">
                                 {% for reply in user_replies %}
                                     <div>
-                                        <p> {{ reply}}</p>
+                                        <p> <span class="small">At {{ inquiry.updated_on }}</span> - {{ reply }}</p>
                                     </div>
                                 {% endfor %}
                             </div>
