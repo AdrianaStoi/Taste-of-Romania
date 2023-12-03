@@ -27,7 +27,7 @@ def user_inquiry(request):
     else:
         form = InquiryForm()
 
-    return render(request, 'inquiries/inquiries.html', {'form': form, 'inquiries': inquiries})
+    return render(request, 'inquiries/inquiries.html', {'form': form, 'inquiries': inquiries, 'base_message': True})
 
 @login_required
 def inquiry_details(request, inquiry_id):
@@ -60,6 +60,7 @@ def inquiry_details(request, inquiry_id):
         'inquiry': inquiry,
         'user_replies': user_replies,
         'user_reply_form': user_reply_form,
+        'base_message': True
     })
 
 @login_required
@@ -77,4 +78,4 @@ def delete_inquiry(request, inquiry_id):
             )
         return redirect('home')
 
-    return render(request, 'inquiries/inquiry_confirm_delete.html', {'inquiry':inquiry})
+    return render(request, 'inquiries/inquiry_confirm_delete.html', {'inquiry':inquiry, 'base_message': True})

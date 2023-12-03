@@ -17,6 +17,7 @@ class FavoritesPage(generic.ListView):
     model = Favorites
     template_name = 'favorites.html'
     context_object_name = 'favorites'
+    extra_context = {'base_message': True}
     
     def get_queryset(self):
         if self.request.user.is_authenticated:
@@ -35,7 +36,8 @@ class AddtoFavorites(View, LoginRequiredMixin):
     """
 
     model = Product
-
+    extra_context = {'base_message': True}
+    
     def post(self, request, product_id, *args, **kwargs):
         product = get_object_or_404(Product, id=product_id)
         user = request.user
@@ -58,3 +60,4 @@ class AddtoFavorites(View, LoginRequiredMixin):
                 'You have removed the product from favorites successfully.'
             )
             return redirect('favorites')
+    

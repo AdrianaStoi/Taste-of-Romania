@@ -89,12 +89,14 @@ def product_information(request, product_id):
         @login_required
         def submit_review(request):
             form = ReviewForm(request.POST)
-
+            
             if form.is_valid():
                 review = form.save(commit=False)
                 review.product = product
                 review.user = request.user
                 review.save()
+
+                extra_context = {'base_message': True}
 
                 messages.success(request, 'Review added successfully')
                 return redirect('product_information', product_id = product_id)
@@ -108,7 +110,7 @@ def product_information(request, product_id):
         'product': product,
         'comments': comments,
         'user_comment':user_comment,
-        'form': form
+        'form': form,
     }
 
     return render(request, 'products/product_information.html', context)
@@ -148,6 +150,7 @@ def edit_comment(request, comment_id):
         'form': form,
         'review': review,
         'comments':comments,
+        'base_message': True,
     }
     return render(request, 'products/editcomment.html', context)
 
@@ -165,6 +168,7 @@ def delete_comment(request, comment_id):
     if request.method == 'POST':
         if request.user == review.user:
             review.delete()
+
             messages.success(
                 request,
                 'You have deleted the comment successfully.'
@@ -177,6 +181,7 @@ def delete_comment(request, comment_id):
     context = {
         'review': review,
         'product': product,
+        'base_message': True,
     }
 
     return render(request, 'products/confirm_deletecomment.html', context)
@@ -202,6 +207,7 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'base_message': True,
     }
 
     return render(request, template, context)
@@ -230,6 +236,7 @@ def edit_product(request, product_id):
     context = {
         'form': form,
         'product': product,
+        'base_message': True
     }
 
     return render(request, template, context)
@@ -237,11 +244,13 @@ def edit_product(request, product_id):
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
+    
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can delete products.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
+    context = {'base_message': True}
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))

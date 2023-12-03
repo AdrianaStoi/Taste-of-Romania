@@ -27,7 +27,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'base_message': True,
     }
 
     return render(request, template, context)
