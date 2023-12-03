@@ -12,7 +12,7 @@
 {% block content %}
 
 <!--Landing image and title-->
-<div class="container-fluid">
+<div class="container-fluid container-landing-page">
     <div class="row">
         <div class="col-md-6 p-0 d-flex align-items-stretch">
             <img src="{% static 'media/taste_of_romania_home.jpg' %}" class="img-fluid" alt="image home romania symbol"> 
@@ -20,14 +20,14 @@
         <div class="col-md-6 p-0 d-flex flex-column align-items-center black-container text-white">
              <!-- Title and Description -->
              <div class="mb-3 home-container">
-                <h1>
+                <h1 class="text-center">
                     Traditional Romanian specialties and gifts
                 </h1>
-                <h2> Explore, Order, Enjoy!</h2>
+                <h2 class="text-center"> Explore, Order, Enjoy!</h2>
             </div>
-            <div class="d-flex align-items-center">
+            <div class="align-items-center my-5">
                 <h4>
-                    <a href="{% url 'products' %}" class="see-products-button btn btn-lg rounded text-uppercase py-3 text-white">See our Products</a>
+                    <a href="{% url 'products' %}" class="see-products-button btn btn-lg rounded text-uppercase  text-white">See our Products</a>
                 </h4>
             </div>
         </div>
@@ -57,7 +57,7 @@
     <div class="row  text-center">
         <div class="col-md-4">
             <div class="card h-75">
-                <img src="{% static 'media/sweets_and_savory.png' %}" class="card-img-top h-100" alt="">
+                <img src="{% static 'media/sweets_and_savory.png' %}" class="card-img-top h-100" alt="Romanian sweets and savory">
                 <div class="card-body">
                     <a href="{% url 'products' %}?category=cheese, meat_products,sweets,snacks,food_cupboard" class="text-decoration-none">
                         <h5 class="card-title">Sweet and Savory</h5>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-md-4">
             <div class="card h-75">
-                <img src="{% static 'media/drinks_category.png' %}" class="card-img-top h-100" alt="">
+                <img src="{% static 'media/drinks_category.png' %}" class="card-img-top h-100" alt="Romanian drinks image">
                 <div class="card-body">
                     <a href="{% url 'products' %}?category=drinks" class="text-decoration-none">
                         <h5 class="card-title"> Alcoholic Drinks</h5>
@@ -77,7 +77,7 @@
         </div>
         <div class="col-md-4">
             <div class="card h-75">
-                <img src="{% static 'media/romanian_pottery.png' %}" class="card-img-top h-100" alt="">
+                <img src="{% static 'media/romanian_pottery.png' %}" class="card-img-top h-100" alt="Romanian pottery image">
                 <div class="card-body">
                     <a href="{% url 'products' %}?category=traditional_clothing,handmade_pottery,handmade_bracelet" class="text-decoration-none">
                         <h5 class="card-title"> Clothing and Handmade pottery </h5>
