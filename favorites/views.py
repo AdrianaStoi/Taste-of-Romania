@@ -34,6 +34,8 @@ class AddtoFavorites(View, LoginRequiredMixin):
     add product to favorites or remove it from favorites.
     """
 
+    model = Product
+
     def post(self, request, product_id, *args, **kwargs):
         product = get_object_or_404(Product, id=product_id)
         user = request.user

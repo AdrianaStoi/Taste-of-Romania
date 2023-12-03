@@ -1,7 +1,7 @@
-<li class="list-inline-item text-white">
-    <a class="text-white nav-bar d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<li class="list-inline-item">
+    <a class="text-white d-block d-lg-none nav-link" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div><i class="fas fa-search fa-lg"></i></div>
+            <div><i class="fas fa-search fa-lg" style="color: #ffffff;"></i></div>
             <p class="my-0">Search</p>
         </div>
     </a>
@@ -37,12 +37,21 @@
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Administration</a>
             {% endif %}
             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+            <a href="{% url 'inquiries' %}" class="dropdown-item">My Inquiries</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
+</li>
+<li class="list-inline-item">
+    <a href="{% url 'favorites' %}" class="text-decoration-none nav-link">
+        <div class="text-center text-white">
+            <i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i>
+        </div>
+        <p class="my-0 text-white">My Favorites {{ favorite_count }} </p>
+    </a>
 </li>
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">

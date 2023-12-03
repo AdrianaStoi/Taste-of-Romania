@@ -231,8 +231,6 @@ footer {
         max-width: 80%;
     }
 
-
-
 .btn-select-file {
     position: relative;
     overflow: hidden;
@@ -247,7 +245,6 @@ footer {
     opacity: 0;
     cursor: pointer;
 }
-
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
@@ -265,9 +262,18 @@ footer {
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
 
-    .header-container {
-        padding-top: 164px;
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
     }
+
+    .header-container {
+        padding-top: 180px;
+    }
+
 }
 
 /* pad the top when navbar is collapsed on mobile */
@@ -279,4 +285,83 @@ footer {
     body {
         height: calc(100vh - 116px);
     }
+
+    .nav-mobile {
+        background-color: #090601 !important;
+        color: #ffffff;
+    }
+
+    li > p, .nav-link {
+        color: #ffffff !important;
+    }
+
+    li > p, .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    body{
+        font-size: medium;
+    }
+     .nav-link i.fa-lg {
+        font-size: 0.75rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
+        font-size: 0.75rem;
+    }
+
+    .navbar-toggler {
+        padding: .4rem .4rem;
+        font-size: .75rem;
+    }
+
+    .dropdown-item, .nav-link {
+        font-size: .8rem;
+    }
+
+}
+
+@media (max-width: 290px) {
+
+    .list-inline-item:not(:last-child) {
+        font-size: .5rem;
+    }
+
+    .navbar-toggler {
+        padding: .3rem .3rem;
+        font-size: .5rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 0.7rem 0.8rem;
+   }
+
+   .dropdown-item, .nav-link {
+    font-size: .7rem;
+}
+   
 }
