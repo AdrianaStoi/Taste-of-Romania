@@ -329,8 +329,7 @@ h5>a {
     }
     
     .img-product {
-        object-fit: scale-down;
-        min-height: 350px;
+        min-height: 380px;
     }
     
 
@@ -343,7 +342,14 @@ h5>a {
         padding: .3rem .4rem !important;
     }
 
+}
 
+@media (max-width: 540px) {
+
+    .img-product {
+        object-fit: contain;
+        min-height: 200px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -422,7 +428,8 @@ h5>a {
     }
 
     .img-product {
-        object-fit: cover;
+        object-fit: contain;
+        min-height: 200px;
     }
 
     /* Style toast success-message */ 
@@ -431,4 +438,13 @@ h5>a {
         left: 0.5px;
     }
    
+    /*Style my inquiry page*/
+
+    .btn-del-inquiry {
+        margin-bottom: 1rem;
+    }
+    
+    .reply-button {
+        float: left !important;
+    }
 }
