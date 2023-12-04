@@ -229,7 +229,6 @@ h5>a {
 }
 
 
-
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -264,7 +263,7 @@ h5>a {
 
 }
 
-/* fixed top navbar only on medium and up */
+/* Fixed top navbar only on medium and up */
 @media (min-width: 992px) {
 
     .fixed-top-desktop-only {
@@ -281,7 +280,7 @@ h5>a {
 
 }
 
-/* pad the top when navbar is collapsed on mobile */
+/* Pad the top when navbar is collapsed on mobile */
 @media (max-width: 991px) {
 
     .header-container {
@@ -331,9 +330,18 @@ h5>a {
     
     .img-product {
         object-fit: scale-down;
-        min-height: 300px;
+        min-height: 350px;
     }
+    
 
+    .continue-shop-btn, .btn-black-cart {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+    
+    .increment-qty, .decrement-qty {
+        padding: .3rem .4rem !important;
+    }
 
 }
 
@@ -370,8 +378,6 @@ h5>a {
     .dropdown-item, .nav-link {
         font-size: .8rem;
     }
-
- 
 
 }
 
