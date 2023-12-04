@@ -342,6 +342,10 @@ h5>a {
         padding: .3rem .4rem !important;
     }
 
+    .list-inline-item:not(:last-child) {
+        margin-right: 0.3rem;
+    }
+
 }
 
 @media (max-width: 540px) {
@@ -350,6 +354,7 @@ h5>a {
         object-fit: contain;
         min-height: 200px;
     }
+
 }
 
 @media (max-width: 400px) {
