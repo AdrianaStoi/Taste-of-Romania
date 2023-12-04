@@ -228,6 +228,13 @@ h5>a {
     overflow-y: auto;
 }
 
+/* Style container on inquiry details page*/
+
+.inquiry-user-details {
+    background-color: #8b181e;
+    color: #ffffff;
+}
+
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -260,6 +267,7 @@ h5>a {
     border-color: #8b181e;
     border-radius: 0;
 }
+
 
 }
 

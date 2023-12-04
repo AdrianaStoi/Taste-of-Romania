@@ -32,39 +32,39 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
-                <div class="p-2 border">
+                <div class="p-2 border inquiry-user-details">
                     <div class="row my-2">
                         <div class="col">
-                            <p>Inquiry Info:</p>
+                            <p class="font-weight-bold">Inquiry Info:</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <p class="mb-0 text-black font-weight-bold">Order Number: {{ inquiry.order_number_inquiry }} </p>
+                            <p class="mb-0 font-weight-bold">Order Number: {{ inquiry.order_number_inquiry }} </p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <p class="mb-0 text-black font-weight-bold"> Date : <small class="text-md-right">{{ inquiry.created_on }}</small></p>
+                            <p class="mb-0 font-weight-bold"> Date : <small class="text-md-right">{{ inquiry.created_on }}</small></p>
                         </div>
                     </div>
 
                     <div class="row my-2">
                         <div class="col-12 col-md-6">
-                            <p class="mb-0 text-black font-weight-bold">Full Name: {{ inquiry.name }}</p>
+                            <p class="mb-0 text-white font-weight-bold">Full Name: {{ inquiry.name }}</p>
                         </div>
                     </div>
                     <div class="row my-2">
                         <div class="col-12 col-md-6">
-                            <p class="mb-0 text-black font-weight-bold">Email: <small>{{ inquiry.email }}</small></p>
+                            <p class="mb-0 text-white font-weight-bold">Email: <small>{{ inquiry.email }}</small></p>
                         </div>
                     </div>
                     {% if inquiry.phone_number %}
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <p class="mb-0 text-black font-weight-bold">Phone Number :<small>{{ inquiry.phone_number }} </small></p>
+                            <p class="mb-0 text-white font-weight-bold">Phone Number :<small>{{ inquiry.phone_number }} </small></p>
                         </div>
                     </div>
                     {% endif %}
@@ -77,8 +77,10 @@
                     <div class="row my-2">
                         <div class="col-12 col-md-6">
                             <p class="mb-0 text-black font-weight-bold">Subject: {{ inquiry.subject }} </p>
+                            
                         </div>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Message</p>
