@@ -2,22 +2,23 @@
 {% load static %}
 {% block content %}
 
-<!--Delete request page-->
+<!--Product Administration - Delete product-->
 <div class="container-fluid d-flex align-items-center custom-container">
     <div class="col-lg-4">
         <div class="card-body border rounded">
             <div class="mb-1">
                 <h3>Confirm Deletion</h3>
-                <p> Do you really want to delete inquiry number <strong>{{ inquiry.id }}</strong>?</p>
+                <p> Do you really want to delete the product: {{ product.name }}?</p>
                 <div class="col-md-6">
-                    <form method="post" style="margin-top: 1.3em;">
+                    <form method="post" action="{% url 'delete_product' product.id %}" style="margin-top: 1.3em;">
                         {% csrf_token %}
                         <input type="submit" value="Yes" class="btn btn-danger mt-3 mb-3">
-                        <a href="{% url 'inquiry' inquiry.id %}" class="btn btn-warning mt-3 mb-3" >Cancel</a>
+                        <a href="{% url 'product_information' product.id %}" class="btn btn-warning mt-3 mb-3" >Cancel</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

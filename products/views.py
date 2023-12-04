@@ -151,7 +151,7 @@ def edit_comment(request, comment_id):
         'comments':comments,
         'base_message': True,
     }
-    return render(request, 'products/editcomment.html', context)
+    return render(request, 'products/includes/editcomment.html', context)
 
 @login_required
 def delete_comment(request, comment_id):
@@ -183,7 +183,7 @@ def delete_comment(request, comment_id):
         'base_message': True,
     }
 
-    return render(request, 'products/confirm_deletecomment.html', context)
+    return render(request, 'products/includes/confirm_deletecomment.html', context)
 
 
 @login_required
@@ -241,15 +241,27 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 @login_required
+def confirm_delete_product(request, product_id):
+    """Confirm product deletion"""
+    product = get_object_or_404(Product, pk=product_id)
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can delete products.')
+        return redirect(reverse('home'))
+
+    return render(request, 'products/confirm_delete_product.html', {'product':product, 'base_message': True})
+
+@login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
     
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can delete products.')
         return redirect(reverse('home'))
-
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    context = {'base_message': True}
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+    
+    if request.method == 'POST':
+        product = get_object_or_404(Product, pk=product_id)
+        context = {'base_message': True}
+        product.delete()
+        messages.success(request, 'Product deleted!')
+        return redirect(reverse('products'))
