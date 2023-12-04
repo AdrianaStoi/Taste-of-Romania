@@ -34,16 +34,16 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Number</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.order_number }}</p>
+                            <p class="mb-0 small">{{ order.order_number }}</p>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Date</p>
                         </div>
@@ -59,7 +59,7 @@
                     </div>
 
                     {% for item in order.lineitems.all %}
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
                                 {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
@@ -77,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Full Name</p>
                         </div>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Address 1</p>
                         </div>
@@ -96,7 +96,7 @@
                     </div>
 
                     {% if order.street_address2 %}
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Address 2</p>
                         </div>
@@ -107,7 +107,7 @@
                     {% endif %}
 
                     {% if order.county %}
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">County</p>
                         </div>
@@ -117,7 +117,7 @@
                     </div>
                     {% endif %}
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Town or City</p>
                         </div>
@@ -127,7 +127,7 @@
                     </div>
 
                     {% if order.postcode %}
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Postal Code</p>
                         </div>
@@ -146,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Phone Number</p>
                         </div>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Delivery costs</p>
                         </div>
@@ -179,7 +179,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Grand Total</p>
                         </div>
