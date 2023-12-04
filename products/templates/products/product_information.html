@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="my-5">
+                <div class="my-0 my-md-5 my-lg-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid detail-product" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -120,13 +120,13 @@
                                 </div>
                             </div>
                             <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn continue-shop-btn rounded-3 mt-5">
+                                <a href="{% url 'products' %}" class="btn continue-shop-btn rounded-3 mt-2 mt-lg-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Continue Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black-cart rounded-3 text-uppercase mt-5" value="Add to Cart">
+                                <input type="submit" class="btn btn-black-cart rounded-3 text-uppercase mt-2 mt-lg-5" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}

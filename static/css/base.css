@@ -207,7 +207,6 @@ h5>a {
 }
 
 /* Style bootstrap toasts- style and classes taken from boutique-ado walthrough*/
-
 .message-container {
     position: fixed;
     top: 120px;
@@ -329,6 +328,13 @@ h5>a {
     .container-landing-page {
         gap: 0;
     }
+    
+    .img-product {
+        object-fit: scale-down;
+        min-height: 300px;
+    }
+
+
 }
 
 @media (max-width: 400px) {
@@ -364,6 +370,9 @@ h5>a {
     .dropdown-item, .nav-link {
         font-size: .8rem;
     }
+
+ 
+
 }
 
 @media (max-width: 300px) {
@@ -380,7 +389,7 @@ h5>a {
         font-size: 1.7rem;
     }
 
-    h5 {
+    h3, h4, h5 {
         font-size: 1rem;
     }
 
@@ -403,6 +412,10 @@ h5>a {
 
    .dropdown-item, .nav-link {
     font-size: .7rem;
-}
+    }
+
+    .img-product {
+        object-fit: cover;
+    }   
    
 }

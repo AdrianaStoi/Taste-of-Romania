@@ -130,7 +130,6 @@ def edit_comment(request, comment_id):
     product = get_object_or_404(Product, id=product_id)
     comments = Review.objects.filter(product=product)
 
-
     if request.user == review.user:
         if request.method == 'POST':
             review_form = ReviewForm(request.POST, instance=review)
