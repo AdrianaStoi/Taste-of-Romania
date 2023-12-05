@@ -64,3 +64,8 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+
+.order-confirmation-wrapper {
+    border: 1px solid #8b181e;
+}
