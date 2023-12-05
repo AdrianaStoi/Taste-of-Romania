@@ -79,21 +79,21 @@
                                         </div>
                                         <div class="mb-3">
                                             {% if user.is_authenticated %}
-                                            <form class="d-inline" action="{% url 'addtofavorites' product.id %}"
-                                                method="POST">
-                                                {% csrf_token %}
-                                                {% if is_favorite %}
-                                                <button type="submit" name="product_id" value="{{ product.id }}"
-                                                    class="btn">
-                                                    <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
-                                                </button>
+                                                {% if product.id in favorite_product_ids %}
+                                                    <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST"> 
+                                                        {% csrf_token %}
+                                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
+                                                            <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                        </button>
+                                                    </form>
                                                 {% else %}
-                                                <button type="submit" name="product_id" value="{{ product.id }}"
-                                                    class="btn">
-                                                    <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
-                                                </button>
+                                                    <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST"> 
+                                                        {% csrf_token %}
+                                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
+                                                            <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
+                                                        </button>
+                                                    </form> 
                                                 {% endif %}
-                                            </form>
                                             {% else %}
                                                 <span class="text-secondary btn" onclick="showModal()"><i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i></span>
                                                 {% include 'products/includes/modal.html' %}

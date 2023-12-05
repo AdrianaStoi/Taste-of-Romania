@@ -5,12 +5,18 @@ from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
+from favorites.models import Favorites
 from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
 def all_products(request):
-    """ This view shows all products, including sorting and search queries """
+    """ 
+    This view shows all products, 
+    including sorting and search queries.
+    The view also gets the product ids that are favorites
+    for the logged-in user.
+    """
 
     products = Product.objects.all()
     query = None
@@ -63,18 +69,28 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    favorite_product_ids = []
+    if request.user.is_authenticated:
+        favorite_product_ids = Favorites.objects.filter(user=request.user).values_list('product__id', flat=True)
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'favorite_product_ids': favorite_product_ids
     }
 
     return render(request, 'products/products.html', context)
 
 
 def product_information(request, product_id):
-    """ This view shows individual product information"""
+    """ 
+    This view shows individual product information.
+    It adds comment review if user is loged-in. 
+    The view also checks if the product is favorite
+    for the logged-in user.
+    """
 
     product = get_object_or_404(Product, pk=product_id)
     comments = Review.objects.filter(product=product)
@@ -106,11 +122,17 @@ def product_information(request, product_id):
     else:
         form = ReviewForm()
 
+    if request.user.is_authenticated:
+        is_favorite = Favorites.objects.filter(product=product, user=request.user).exists()
+    else:
+        is_favorite = False
+
     context = {
         'product': product,
         'comments': comments,
         'user_comment':user_comment,
         'form': form,
+        'is_favorite':is_favorite,
     }
 
     return render(request, 'products/product_information.html', context)
@@ -167,7 +189,6 @@ def delete_comment(request, comment_id):
     if request.method == 'POST':
         if request.user == review.user:
             review.delete()
-
             messages.success(
                 request,
                 'You have deleted the comment successfully.'

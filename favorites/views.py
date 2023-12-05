@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.db.models import Count
+
 
 
 class FavoritesPage(generic.ListView):
@@ -51,7 +51,6 @@ class AddtoFavorites(View, LoginRequiredMixin):
                 request,
                 'You have added the product to favorites successfully.'
             )
-            return redirect('favorites')
         else:
             favorites.is_favorite = False
             favorites.delete()
@@ -59,5 +58,6 @@ class AddtoFavorites(View, LoginRequiredMixin):
                 request,
                 'You have removed the product from favorites successfully.'
             )
-            return redirect('favorites')
+           
+        return redirect(reverse('favorites'), favorites_id=favorites.id) 
     
