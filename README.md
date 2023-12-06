@@ -342,4 +342,34 @@ In the Comments section, users who are not logged in will have read access to vi
 ![Verify email page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/verify_email_page.png)
 ![Alert message email sent](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/alert_message.png)
 
+### Ordering process 
+#### Guest checkout 
+##### Shopping cart
+
+* Guest users can place an order on the site without having to login. 
+
+* Upon adding a product to the cart, a success message appears in the right corner. This message includes a summary of the shopping cart, presenting details such as the added product, quantity, price excluding delivery costs, a notification of the required amount to qualify for free delivery, and a "Secure Checkout" button.
+
+![Shopping cart](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/shopping_cart.png)
+
+* When clicking on “Secure checkout” button the user is redirected to the “Shopping cart page” which includes a summary of the cart, along with the options to update the quantiy and remove option under the quantity and the user is informed about the grand total of the order. 
+* The user can continue the “Secure checkout” or can “Continue shopping” *this redirects the user back to products page”. 
+
+![Shopping cart page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/shopping_cart_page.png)
+
+* If the user continues and goes to the “Checkout” he will be prompted to add the personal details and card information.
+
+![Secure checkout](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/checkout_page.png)
+
+* Once the order is submitted, the guest user is directed to the order confirmation page where they can view the order details. They will also be prompted with a success message in the top left corner.
+ 
+![Order confirmation](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/order_confirmation.png)
+
+#### Logged in user
+
+* The ordering process for the logged-in user is the same as for the guest user, with the difference being that on the checkout page, the logged-in user will only need to add their name and card details. The personal information will be prefilled with the details from their account.
+
+![Checkout logged in user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/checkout_loggedin_user.png)
+
+
 
