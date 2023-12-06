@@ -148,7 +148,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * Contact details are recorded through the name CharField, email EmailField, and phone_number CharField. The subject CharField allows users to define the topic of their inquiry, while the message TextField accommodates detailed information. The order_number CharField is available for users to associate inquiries with specific orders. Admin responses are stored in the admin_reply TextField, facilitating communication between users and administrators. Additionally, the user_reply TextField offers the option for users to respond or provide further information. This comprehensive model ensures a structured approach to managing and responding to user inquiries effectively.
 
-![Taste of Romania - Database Diagram]()
+![Taste of Romania - Database Diagram](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/lucidchart_taste_of_romania.png)
 
 ## Existing Features
 
@@ -172,7 +172,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * My Account options when regular user is signed in : 
 
-![Image navbar regular user signed in ]()
+![Image navbar regular user signed in ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_loggedin_regular_user.png)
 
 #### Search bar
 
@@ -196,21 +196,53 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * At the top of the page the user can see the delivery threshold for free delivery. This has been added at the top of the page, so it is visible to the user and remains accessible across all pages.
 
-![ Delivery threshold]()
+![ Delivery threshold](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/delivery_threshold.png)
 
 #### Navbar menu 
 
 * Underneath the navbar, there is located the navbar menu with the different categorization types. The navigation menu is present on all site pages. 
 * There is “All Products” dropdown menu with the options to view products “By Price”, “By Category” and “All Products”. 
 
-![Navbar menu ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_categorization.png)
+![Navbar menu](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_categorization.png)
 
 * Under Romanian specialties the user can go to categories: Cheese, Meat products, Sweets, Snacks Food Cupboard or All Romanian specialties. 
 
-![Navbar menu ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_specialties.png)
+![Navbar menu](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_specialties.png)
 
 * The Drinks section does not include a dropdown menu. This will lead to the Drinks page. 
 * An lastly under the “Artisanal products” section, the user can choose to go to : Traditional clothing, Handmade pottery, Handmade bracelet or All Artisanal Products. 
 
-![Navbar menu ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_artisanal.png)
+![Navbar menu](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_artisanal.png)
+
+#### Landing image 
+
+* The home page includes an image with Romanian motifs and a color palette predominantly composed of red, black, and white tones, aligning with the overall design aesthetics of the website.
+*  Additionally, a welcoming message is displayed on the homepage and a button ‘See all products’ inviting the users to explore the shop.
+
+![Landing image](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/landing_image.png)
+
+#### About us
+
+* This section provides information about the site owner’s scope. Reassuring the user that they are at the right place for buying Romanian products.
+
+![Image about us section](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/about_us_section.png)
+
+#### Choose a category 
+
+* Under the About section the user can find “Choose a Category” section with three images that illustrate the category along with the corresponding product categories titles. 
+* When the user clicks on the category titles, they are directed to the respective page displaying products related to those categories.
+
+![Choose a category  section](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/choose_category_homepage.png)
+
+#### Payment, shipping and return
+
+* At the bottom of the page the user can find a payment and shipping information section alongn with the return information. This section is available on all pages so the user has access to this information at all times. 
+
+![Payment, shipping and return](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/shipping_return_info.png)
+
+#### Footer
+
+* The last section is the footer where the user can find the contact details, Privacy policy, subscribe to the newsletter form and the social media icons. 
+
+![Footer](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/footer.png)
 
