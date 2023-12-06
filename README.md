@@ -412,3 +412,68 @@ The users have also the option to delete the request. When clicking on “Delete
 ![Delete request button](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/delete_request_button.png) 
 
 ![Confirm deletion inquiry](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_deletion_inquiry.png) ![Confirm deletion alert inquiry](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirmation_deletion_inquiry_alert.png)
+
+
+### My Favorites page
+
+#### Logged in user
+
+* Registered users can add products to favorites and also remove them. Products added to favorites will be saved in the “My Favorites” page. 
+* If no products were added, the page will contain the default message “You have not added any products to your favorites yet.”
+
+![My favorites - no products](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_empty.png)
+
+* Logged in users can add a product to favorites from the “Products” page or “Products information” page by clicking on the heart icon. 
+* Once clicked on the heart icon, the user is lead to the favorites page. If the user goes back to the “Products” page or that respective “Product information” page, the heart will be filled in and they can distinguish which product has been added to favorites and which not. 
+
+##### Product added to favorites
+
+![Product added to favorites](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_product_added.png)
+
+##### Existing favorites product: 
+
+![Existing favorites product info](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_existing_prod_info.png)
+
+![Existing favorites product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_existing_prod_products_page.png)
+
+##### Remove product from favorites
+
+The users can remove a product from favorites, either by going to the “My Favorites” page and click on the trash icon or from the “Products” or “Product information” page by clicking on the solid red colored heart. This action will automatically remove the product from the “My favorites” page. 
+
+![Remove favorites](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_remove.png)
+![Favorites removed](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_removed.png)
+
+#### Guest users
+
+* Users who are not logged in cannot add products to their favorites. If they click on the heart icon, they will be prompted with a message instructing them to log in or register. Additionally, if they visit the "My Favorites" page, they will see a message inviting them to log in or register, along with the respective link.
+
+![My favorites page- guest users](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_guest_users.png)
+![Guest users popup message](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_guest_users_popup_message.png)
+
+
+### Product Administration page 
+
+* The administrator can add, modify, and remove products directly on the frontend using the "Product Administration" section. Upon selecting the product administration option, the admin is directed to the "Product Administration - Add Product" page.
+
+![Product Administration- Add Product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/add_product_admin.png)
+![Product Administration- Add Product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/add_product_admin_form.png)
+
+* When adding a product, the admin is prompted with an alert success message, and it is directed to the product information page. When he does not add any image to the product, it will be added with the “noimage” product below: 
+
+![Noimage product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/add_product_noimage.png)
+
+* The admin can edit the existing product by clicking on “Edit”. The Edit and remove options will be displayed on the All Products page under each product and under the Product information page. 
+* When on the editing page the admin is being informed that he is editing the product. 
+
+![Edit_product_alert](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/edit_product_alert.png)
+
+* Once edited, he is prompted with success message: 
+
+![Product edit success message](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/edit_product_success.png)
+
+*  The admin can also delete a product. When clicking on "Delete," they are directed to a "Confirmation Deletion" page. Once deleted, they are prompted with a success message.
+
+![Confirmation Deletion product admin](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_deletion_product_admin.png)
+
+![Success message product deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/message_deletion_product.png)
+
