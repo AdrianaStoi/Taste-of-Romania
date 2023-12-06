@@ -11,8 +11,9 @@ from django.urls import reverse
 @login_required
 def user_inquiry(request):
 
-    """ This view allows user to submit an inquiry
-        and to display all user inquiries.
+    """ 
+    This view allows user to submit an inquiry
+    and to display all user inquiries.
     """
     inquiries = Inquiry.objects.filter(user=request.user).order_by('-created_on')
 

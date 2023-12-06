@@ -86,13 +86,32 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 * The user stories below were the ones not implemented in the project due to time constraints and were labelled as “Won’t Have” on the Kanban board on Github. These user stories and last EPIC will be implemented in the future:
 
     **EPIC: Store viewing and navigation**
+
     29. As a shopper I want to be able to easily identify discounted products on the site so that I can take advantage of existing discounts. 
 
     **EPIC : Ordering and Checkout**
+
     30. As a site user I want to be able to receive email notifications when a product is out of stock, so that I can be informed when the product becomes available again.
 
     **EPIC : Delivery options**
+
     31. As a shopper I want to be able to choose Express delivery so that I can receive the products earlier than 3 to 5 days. 
+
+### Design, colors and typography
+
+The site's choice of black, white, and red is rooted in their significance in Romanian traditional clothing and culture, a palette that extends to the site's logo. 
+
+The image on the landing page, with Romanian traditional motifs, offer a sense of familiarity to Romanian visitors and provides others with a chance to learn more about Romanian culture. This was inspired from the [blog - Ienationala](https://www.ienationala.ro/blog/index.php/2021/03/03/motive-traditionale-romanesti-care-sunt-principalele-simboluri-si-care-este-semnificatica-lor/)
+
+* Color used for the navbar, landing page, footer, the body of the cards on the products page : #090601
+* The text color scheme was black for the navbar menu and product description. White was used for the paragraphs that have as background color #8b181e and #090601.
+
+* On the buttons I alternated and used the three colors 
+
+* The color choices for the navigation bar, menu the different site sections and pages was selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme. 
+
+Google fonts ‘'Amaranth’ and ‘Open Sans' were used. Specifically, ‘'Amaranth’ was employed for headings, navbar and buttons and ‘'Open Sans' was used for paragraphs. 
+As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pairings/ these two fonts complement each other well. 
 
 ## Agile Methodology
 
@@ -102,3 +121,29 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 * To ensure clarity, every User Story includes well-defined acceptance criteria, further broken down into tasks for seamless execution. 
 * Employing the MoSCoW prioritization technique, the User Stories were categorized from highest to lowest priority: "Must Have," "Should Have," "Could Have," and "Won't Have." 
 * These stories were then assigned to corresponding milestones aligned with the project's sprint cycles.
+
+## Wireframes and Database schema
+
+### Wireframe
+
+* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found [here-Taste of Romania-balsamiq wireframes](): 
+* The layout of the site has changed throughout the project development due to time constraints. As a result, some of the features originally outlined in the wireframe as the User Profile page are to be implemented in the future.
+
+### Database schema
+
+* In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram.
+
+* The diagram is available [here-Taste of Romania-Lucidchart]().
+
+* I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three additional custom models besides the ones from the walkthrough (Product, Order Line, Order, Category, User Profile). These new custom models are "Review", "Favorites" and "Inquiry". 
+* I used Allauth library for the user authentication system.
+
+* The **"Review"** model enables logged in users to comment on products. The Review comment model includes the fields "Comment" and "Rating". The "Product" custom model is linked as a Foreign Key ensuring that each comment is associated with a specific product.  Also, the ‘User’ built in model serves as a Foreign Key, as each comment is attributed to a single user.
+
+* The "rating" field was not implemented in the project at this time due to time constraints. This feature is to be added at a later time.  
+
+* The **"Favorite"** model includes a "product" field that serves as a foreign key, linking to the associated product. In addition, there is a "user" field, which acts as another foreign key, linking to the user who marked the product as a favorite. Finally, the model incorporates an "is_favorite" boolean field, which serves to indicate whether the associated product holds the status of a product marked as a favorite by the user.
+
+* The **"Inquiry"** model is designed with fields to capture and manage user queries. It includes a user field, functioning as a Foreign Key and linking to the respective User involved in the inquiry. The profile field is also a Foreign Key, however this field was not used in the functions at this time.
+
+* Contact details are recorded through the name CharField, email EmailField, and phone_number CharField. The subject CharField allows users to define the topic of their inquiry, while the message TextField accommodates detailed information. The order_number CharField is available for users to associate inquiries with specific orders. Admin responses are stored in the admin_reply TextField, facilitating communication between users and administrators. Additionally, the user_reply TextField offers the option for users to respond or provide further information. This comprehensive model ensures a structured approach to managing and responding to user inquiries effectively.
