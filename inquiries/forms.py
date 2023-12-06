@@ -8,7 +8,7 @@ class InquiryForm(forms.ModelForm):
         fields = ['name', 'email', 'phone_number', 
             'subject', 'order_number_inquiry', 'user_message'
         ]
-    order_number_inquiry = forms.CharField(label='Order Number')
+    order_number_inquiry = forms.CharField(label='Order Number', required=False)
 
     def __init__(self, *args, **kwargs):
         """
@@ -27,3 +27,5 @@ class UserReplyForm(forms.ModelForm):
     class Meta:
         model = Inquiry
         fields = ['user_reply']
+
+    user_reply = forms.CharField(label='Reply', required=True, widget=forms.Textarea)
