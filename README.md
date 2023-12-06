@@ -477,3 +477,244 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 ![Success message product deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/message_deletion_product.png)
 
+
+## Languages
+
+* Skillset used for the project was HTML, CSS, JavaScript and Python.
+
+### Frameworks, Libraries and Programs used
+
+![Gitpod](https://www.gitpod.io/) was used as the editor for developing the site.
+Django was used as Python framework in the development of the project.
+![ElephantSQL](https://www.elephantsql.com/) was used as a database for the project.
+![Django Allauth library](https://docs.allauth.org/en/latest/) was utilized for user authentication system.
+![AWS](https://aws.amazon.com/) was used as storage for dynamic images.
+Psycopg2 and gunicorn were installed as supporting libraries.
+![Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html) was used for Django Forms.
+![Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/) was used for general layout, spacing and buttons.
+![Heroku](https://dashboard.heroku.com/apps) was used as the cloud based hosting platform to deploy the site.
+![GitHub](https://github.com/AdrianaStoi) - The project's deployment history was tracked using Git commit messages on Github. GitHub also served as agile project management tool.
+![Lucidchart](https://www.lucidchart.com/pages/) was used to create and plan the database structure. The diagram is available here – Taste of Romania - Database Diagram.
+![Balsamiq Wireframes ](https://balsamiq.com) was used to create the wireframes for site layout. The wireframe can be found here: Taste of Romania -Wireframes
+![Stripe](https://stripe.com/en-de) used for payments system.
+![Mailchimp](https://mailchimp.com/de/) was used to create the newsletter.
+
+## Testing
+
+* Testing and results can be found in the [TESTING.md]() file [here]().
+
+## Deployment
+
+### Gitpod
+
+* I used ![Gitpod](https://www.gitpod.io/) to develop the project. Here are the steps to create the workspace and run the project:
+* Log in to ![Gitpod](https://www.gitpod.io/) using GitHub account
+* On the Dashboard, click on “New Workspace” which can be found under “Workspaces” section
+* Copy and paste the Repository URL created in GitHub by using the ![CI PP5 Gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template)  into the designated field
+* Click on Create.
+* New Workspace is created in Gitpod.
+* To run and view the project written in Gitpod, click on “Terminal” in the upper left side bar, then select “New Terminal”.
+* The New terminal will open at the bottom part of the page.
+* Install Django by using the command “pip3 install 'django<4' gunicorn”
+* Install supporting libraries: “pip3 install dj_database_url==0.5.0 psycopg2”
+* Then create the Create requirements file by running the code “pip3 freeze --local > requirements.txt”
+* Create Project by running “django-admin startproject project name (e.g. Taste of Romania) .”
+* Create App by using the code “python3 manage.py startapp app name (e.g. home, products, favorites etc.)”
+* In settings.py file add the app to installed apps and save.
+* Migrate the changes in the terminal by using “python3 manage.py migrate”
+* Run the server “python3 manage.py runserver”
+* An error message will appear, copy the host name and add it to “ALLOWED_HOSTS” in the settings.py folder. "e.g. ALLOWED_HOSTS = []"
+
+### Database
+
+* I created a Database on ElephantSQL as follows:
+* Log in to ElephantSQL account
+* Click on “Create New Instance”
+* Set up the plan:
+  * Give the plan a Name (e.g. project name)
+  * Select the "Tiny Turtle (Free) plan"
+  * Leave the "Tags" field blank
+  * Select “Select Region” and then select a data center near
+  * Click on “Review”
+* Check that details are correct and then click “Create instance”
+* Return to the ElephantSQL dashboard and click on the database instance name
+* Under the URL section, the database URL is available. Click on the copy icon to copy the URL.
+
+#### Attach the Database
+
+* In Gitpod terminal:
+* Create "env.py" file on top level directory
+* In "env.py" file import os library
+* Set environment variables : “os.environ["DATABASE_URL"] = "Paste in ElephantSQL database URL"
+* Add in secret key : “os.environ["SECRET_KEY"] = "Make up own randomSecretKey"
+
+### Set up the environment and settings.py file
+
+* In "settings.py" file in Gitpod:
+  * Reference env.py
+  * Create a Remove the insecure secret key and replace it with: “os.environ.get('SECRET_KEY') and add the secret key to env.py”
+  * Comment out the old DataBases Section and replace it with the new Database
+  * In the Gitpod terminal, save all files and Make Migrations using “python3 manage.py migrate”
+
+### Store images to AWS
+* Create an AWS account.
+* Once the account go back to aws.amazon.com
+* From the dashboard, click on “Services” in the upper left corner and search for "S3", select "S3"
+* Or search for the  S3 through the search.
+* Open s3 and create a new bucket
+* Click "Create a new bucket", name the bucket to match Heroku app name if possible
+* Select the closest region 
+* Uncheck block all public access and acknowledge that the bucket will be public.
+* Click "create bucket".
+* Open the bucket created. On the "Properties" tab turn on static website hosting.
+* Scroll to the bottom, locate the "Static website hosting" section, and select "edit". Switch the Static website hosting option to "enabled". Duplicate the default values for both the index and error documents, then click "save changes".
+* Go to "Permissions" tab, scroll down to CORS (Cross-origin resource sharing)  
+* Paste in a coors configuration:
+    ```[ 
+        { 
+        "AllowedHeaders": [ 
+        "Authorization" 
+        ],
+        "AllowedMethods": [
+        "GET" 
+        ], 
+        "AllowedOrigins": [ 
+        "*" 
+        ], 
+        "ExposeHeaders": [] 
+            } 
+    ] 
+    ```
+* Go to the "Bucket policy" tab.
+* Select, policy generator to create a security policy for this bucket.
+* As policy type choose "s3 bucket policy".
+* Allow all principals by using a star.
+* As action add "GetObject".
+* Copy the ARN which stands for Amazon resource name from the other tab.
+* And paste it into the ARN box at the bottom.
+* Click on "Add statement."
+* Click on "Generate policy".
+* Copy this policy into the bucket policy editor.
+* Add a slash star onto the end of the ‘resource key’ and click Save.
+* Go to the Access Control list tab, click edit and enable List for Everyone (public access) and accept the warning box.
+
+### Identify and Access Management (IAM)
+
+* Go to the ‘Services’ menu and open IAM.
+* Click on ‘User Groups’ then create a new group called manage-product-name.
+* Click on create group.
+* Click on Policies and then ‘Create policy’.
+* Go to the JSON tab and then select ‘import managed policy’.
+* Import one that AWS has pre-built for full access to s3.
+* Search for s3 and then import the s3 full access policy.
+* Get the bucket ARN from the bucket policy page in s3.
+* Click on review policy.
+* Give it a name and a description and then click create policy.
+* Click on ‘User Groups’. Select the group, go to the ‘Permissions’ tab, open the ‘Add permissions’ dropdown, and click ‘Attach policies’. Select the policy and click ‘Add permissions’ at the bottom.
+* On the user's page, click add user.
+* Give the user programmatic access.
+* And then select next and put the user in the created group. 
+* To retrieve the CSV and access the keys, go to IAM and select 'Users'
+* Select the user for whom you wish to create a CSV file. 
+* Select the 'Security Credentials' tab.
+* Scroll to 'Access Keys' and click 'Create access key'.
+* Select 'Application running outside AWS', and click next. 
+* On the next screen, you can leave the 'Description tag value' blank. Click 'Create Access Key' 
+* Click the 'Download .csv file' button.
+
+### Connecting S3 to Django
+* In the Gitpod install ‘boto3’ and ‘django-storages’
+* Update the requirements.txt file 
+* Then add storages to the installed apps 
+* Add an if statement in settigns.py: 
+    ```if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'taste-of-romania-5dd5a29030c4'
+    AWS_S3_REGION_NAME = 'eu-central-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com
+    ```
+
+* Add the AWS keys to Heroku to the config variables (refer to Create app in Heroku below).
+* The  AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com' tells Django where the static files are coming from in production
+* In order to tell django that in production it is needed to use s3 to store the  static files whenever someone runs collectstatic, the file ‘custom storages’ file is required.
+* Create a file called custom storages and import both settings from django.conf as well as the s3boto3 storage class from django storages.
+* Create a custom class called static storage :
+    ```class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+    class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+    ```
+
+* Then go to “settings.py”:
+     ``` STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+
+* Next add the below at the beginning of the ‘USE_AWS’ is statement in the settings.py. This will tell the browser that it's okay to cache static files for a long time:
+
+    ```AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+    }
+    ```
+
+* Go to s3 in the AWS bucket, and create a new folder called media.
+* Inside it, click on "upload". Add files. And then select all the product images.
+* Then under Permissions select the option "Grant public-read access" and then click upload. 
+* The static files and media from the S3 AWS will be connected to the django project.
+
+### Create app in Heroku
+
+* I deployed the project on Heroku at the beginning of the project and the steps below were followed:
+* Log into Heroku account or create new account.
+* From the Heroku dashboard click on “New” on the upper right corner and then click on “Create new app”.
+* Add app name (app name must be unique on Heroku).
+* Then select the appropriate region e.g. “Europe” and then click on “Create app”.
+* Then go to “Settings tab”.
+* Add config vars:
+    ```DATABASE_URL, and add the database URL from ElephantSQL as the value
+    SECRET_KEY containing the secret key
+    AWS_ACCESS_KEY_ID containing the AWS access key
+    AWS_SECRET_ACCESS_KEY containing the AWS secret key
+    EMAIL_HOST_USER containing the host user key from Google
+    EMAIL_HOST_PASS containing the host user email address
+    STRIPE_PUBLIC_KEY containing the stripe public key
+    STRIPE_SECRET_KEY containing the stripe secret key
+    STRIPE_WH_SECRET containing the stripe webhandler secret key
+    USE_AWS - True
+    ```
+* In settings.py file in Gitpod:
+  * Add AWS variables and configuration in the settings.py
+  * Link file to the templates directory in Heroku.
+  * Change the templates directory to TEMPLATES_DIR.
+  * Add Heroku Hostname to ALLOWED_HOSTS.
+
+* In Gitpod terminal:
+  * Create media, static, templates folders on top level directory.
+  * Create a Procfile on the top level diectory.
+  * In Procfile add “web: gunicorn PROJ_NAME.wsgi”.
+  * Add, commit and push changes to GitHub.
+
+* Deploy to Heroku:
+  * Go to Heroku account.
+  * Go to “Deploy” tab located at the top of the page.
+  * Under “Deployment method” section, select Github here, and then confirm connection to Github.
+  * Search for the corresponding Github repository name, e.g. Taste of Romania and click “Search”.
+  * Click on “Connect” to link up the Heroku app to the GitHub repository code.
+  * Scroll down on the page, and there are two deployment options in this section: “Automatic deploys” and “Manual deploy”.
+  * Under “Manual deploy”, click on “Deploy Branch”.
+  * Once is deployed there is a message displayed “Your app was successfully deployed.” And a button “View”.
+  * Click on “View” and you are directed to the app deployed and the link.
+
+* Visit deployed site here: ![Taste of Romania](https://taste-of-romania-5dd5a29030c4.herokuapp.com/)
+
+## Credits
+
+## Acknowledgments
+
+
