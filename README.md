@@ -246,3 +246,60 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 ![Footer](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/footer.png)
 
+### Products page 
+
+* On the "All Products" page, users can explore the entire range of products available on the site. In the top left corner, beneath the title, there is a "Product Home" button and the count of displayed products. This layout remains consistent across all product and category pages.
+* For each product there is an image representation of the product. Underneath the image there is information about the product as : product title, price, category tag, heart icon which allows logged in users to add it to favorites and a “See product” button which leads the user to the respective product page. 
+
+![Products](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_page.png)
+
+* On the right side, there is a dropdown menu offering sorting options. Users can arrange the products by price, category name, or product name. This feature provides flexibility in organizing and finding items based on different criteria.
+
+![Products sortby feature](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_sortby.png)
+
+* When the user chooses one of the categories, he will have displayed all the products in that categories. The page will have the same elements as the All products page, meaning Product Home button, product count number, option to sort products. 
+
+![Products by category](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_category.png)
+
+#### Product Information page 
+
+* On the product information page, users will find a "Products Home" button at the top left corner. 
+* To the left, there is an image displaying  the respective product. 
+* On the right side, users can access detailed product information, including the product name, weight (if applicable), a heart icon for adding to favorites, price, description, ingredients (if applicable), size (if applicable), and a quantity section that allows them to adjust the quantity for purchase. The page also includes “Continue Shopping" and "Add to Cart" buttons for seamless navigation and purchasing.
+
+![Product information](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_info_page.png)
+
+![Product page clothing](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_page_clothing.png)
+
+#### Reviews - comments
+
+* Under the product information page there is the reviews section, which at the moment includes the Comments section. The rating feature has not been implemented at this time. 
+In the Comments section, users who are not logged in will have read access to view the comments.
+
+![Reviews guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/reviews_unregistered_no_reviews.png)
+
+* There is also a message displayed “Login or Register to like and leave a comment.” This message encourages users to engage with the community by providing feedback.
+* If no comments are available, there is stated “No reviews yet.”
+
+![No reviews](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/reviews_unregistered_no_reviews.png)
+
+* When a user is logged in, they have the option to submit a comment using a comment form. After sending a comment, they will be prompted with the message “Review added successfully” 
+
+![Review logged in user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/reviews_loggedin_user.png)
+
+![Review - submit success message](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/success_message_review_submitted.png)
+
+* Once the comment is submitted, it will appear in the comment section, and the logged-in user will have the ability to “Edit” or “Delete” their comment.
+
+![]()
+
+* When editing the comment, the user is redirected to a new page where they can make the necessary changes. After editing, they are redirected to the previous page and they are be prompted with a success message alert.
+
+![Edit comment](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/comment_edit.png)
+
+![Edit alert message](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/success_message_edit_comment.png)
+
+* When deleting a comment, the user is prompted with a confirmation message to confirm the deletion. After confirming, the comment will be deleted. They are redirected to the previous page and they are prompted with a success message alert.
+
+![Confirm deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/comment_deletion.png)
+![Alert confirm deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/success_message_deletion.png)
