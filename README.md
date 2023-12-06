@@ -291,7 +291,7 @@ In the Comments section, users who are not logged in will have read access to vi
 
 * Once the comment is submitted, it will appear in the comment section, and the logged-in user will have the ability to “Edit” or “Delete” their comment.
 
-![]()
+![Comment submitted](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/comment_submitted.png)
 
 * When editing the comment, the user is redirected to a new page where they can make the necessary changes. After editing, they are redirected to the previous page and they are be prompted with a success message alert.
 
@@ -303,3 +303,43 @@ In the Comments section, users who are not logged in will have read access to vi
 
 ![Confirm deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/comment_deletion.png)
 ![Alert confirm deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/success_message_deletion.png)
+
+
+### Login page
+
+* On the login page the user is asked to enter their username and password. If the user is not registered yet, they can click on “Register”.
+
+![Login page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/login_page.png)
+
+![Success login](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/success_message_signed_in.png)
+
+* When user enters a wrong username or password, they are prompted with the message “The username and/or password you specified are not correct.”
+
+![Login incorrect password](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/login_incorrect_password.png)
+
+* When users are logged in, at the top right corner their user name is displayed.
+
+![Logged in user name](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/user_logged_in.png)
+
+### Logout page
+
+* When clicking on logout, users are redirected to a page that asks them to confirm their intention to log out. This step helps ensure that users do not accidentally log out and asks for them to confirm this action before proceeding.
+
+
+![Log out](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_logout.png)
+
+![Success message signed out](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/success_message_signed_out.png)
+
+### Register Page
+
+* On the register page, users are asked to enter their name, email and create a password: Once they are registered, they are prompted with the page “Verify your email address” and with a message alert. Once the email is verified the user can log in. 
+
+
+![Register Page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/register_page.png)
+
+* Verify your email address: 
+
+![Verify email page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/verify_email_page.png)
+![Alert message email sent](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/alert_message.png)
+
+
