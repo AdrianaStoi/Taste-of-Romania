@@ -484,20 +484,20 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 ### Frameworks, Libraries and Programs used
 
-![Gitpod](https://www.gitpod.io/) was used as the editor for developing the site.
-Django was used as Python framework in the development of the project.
-![ElephantSQL](https://www.elephantsql.com/) was used as a database for the project.
-![Django Allauth library](https://docs.allauth.org/en/latest/) was utilized for user authentication system.
-![AWS](https://aws.amazon.com/) was used as storage for dynamic images.
-Psycopg2 and gunicorn were installed as supporting libraries.
-![Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html) was used for Django Forms.
-![Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/) was used for general layout, spacing and buttons.
-![Heroku](https://dashboard.heroku.com/apps) was used as the cloud based hosting platform to deploy the site.
-![GitHub](https://github.com/AdrianaStoi) - The project's deployment history was tracked using Git commit messages on Github. GitHub also served as agile project management tool.
-![Lucidchart](https://www.lucidchart.com/pages/) was used to create and plan the database structure. The diagram is available here – Taste of Romania - Database Diagram.
-![Balsamiq Wireframes ](https://balsamiq.com) was used to create the wireframes for site layout. The wireframe can be found here: Taste of Romania -Wireframes
-![Stripe](https://stripe.com/en-de) used for payments system.
-![Mailchimp](https://mailchimp.com/de/) was used to create the newsletter.
+* [Gitpod](https://www.gitpod.io/) was used as the editor for developing the site.
+* Django was used as Python framework in the development of the project.
+* [ElephantSQL](https://www.elephantsql.com/) was used as a database for the project.
+* [Django Allauth library](https://docs.allauth.org/en/latest/) was utilized for user authentication system.
+* [AWS](https://aws.amazon.com/) was used as storage for dynamic images.
+* Psycopg2 and gunicorn were installed as supporting libraries.
+* [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html) was used for Django Forms.
+* [Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/) was used for general layout, spacing and buttons.
+* [Heroku](https://dashboard.heroku.com/apps) was used as the cloud based hosting platform to deploy the site.
+* [GitHub](https://github.com/AdrianaStoi) - The project's deployment history was tracked using Git commit messages on Github. GitHub also served as agile project management tool.
+* [Lucidchart](https://www.lucidchart.com/pages/) was used to create and plan the database structure. The diagram is available here – Taste of Romania - Database Diagram.
+* [Balsamiq Wireframes ](https://balsamiq.com) was used to create the wireframes for site layout. The wireframe can be found here: Taste of Romania -Wireframes
+* [Stripe](https://stripe.com/en-de) used for payments system.
+* [Mailchimp](https://mailchimp.com/de/) was used to create the newsletter.
 
 ## Testing
 
@@ -507,10 +507,10 @@ Psycopg2 and gunicorn were installed as supporting libraries.
 
 ### Gitpod
 
-* I used ![Gitpod](https://www.gitpod.io/) to develop the project. Here are the steps to create the workspace and run the project:
-* Log in to ![Gitpod](https://www.gitpod.io/) using GitHub account
+* I used [Gitpod](https://www.gitpod.io/) to develop the project. Here are the steps to create the workspace and run the project:
+* Log in to [Gitpod](https://www.gitpod.io/) using GitHub account
 * On the Dashboard, click on “New Workspace” which can be found under “Workspaces” section
-* Copy and paste the Repository URL created in GitHub by using the ![CI PP5 Gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template)  into the designated field
+* Copy and paste the Repository URL created in GitHub by using the [CI PP5 Gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template)  into the designated field
 * Click on Create.
 * New Workspace is created in Gitpod.
 * To run and view the project written in Gitpod, click on “Terminal” in the upper left side bar, then select “New Terminal”.
@@ -711,7 +711,7 @@ Psycopg2 and gunicorn were installed as supporting libraries.
   * Once is deployed there is a message displayed “Your app was successfully deployed.” And a button “View”.
   * Click on “View” and you are directed to the app deployed and the link.
 
-* Visit deployed site here: ![Taste of Romania](https://taste-of-romania-5dd5a29030c4.herokuapp.com/)
+* Visit deployed site here: [Taste of Romania](https://taste-of-romania-5dd5a29030c4.herokuapp.com/)
 
 ## Credits
 
