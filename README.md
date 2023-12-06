@@ -87,15 +87,15 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
     **EPIC: Store viewing and navigation**
 
-    29. As a shopper I want to be able to easily identify discounted products on the site so that I can take advantage of existing discounts. 
+29. As a shopper I want to be able to easily identify discounted products on the site so that I can take advantage of existing discounts. 
 
     **EPIC : Ordering and Checkout**
 
-    30. As a site user I want to be able to receive email notifications when a product is out of stock, so that I can be informed when the product becomes available again.
+30. As a site user I want to be able to receive email notifications when a product is out of stock, so that I can be informed when the product becomes available again.
 
     **EPIC : Delivery options**
 
-    31. As a shopper I want to be able to choose Express delivery so that I can receive the products earlier than 3 to 5 days. 
+31. As a shopper I want to be able to choose Express delivery so that I can receive the products earlier than 3 to 5 days. 
 
 ### Design, colors and typography
 
@@ -133,7 +133,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram.
 
-* The diagram is available [here-Taste of Romania-Lucidchart]().
+* The diagram is available [here-Taste of Romania-Lucidchart](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/wireframes/Lucidchart-Taste%20of%20Romania.pdf).
 
 * I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three additional custom models besides the ones from the walkthrough (Product, Order Line, Order, Category, User Profile). These new custom models are "Review", "Favorites" and "Inquiry". 
 * I used Allauth library for the user authentication system.
@@ -147,3 +147,70 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 * The **"Inquiry"** model is designed with fields to capture and manage user queries. It includes a user field, functioning as a Foreign Key and linking to the respective User involved in the inquiry. The profile field is also a Foreign Key, however this field was not used in the functions at this time.
 
 * Contact details are recorded through the name CharField, email EmailField, and phone_number CharField. The subject CharField allows users to define the topic of their inquiry, while the message TextField accommodates detailed information. The order_number CharField is available for users to associate inquiries with specific orders. Admin responses are stored in the admin_reply TextField, facilitating communication between users and administrators. Additionally, the user_reply TextField offers the option for users to respond or provide further information. This comprehensive model ensures a structured approach to managing and responding to user inquiries effectively.
+
+![Taste of Romania - Database Diagram]()
+
+## Existing Features
+
+### Home page
+
+#### Navigation Bar
+
+* The navigation bar is present on all site pages. It is a fully responsive navigation bar which includes the links for easy user navigation to the “My Account”, “My Favorites”, “Shopping Cart” page. When users click on the “Taste of Romania” logo they will be directed to the “Home” page. With these features the user can navigate from page to page and does not have to use back to revert to the previous page. The navigation bar can be used on all device types: desktop, tablet, and smartphones.
+
+![Image navbar](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar.png)
+
+* When the unregistered user clicks on ‘My Account’, he has a dropdown menu with the options ‘Register’ and ‘Login’. 
+
+![Image navbar My account](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_myaccount_unregistered.png)
+
+* Logged in user will have multiple options when clicking on My Account, which are My Profile, My Inquiries and Logout. These are the options based on user type.
+
+* My Account options when the admin is signed in : 
+
+![Image navbar- admin signed in](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/myaccount_signed_in_admin.png)
+
+* My Account options when regular user is signed in : 
+
+![Image navbar regular user signed in ]()
+
+#### Search bar
+
+* In the middle of the navbar the user can access a search bar, which remains accessible across all pages. 
+
+![Image search](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar.png)
+
+##### Search results
+
+* This feature enables the user to search for products. On the products results page, there is a “Products Home” button to improve the user experience. This button allows users to easily return to the Products page.
+
+![Search results](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/search_results.png)
+
+##### Search no results
+
+* If no products are found, a message is displayed stating “0 products found for.”
+
+![Search no results](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/search_no_results.png)
+
+#### Delivery threshold 
+
+* At the top of the page the user can see the delivery threshold for free delivery. This has been added at the top of the page, so it is visible to the user and remains accessible across all pages.
+
+![ Delivery threshold]()
+
+#### Navbar menu 
+
+* Underneath the navbar, there is located the navbar menu with the different categorization types. The navigation menu is present on all site pages. 
+* There is “All Products” dropdown menu with the options to view products “By Price”, “By Category” and “All Products”. 
+
+![Navbar menu ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_categorization.png)
+
+* Under Romanian specialties the user can go to categories: Cheese, Meat products, Sweets, Snacks Food Cupboard or All Romanian specialties. 
+
+![Navbar menu ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_specialties.png)
+
+* The Drinks section does not include a dropdown menu. This will lead to the Drinks page. 
+* An lastly under the “Artisanal products” section, the user can choose to go to : Traditional clothing, Handmade pottery, Handmade bracelet or All Artisanal Products. 
+
+![Navbar menu ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_artisanal.png)
+
