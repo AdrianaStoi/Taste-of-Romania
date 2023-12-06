@@ -372,4 +372,43 @@ In the Comments section, users who are not logged in will have read access to vi
 ![Checkout logged in user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/checkout_loggedin_user.png)
 
 
+### My Profile page
 
+* On the profile page on the left side, the logged in user can find their default delivery information if they save it in their account along with the option to update the information. 
+
+* On the right side the user can see their order history. If they click on the order number, they will be directed to the order confirmation page which displays their order details. 
+
+![My Profile page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/myprofile_page.png)
+
+### My inquiries page
+
+* On the my inquiries page the user can send a request a request about their current order or just send a question to the shop. 
+* On this page the logged in users can also find a history of their inquiries: 
+
+![My inquiries page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_inquiries_page.png)
+
+### Inquiry details page 
+
+* On the Inquiry details page, the user can see their request details. They can add a reply to the existing request which will be added to the existing one. At this time, the reply option has been added as a string. It is added as a separate message line under the “Reply” section along with their name.
+
+![Inquiry details page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_inquiry_details.png)
+
+#### User Reply 
+
+Reply added to the request:
+
+![Inquiry - Reply](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_inquiry_details_reply.png)
+
+#### Admin Reply 
+
+* When there is an update from the Taste of Romania, this will be displayed under the “Taste of Romania” section in the form. 
+* At the moment the admin can add a message only within their Django admin panel. 
+* The admin message will be displayed as per below: 
+
+![Admin Reply ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_inquiry_details_admin_reply.png)
+
+The users have also the option to delete the request. When clicking on “Delete request”, they are prompted with a confirmation deletion page indicating the inquiry number. 
+
+![Delete request button](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/delete_request_button.png) 
+
+![Confirm deletion inquiry](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_deletion_inquiry.png) ![Confirm deletion alert inquiry](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirmation_deletion_inquiry_alert.png)
