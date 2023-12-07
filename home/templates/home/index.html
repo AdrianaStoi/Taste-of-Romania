@@ -26,9 +26,9 @@
                 <h2 class="text-center"> Explore, Order, Enjoy!</h2>
             </div>
             <div class="align-items-center my-5">
-                <h4>
+                <h3>
                     <a href="{% url 'products' %}" class="see-products-button btn btn-lg rounded text-uppercase  text-white">See our Products</a>
-                </h4>
+                </h3>
             </div>
         </div>
     </div>
@@ -53,14 +53,14 @@
 
 <!--Choose a category section-->
 <section class="container mt-4">
-    <h4 class="mt-4 mb-4">Choose a category</h4> 
+    <h3 class="mt-4 mb-4">Choose a category</h3> 
     <div class="row  text-center">
         <div class="col-md-4">
             <div class="card h-75">
                 <img src="{% static 'media/sweets_and_savory.png' %}" class="card-img-top h-100" alt="Romanian sweets and savory">
                 <div class="card-body">
                     <a href="{% url 'products' %}?category=cheese, meat_products,sweets,snacks,food_cupboard" class="text-decoration-none">
-                        <h5 class="card-title">Sweet and Savory</h5>
+                        <h4 class="card-title">Sweet and Savory</h4>
                     </a>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                 <img src="{% static 'media/drinks_category.png' %}" class="card-img-top h-100" alt="Romanian drinks image">
                 <div class="card-body">
                     <a href="{% url 'products' %}?category=drinks" class="text-decoration-none">
-                        <h5 class="card-title"> Alcoholic Drinks</h5>
+                        <h4 class="card-title"> Alcoholic Drinks</h4>
                     </a>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                 <img src="{% static 'media/romanian_pottery.png' %}" class="card-img-top h-100" alt="Romanian pottery image">
                 <div class="card-body">
                     <a href="{% url 'products' %}?category=traditional_clothing,handmade_pottery,handmade_bracelet" class="text-decoration-none">
-                        <h5 class="card-title"> Clothing and Handmade pottery </h5>
+                        <h4 class="card-title"> Clothing and Handmade pottery </h4>
                     </a>
                 </div>
             </div>
