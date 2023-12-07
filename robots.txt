@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /profile/
+Disallow: /inquiries/
+Sitemap: https://taste-of-romania-5dd5a29030c4.herokuapp.com/sitemap.xml
