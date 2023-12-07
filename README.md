@@ -13,6 +13,34 @@ Customers can easily navigate the site by category, leave reviews, and add produ
 
 Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
+## Table of contents
+
+-[Taste of Romania](#Taste-of-Romania)
+
+-[Table of contents](#Table-of-contents)
+
+-[User Experience](#User-Experience)
+
+  -[The goal of the site owner](#The-goal-of-the-site-owner)
+
+  -[The goal of the external user](#The-goal-of-the-external-user)
+
+  -[User stories](#User-stories)
+    -[EPIC: Back-end Store Administration](#EPIC:-Back-end-Store-Administration)
+    -[EPIC: Store viewing and navigation](#EPIC:-Store-viewing-and-navigation)
+    -[EPIC: User Login/Registration and Profile ](#EPIC:-User-Login/Registration-and-Profile)
+    -[EPIC: Product Categorization and Searching](#EPIC:-Product-Categorization-and-Searching)
+    -[EPIC: Ordering and Checkout](#EPIC:-Ordering-and-Checkout)
+    -[EPIC: Product Comment and Rating](#EPIC:-Product-Comment-and-Rating)
+    -[EPIC: Subscribe to Newsletter ](#EPIC:-Subscribe-to-Newsletter )
+    -[EPIC: Front-end Store Administration ](#EPIC:-Front-end-Store-Administration)
+
+  -[Future Features](#Future-Features)
+  
+
+
+
+
 ## User Experience
 
 ### The goal of the site owner
@@ -160,6 +188,8 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 ### SEO 
 
+#### Keywords
+
 * I conducted keyword research for the site, utilizing both short and long-tail keywords. Initially, I checked Google search results and wordtracker.com; however, due to the limitations of the free option on wordtracker.com, I relied more on Google searches for keyword research.
 
 * To refine my list, I examined the number of results for each keyword and explored the "Related searches" and "People also ask" sections on Google. I created a list of relevant keywords, prioritizing those most suitable for improving the site's ranking in search engine results.
@@ -198,7 +228,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
     Romanian grocery online
     Romanian products near me
 
-### Robots.txt and Sitemaps
+#### Robots.txt and Sitemaps
 
 * A robots.txt file was created for the site to instruct search engines about areas they should avoid while navigating on the site. This file is used for enhancing the site’s SEO ranking.
 
@@ -226,9 +256,9 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * This was the link for the Facebook business page, which has been in the meantime deactivated : https://www.facebook.com/profile.php?id=61554418048295
 
-[Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_fb.png)
+![Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_fb.png)
 
-[Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_facebook.png)
+![Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_facebook.png)
 
 
 ### Email Marketing 
