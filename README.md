@@ -15,30 +15,83 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
 ## Table of contents
 
--[Taste of Romania](#Taste-of-Romania)
-
--[Table of contents](#Table-of-contents)
-
--[User Experience](#User-Experience)
-
-  -[The goal of the site owner](#The-goal-of-the-site-owner)
-
-  -[The goal of the external user](#The-goal-of-the-external-user)
-
-  -[User stories](#User-stories)
-    -[EPIC: Back-end Store Administration](#EPIC:-Back-end-Store-Administration)
-    -[EPIC: Store viewing and navigation](#EPIC:-Store-viewing-and-navigation)
-    -[EPIC: User Login/Registration and Profile ](#EPIC:-User-Login/Registration-and-Profile)
-    -[EPIC: Product Categorization and Searching](#EPIC:-Product-Categorization-and-Searching)
-    -[EPIC: Ordering and Checkout](#EPIC:-Ordering-and-Checkout)
-    -[EPIC: Product Comment and Rating](#EPIC:-Product-Comment-and-Rating)
-    -[EPIC: Subscribe to Newsletter ](#EPIC:-Subscribe-to-Newsletter )
-    -[EPIC: Front-end Store Administration ](#EPIC:-Front-end-Store-Administration)
-
-  -[Future Features](#Future-Features)
-  
-
-
+- [Taste of Romania](#Taste-of-Romania)
+- [Table of contents](#Table-of-contents)
+- [User Experience](#User-Experience)
+  - [The goal of the site owner](#The-goal-of-the-site-owner)
+  - [The goal of the external user](#The-goal-of-the-external-user)
+  - [User stories](#User-stories)
+    - [EPIC: Back-end Store Administration](#EPIC:-Back-end-Store-Administration)
+    - [EPIC: Store viewing and navigation](#EPIC:-Store-viewing-and-navigation)
+    - [EPIC: User Login/Registration and Profile ](#EPIC:-User-Login/Registration-and-Profile)
+    - [EPIC: Product Categorization and Searching](#EPIC:-Product-Categorization-and-Searching)
+    - [EPIC: Ordering and Checkout](#EPIC:-Ordering-and-Checkout)
+    - [EPIC: Product Comment and Rating](#EPIC:-Product-Comment-and-Rating)
+    - [EPIC: Subscribe to Newsletter ](#EPIC:-Subscribe-to-Newsletter )
+    - [EPIC: Front-end Store Administration ](#EPIC:-Front-end-Store-Administration)
+  - [Future Features](#Future-Features)
+  - [Design, colors and typography](#Design,-colors-and-typography)
+- [Agile Methodology](#Agile-Methodology)
+- [Wireframes and Database schema](#Wireframes-and-Database-schema)
+  - [Wireframe](#Wireframe)
+  - [Database schema](#Database-schema)
+- [Business Model](#Business-Model)
+- [Marketing Strategies](#Marketing-Strategies)
+  - [SEO](#SEO)
+    - [Keywords](#Keywords)
+    - [Robots.txt and Sitemaps](#Robots.txt-and-Sitemaps)
+  - [Content Marketing](#Content-Marketing)
+  - [Social Media Marketing](#Social-Media-Marketing)
+  - [Email Marketing](#Email-Marketing)
+- [Existing Features](#Existing-Features)
+  - [Home page](#Home-page)
+    - [Navigation Bar](#Navigation-Bar)
+    - [Search bar](#Search-bar)
+      - [Search results](#Search-results)
+      - [Search no results](#Search-no-results)
+    - [Delivery threshold](#Delivery-threshold)
+    - [Navbar menu](#Navbar-menu)
+    - [Landing image](#Landing-image)
+    - [About us](#About-us)
+    - [Choose a category](#Choose-a-category)
+    - [Payment, shipping and return](#Payment,-shipping-and-return)
+    - [Footer](#Footer)
+- [Products page](#Products-page)
+- [Product Information page](#Product-Information-page)
+  - [Reviews - comments](#Reviews-comments)
+- [Login page](#Login-page)
+- [Logout page](#Logout-page)
+- [Register Page](#Register-Page)
+- [Ordering process](#Ordering-process)
+  - [Guest checkout](#Guest-checkout)
+    - [Shopping cart](#Shopping-cart)
+  - [Logged in user](#Logged-in-user)
+- [My Profile page](#My-Profile-page)
+- [My inquiries page](#My-inquiries-page)
+- [Inquiry details page](#Inquiry-details-page)
+  - [User Reply](#User-Reply)
+  - [Admin Reply](#Admin-Reply)
+- [My Favorites page](#My-Favorites-page)
+  - [Logged in user](#Logged-in-user)
+  - [Product added to favorites](#Product-added-to-favorites)
+  - [Existing favorites product:](#Existing-favorites-product:)
+  - [Remove product from favorites](#Remove-product-from-favorites)
+  - [Guest users](#Guest-users)
+- [Product Administration page](#Product-Administration-page)
+- [Languages](#Languages)
+  - [Frameworks, Libraries and Programs used](#Frameworks,-Libraries-and-Programs-used)
+- [Testing](#Testing)
+- [Deployment](#Deployment)
+  - [Gitpod](#Gitpod)
+  - [Database](#Database)
+    - [Attach the Database](#Attach-the-Database)
+  - [Set up the environment and settings.py file](#Set-up-the-environment-and-settings.py-file)
+  - [Store images to AWS](#Store-images-to-AWS)
+  - [Identify and Access Management (IAM)](#Identify-and-Access-Management-(IAM))
+  - [Connecting S3 to Django](#Connecting-S3-to-Django)
+  - [Create app in Heroku](#Create-app-in-Heroku)
+- [Credits](#Credits)
+- [Acknowledgments](#Acknowledgments)
 
 
 ## User Experience
@@ -377,7 +430,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 ![Products by category](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_category.png)
 
-#### Product Information page 
+### Product Information page 
 
 * On the product information page, users will find a "Products Home" button at the top left corner. 
 * To the left, there is an image displaying  the respective product. 
@@ -834,3 +887,6 @@ The users can remove a product from favorites, either by going to the “My Favo
 ## Acknowledgments
 
 
+
+
+[def]: #Future-Features
