@@ -63,7 +63,7 @@
                                     <div class="row">
                                         <div class="col mt-1 mb-3 pl-2">
                                             <p class="lead mb-0 text-left">{{ product.price }}€</p>
-                                            {% if product.category %}
+                                            <strong>{% if product.category %}</strong>
                                             <p class="small mt-1 mb-2">
                                                 <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">
                                                     <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
