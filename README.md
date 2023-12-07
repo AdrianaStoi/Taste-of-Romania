@@ -21,14 +21,14 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
   - [The goal of the site owner](#The-goal-of-the-site-owner)
   - [The goal of the external user](#The-goal-of-the-external-user)
   - [User stories](#User-stories)
-    - [EPIC: Back-end Store Administration](#EPIC:-Back-end-Store-Administration)
-    - [EPIC: Store viewing and navigation](#EPIC:-Store-viewing-and-navigation)
-    - [EPIC: User Login/Registration and Profile ](#EPIC:-User-Login/Registration-and-Profile)
-    - [EPIC: Product Categorization and Searching](#EPIC:-Product-Categorization-and-Searching)
-    - [EPIC: Ordering and Checkout](#EPIC:-Ordering-and-Checkout)
-    - [EPIC: Product Comment and Rating](#EPIC:-Product-Comment-and-Rating)
-    - [EPIC: Subscribe to Newsletter ](#EPIC:-Subscribe-to-Newsletter )
-    - [EPIC: Front-end Store Administration ](#EPIC:-Front-end-Store-Administration)
+    - [EPIC: Back-end Store Administration](#EPIC-Back-end-Store-Administration)
+    - [EPIC: Store viewing and navigation](#EPIC-Store-viewing-and-navigation)
+    - [EPIC: User Login/Registration and Profile ](#EPIC-User-Login/Registration-and-Profile)
+    - [EPIC: Product Categorization and Searching](#EPIC-Product-Categorization-and-Searching)
+    - [EPIC: Ordering and Checkout](#EPIC-Ordering-and-Checkout)
+    - [EPIC: Product Comment and Rating](#EPIC-Product-Comment-and-Rating)
+    - [EPIC: Subscribe to Newsletter ](#EPIC-Subscribe-to-Newsletter )
+    - [EPIC: Front-end Store Administration ](#EPIC-Front-end-Store-Administration)
   - [Future Features](#Future-Features)
   - [Design, colors and typography](#Design,-colors-and-typography)
 - [Agile Methodology](#Agile-Methodology)
@@ -74,7 +74,7 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 - [My Favorites page](#My-Favorites-page)
   - [Logged in user](#Logged-in-user)
   - [Product added to favorites](#Product-added-to-favorites)
-  - [Existing favorites product:](#Existing-favorites-product:)
+  - [Existing favorites product:](#Existing-favorites-product)
   - [Remove product from favorites](#Remove-product-from-favorites)
   - [Guest users](#Guest-users)
 - [Product Administration page](#Product-Administration-page)
@@ -162,6 +162,8 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 27. As a store owner I want to be able to edit a product from the frontend site so that I can easily edit products details accordingly without having to access the backend.  
 28. As a store owner I want to be able to delete a product from the frontend site so that I can easily delete products that are no longer available without having to access the backend.  
 
+[Back to table of contents](#table-of-contents)
+
 ### Future Features
 
 * The user stories below were the ones not implemented in the project due to time constraints and were labelled as “Won’t Have” on the Kanban board on Github. These user stories and last EPIC will be implemented in the future:
@@ -193,6 +195,8 @@ The image on the landing page, with Romanian traditional motifs, offer a sense o
 
 Google fonts ‘'Amaranth’ and ‘Open Sans' were used. Specifically, ‘'Amaranth’ was employed for headings, navbar and buttons and ‘'Open Sans' was used for paragraphs. 
 As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pairings/ these two fonts complement each other well. 
+
+[Back to table of contents](#table-of-contents)
 
 ## Agile Methodology
 
@@ -230,6 +234,8 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 * Contact details are recorded through the name CharField, email EmailField, and phone_number CharField. The subject CharField allows users to define the topic of their inquiry, while the message TextField accommodates detailed information. The order_number CharField is available for users to associate inquiries with specific orders. Admin responses are stored in the admin_reply TextField, facilitating communication between users and administrators. Additionally, the user_reply TextField offers the option for users to respond or provide further information. This comprehensive model ensures a structured approach to managing and responding to user inquiries effectively.
 
 ![Taste of Romania - Database Diagram](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/lucidchart_taste_of_romania.png)
+
+[Back to table of contents](#table-of-contents)
 
 ## Business Model
 
@@ -318,6 +324,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * Mailchimp has been used to implement a newsletter signup feature on the site. Any user visiting the site can subscribe to the newsletter by providing their email address without requiring them to create an account. It serves as a means of communicating product updates and news, reaching both potential new customers and existing customers. 
 
+[Back to table of contents](#table-of-contents)
 
 ## Existing Features
 
@@ -342,6 +349,8 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 * My Account options when regular user is signed in : 
 
 ![Image navbar regular user signed in ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_loggedin_regular_user.png)
+
+[Back to table of contents](#table-of-contents)
 
 #### Search bar
 
@@ -415,6 +424,8 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 ![Footer](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/footer.png)
 
+[Back to table of contents](#table-of-contents)
+
 ### Products page 
 
 * On the "All Products" page, users can explore the entire range of products available on the site. In the top left corner, beneath the title, there is a "Product Home" button and the count of displayed products. This layout remains consistent across all product and category pages.
@@ -429,6 +440,8 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 * When the user chooses one of the categories, he will have displayed all the products in that categories. The page will have the same elements as the All products page, meaning Product Home button, product count number, option to sort products. 
 
 ![Products by category](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_category.png)
+
+[Back to table of contents](#table-of-contents)
 
 ### Product Information page 
 
@@ -473,6 +486,7 @@ In the Comments section, users who are not logged in will have read access to vi
 ![Confirm deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/comment_deletion.png)
 ![Alert confirm deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/success_message_deletion.png)
 
+[Back to table of contents](#table-of-contents)
 
 ### Login page
 
@@ -489,6 +503,8 @@ In the Comments section, users who are not logged in will have read access to vi
 * When users are logged in, at the top right corner their user name is displayed.
 
 ![Logged in user name](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/user_logged_in.png)
+
+[Back to table of contents](#table-of-contents)
 
 ### Logout page
 
@@ -510,6 +526,8 @@ In the Comments section, users who are not logged in will have read access to vi
 
 ![Verify email page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/verify_email_page.png)
 ![Alert message email sent](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/alert_message.png)
+
+[Back to table of contents](#table-of-contents)
 
 ### Ordering process 
 #### Guest checkout 
@@ -534,6 +552,8 @@ In the Comments section, users who are not logged in will have read access to vi
  
 ![Order confirmation](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/order_confirmation.png)
 
+[Back to table of contents](#table-of-contents)
+
 #### Logged in user
 
 * The ordering process for the logged-in user is the same as for the guest user, with the difference being that on the checkout page, the logged-in user will only need to add their name and card details. The personal information will be prefilled with the details from their account.
@@ -548,6 +568,8 @@ In the Comments section, users who are not logged in will have read access to vi
 * On the right side the user can see their order history. If they click on the order number, they will be directed to the order confirmation page which displays their order details. 
 
 ![My Profile page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/myprofile_page.png)
+
+[Back to table of contents](#table-of-contents)
 
 ### My inquiries page
 
@@ -582,6 +604,7 @@ The users have also the option to delete the request. When clicking on “Delete
 
 ![Confirm deletion inquiry](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_deletion_inquiry.png) ![Confirm deletion alert inquiry](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirmation_deletion_inquiry_alert.png)
 
+[Back to table of contents](#table-of-contents)
 
 ### My Favorites page
 
@@ -619,6 +642,7 @@ The users can remove a product from favorites, either by going to the “My Favo
 ![My favorites page- guest users](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_guest_users.png)
 ![Guest users popup message](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_guest_users_popup_message.png)
 
+[Back to table of contents](#table-of-contents)
 
 ### Product Administration page 
 
@@ -646,6 +670,7 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 ![Success message product deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/message_deletion_product.png)
 
+[Back to table of contents](#table-of-contents)
 
 ## Languages
 
@@ -667,6 +692,8 @@ The users can remove a product from favorites, either by going to the “My Favo
 * [Balsamiq Wireframes ](https://balsamiq.com) was used to create the wireframes for site layout. The wireframe can be found here: Taste of Romania -Wireframes
 * [Stripe](https://stripe.com/en-de) used for payments system.
 * [Mailchimp](https://mailchimp.com/de/) was used to create the newsletter.
+
+[Back to table of contents](#table-of-contents)
 
 ## Testing
 
@@ -693,6 +720,8 @@ The users can remove a product from favorites, either by going to the “My Favo
 * Migrate the changes in the terminal by using “python3 manage.py migrate”
 * Run the server “python3 manage.py runserver”
 * An error message will appear, copy the host name and add it to “ALLOWED_HOSTS” in the settings.py folder. "e.g. ALLOWED_HOSTS = []"
+
+[Back to table of contents](#table-of-contents)
 
 ### Database
 
@@ -882,11 +911,11 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 * Visit deployed site here: [Taste of Romania](https://taste-of-romania-5dd5a29030c4.herokuapp.com/)
 
+[Back to table of contents](#table-of-contents)
+
 ## Credits
 
 ## Acknowledgments
 
 
-
-
-[def]: #Future-Features
+[Back to table of contents](#table-of-contents)
