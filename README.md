@@ -150,6 +150,92 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 ![Taste of Romania - Database Diagram](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/lucidchart_taste_of_romania.png)
 
+## Business Model
+
+* Taste of Romania has a Business to Consumer (B2C) Business Model with products sold directly from the shop to end consumers. This is a specialized online shop addressing a niche market. The typical customer of Taste of Romania is expected to be individuals who are Romanians residing abroad, those who have visited Romania, or individuals with Romanian friends and acquaintances. 
+
+## Marketing Strategies
+
+* Several Marketing strategies were used for the project which are SEO, Content Marketing, Social Media Marketing and Email Marketing. 
+
+### SEO 
+
+* I conducted keyword research for the site, utilizing both short and long-tail keywords. Initially, I checked Google search results and wordtracker.com; however, due to the limitations of the free option on wordtracker.com, I relied more on Google searches for keyword research.
+
+* To refine my list, I examined the number of results for each keyword and explored the "Related searches" and "People also ask" sections on Google. I created a list of relevant keywords, prioritizing those most suitable for improving the site's ranking in search engine results.
+
+* These keywords were integrated into various elements of the site, including product descriptions, the navigation menu, and headings, all of which contribute significantly to SEO. Additionally, I incorporated meta keywords into my base HTML template, selecting the most pertinent and applicable keywords. To further improve SEO, the alt tag descriptions for the images include the product names, which are essential components of the keywords.
+
+* The initial keyword list included: 
+
+    __Short-tail keywords__
+
+    Romanian specialties
+    Romanian pottery
+    Romanian sweets
+    Mici
+    Romanian snacks
+    Blouse IE
+    Romanian chocolate
+    Romanian gifts
+    Tradition
+    Romanian zacusca
+    Romanian cheese
+    Romanian drinks
+    Visinata
+
+    __Long-tail keywords__
+
+    Romanian online store
+    Products from Romania
+    Traditional Romanian gifts
+    Romanian traditional blouse ie
+    Romanian cheese buy online
+    Traditional Romanian products buy online
+    Where to buy Romanian mici
+    Buy Romanian food online
+    Artisanal and crafts from Romania
+    Romanian grocery online
+    Romanian products near me
+
+### Robots.txt and Sitemaps
+
+* A robots.txt file was created for the site to instruct search engines about areas they should avoid while navigating on the site. This file is used for enhancing the site’s SEO ranking.
+
+* A sitemap file was generated using xml-sitemaps.com to facilitate a clear understanding of the website’s structure search engines understand the website structure. The presence of a sitemap ensures that search engines crawl every important page on the site, contributing to comprehensive and efficient indexing.
+
+### Content Marketing 
+
+* As part of the content marketing strategy, I have integrated customer reviews for the products. 
+
+* Particularly, user-generated content like product reviews plays a central role. By incorporating customer feedback into the content marketing approach, the goal is to establish trust, engage the audience, and impact potential customers by sharing experiences and opinions related to the site's products.
+
+* The customer’s reviews can be accessed by any user on each product information page. 
+
+### Social Media Marketing
+
+* A Facebook Business Page has been created for the Taste for Romania site as part of organic social media marketing approach. 
+
+* The Facebook page aligns very well with the design and information on the online shop. For the profile picture I have used the logo image and as cover I have chosen to add the landing page. 
+
+* As “Action Button” I have chosen to add “Contact us” which directs users to the deployed website. While I wanted to include a “Buy now” or “Shop” button, I did not have the option to just add the link of the website. The options available required the use of third-party sites to connect and to then create the “Buy now” button. 
+
+* The “Contact us” button also conveys with the purpose of directing potential customers to the site. 
+
+* Interested customers can also reach the site by clicking on the site link added under the intro section.
+
+* This was the link for the Facebook business page, which has been in the meantime deactivated : https://www.facebook.com/profile.php?id=61554418048295
+
+[Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_fb.png)
+
+[Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_facebook.png)
+
+
+### Email Marketing 
+
+* Mailchimp has been used to implement a newsletter signup feature on the site. Any user visiting the site can subscribe to the newsletter by providing their email address without requiring them to create an account. It serves as a means of communicating product updates and news, reaching both potential new customers and existing customers. 
+
+
 ## Existing Features
 
 ### Home page
