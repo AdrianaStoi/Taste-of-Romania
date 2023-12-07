@@ -211,7 +211,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 ### Wireframe
 
-* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found [here-Taste of Romania-balsamiq wireframes](): 
+* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found [here-Taste of Romania-balsamiq wireframes](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/wireframes/Taste_of_romania_wireframes.pdf): 
 * The layout of the site has changed throughout the project development due to time constraints. As a result, some of the features originally outlined in the wireframe as the User Profile page are to be implemented in the future.
 
 ### Database schema
