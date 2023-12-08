@@ -499,6 +499,12 @@ In the Comments section, users who are not logged in will have read access to vi
 
 ![Login incorrect password](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/login_incorrect_password.png)
 
+__Forgot password__
+
+Users can reset their passwords when needed. When clicking on "Forget password" option on the “Login” page, they will be redirected to the “Password Reset” page. Subsequently, a link is sent to their email address, enabling them to change the password:
+
+![Password reset](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_page.png)
+
 * When users are logged in, at the top right corner their user name is displayed.
 
 ![Logged in user name](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/user_logged_in.png)
