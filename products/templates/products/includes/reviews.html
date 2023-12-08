@@ -1,5 +1,5 @@
  <!--Review section-->
- <div class="row">
+<div class="row">
     <div class="col-12 col-md-8 col-lg-4 offset-lg-1 mt-3">
         <h3>Reviews:</h3>
         {% if not user.is_authenticated %}
@@ -20,10 +20,9 @@
                         </p>
                         {{ comment.comment | linebreaks }}
                         {% if comment.user == user %}
-                            <button type="submit" class="btn btn-warning mt-3"><a class="text-decoration-none text-black"
-                                    href="{% url 'editcomment' comment.id %}">Edit</a></button>
-                            <a class="text-decoration-none" href="{% url 'confirm_deletecomment' comment.id %}"><button type="submit"
-                                    class="btn btn-danger mt-3">Delete</button></a>
+                        <a class="btn btn-warning mt-3 text-decoration-none text-black" href="{% url 'editcomment' comment.id %}">Edit</a>
+    
+                        <a class="btn btn-danger mt-3 text-decoration-none" href="{% url 'confirm_deletecomment' comment.id %}">Delete</a>
                         {% endif %}
                     {% endfor %}
                 {% else %}
@@ -51,7 +50,3 @@
         </div>
     </div>
 </div>
-
-{% block postloadjs %}
-
-{% endblock %}

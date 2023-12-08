@@ -7,7 +7,7 @@
                     class="decrement-qty btn btn-sm btn-black-cart rounded-3 decrement-qty_{{ item.item_id }} 
                         {% if item.size %}decrement-size_{{ item.item_id }}_{{ item.size }}{% endif %}"
                     data-item_id="{{ item.item_id }}"
-                    data-size="{{ item.size }}">
+                    data-size="{{ item.size }}" aria-label="Decrease quantity">
                     <span class="icon">
                         <i class="fas fa-minus"></i>
                     </span>
@@ -37,4 +37,4 @@
     </div>
 </form>
 <a class="update-item text-info"><small>Update</small></a>
-<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+<a class="remove-item text-danger float-right remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
