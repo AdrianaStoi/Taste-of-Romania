@@ -259,33 +259,33 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
     __Short-tail keywords__
 
-    Romanian specialties
-    Romanian pottery
-    Romanian sweets
-    Mici
-    Romanian snacks
-    Blouse IE
-    Romanian chocolate
-    Romanian gifts
-    Tradition
-    Romanian zacusca
-    Romanian cheese
-    Romanian drinks
-    Visinata
+    * Romanian specialties
+    * Romanian pottery
+    * Romanian sweets
+    * Mici
+    * Romanian snacks
+    * Blouse IE
+    * Romanian chocolate
+    * Romanian gifts
+    * Tradition
+    * Romanian zacusca
+    * Romanian cheese
+    * Romanian drinks
+    * Visinata
 
     __Long-tail keywords__
 
-    Romanian online store
-    Products from Romania
-    Traditional Romanian gifts
-    Romanian traditional blouse ie
-    Romanian cheese buy online
-    Traditional Romanian products buy online
-    Where to buy Romanian mici
-    Buy Romanian food online
-    Artisanal and crafts from Romania
-    Romanian grocery online
-    Romanian products near me
+    * Romanian online store
+    * Products from Romania
+    * Traditional Romanian gifts
+    * Romanian traditional blouse ie
+    * Romanian cheese buy online
+    * Traditional Romanian products buy online
+    * Where to buy Romanian mici
+    * Buy Romanian food online
+    * Artisanal and crafts from Romania
+    * Romanian grocery online
+    * Romanian products near me
 
 #### Robots.txt and Sitemaps
 
@@ -315,10 +315,9 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * This was the link for the Facebook business page, which has been in the meantime deactivated : https://www.facebook.com/profile.php?id=61554418048295
 
-![Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_fb.png)
-
 ![Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_facebook.png)
 
+![Taste of Romania - Facebook business page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_fb.png)
 
 ### Email Marketing 
 
