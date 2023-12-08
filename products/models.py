@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Category(models.Model):
     """Model for Product Category"""
     name = models.CharField(max_length=254)
@@ -21,7 +22,12 @@ class Category(models.Model):
 class Product(models.Model):
     """Model for Product"""
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -34,9 +40,10 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    
+
     def __str__(self):
         return self.name
+
 
 class Review(models.Model):
     """Model for Reviews: Comments and Ratings"""
@@ -47,7 +54,6 @@ class Review(models.Model):
     rating = models.IntegerField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    
 
     class Meta:
         ordering = ['created_on']

@@ -11,6 +11,7 @@ import json
 import time
 import stripe
 
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
@@ -26,13 +27,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-            
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
+        )
 
     def handle_event(self, event):
         """
@@ -56,7 +57,7 @@ class StripeWH_Handler:
             intent.latest_charge
         )
 
-        billing_details = stripe_charge.billing_details 
+        billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2)
 

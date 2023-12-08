@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from products.models import Product
 
+
 class Favorites(models.Model):
     """Model for Favorites"""
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

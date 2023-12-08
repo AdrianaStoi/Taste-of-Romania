@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Inquiry
 # Register your models here.
 
+
 @admin.register(Inquiry)
 class FavoritesAdmin(admin.ModelAdmin):
     """
@@ -10,4 +11,4 @@ class FavoritesAdmin(admin.ModelAdmin):
     list_display = ('user',
                     'created_on', 'subject', 'order_number_inquiry')
     search_fields = ['subject', 'user_message', 'user_reply', 'admin_reply']
-    ordering =('created_on',)
+    ordering = ('created_on',)

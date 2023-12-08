@@ -11,11 +11,12 @@ from django.urls import reverse
 @login_required
 def user_inquiry(request):
 
-    """ 
+    """
     This view allows user to submit an inquiry
     and to display all user inquiries.
     """
-    inquiries = Inquiry.objects.filter(user=request.user).order_by('-created_on')
+    inquiries = Inquiry.objects.filter(user=request.user)
+    inquiries = inquiries.order_by('-created_on')
 
     if request.method == 'POST':
         form = InquiryForm(request.POST)
@@ -23,17 +24,24 @@ def user_inquiry(request):
             inquiry = form.save(commit=False)
             inquiry.user = request.user
             inquiry.save()
-            messages.success(request, 'Your inquiry was submitted successfully.')
+            message_text = 'Your inquiry was submitted successfully.'
+            messages.success(request, message_text)
             return redirect(request.path)
     else:
         form = InquiryForm()
 
-    return render(request, 'inquiries/inquiries.html', {'form': form, 'inquiries': inquiries, 'base_message': True})
+    context = {
+        'form': form,
+        'inquiries': inquiries,
+        'base_message': True
+    }
+    return render(request, 'inquiries/inquiries.html', context)
+
 
 @login_required
 def inquiry_details(request, inquiry_id):
-    """ 
-    This view displays the inquiry details and 
+    """
+    This view displays the inquiry details and
     allows user to add an update/reply
     to the same inquiry.
     """
@@ -64,9 +72,10 @@ def inquiry_details(request, inquiry_id):
         'base_message': True
     })
 
+
 @login_required
 def delete_inquiry(request, inquiry_id):
-    """ 
+    """
     This deletes the inquiry.
     """
     inquiry = get_object_or_404(Inquiry, pk=inquiry_id)
@@ -79,4 +88,9 @@ def delete_inquiry(request, inquiry_id):
             )
         return redirect('home')
 
-    return render(request, 'inquiries/inquiry_confirm_delete.html', {'inquiry':inquiry, 'base_message': True})
+    context = {
+        'inquiry': inquiry,
+        'base_message': True
+    }
+
+    return render(request, 'inquiries/inquiry_confirm_delete.html', context)

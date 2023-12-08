@@ -9,7 +9,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 
 
-
 class FavoritesPage(generic.ListView):
     """
     This view lists favorites products.
@@ -18,16 +17,20 @@ class FavoritesPage(generic.ListView):
     template_name = 'favorites.html'
     context_object_name = 'favorites'
     extra_context = {'base_message': True}
-    
+
     def get_queryset(self):
         if self.request.user.is_authenticated:
             product_id = self.request.GET.get('product_id')
             if product_id is not None:
-                return Favorites.objects.filter(product=product_id, user=self.request.user)
+                return Favorites.objects.filter(
+                    product=product_id,
+                    user=self.request.user
+                )
             else:
                 return Favorites.objects.filter(user=self.request.user)
         else:
             return Favorites.objects.none()
+
 
 class AddtoFavorites(View, LoginRequiredMixin):
     """
@@ -37,13 +40,16 @@ class AddtoFavorites(View, LoginRequiredMixin):
 
     model = Product
     extra_context = {'base_message': True}
-    
+
     def post(self, request, product_id, *args, **kwargs):
         product = get_object_or_404(Product, id=product_id)
         user = request.user
 
-        favorites, created = Favorites.objects.get_or_create(user=user, product=product)
- 
+        favorites, created = Favorites.objects.get_or_create(
+            user=user,
+            product=product
+        )
+
         if created or not favorites.is_favorite:
             favorites.is_favorite = True
             favorites.save()
@@ -58,6 +64,5 @@ class AddtoFavorites(View, LoginRequiredMixin):
                 request,
                 'You have removed the product from favorites successfully.'
             )
-           
-        return redirect(reverse('favorites'), favorites_id=favorites.id) 
-    
+
+        return redirect(reverse('favorites'), favorites_id=favorites.id)

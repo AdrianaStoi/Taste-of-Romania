@@ -3,13 +3,18 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Inquiry(models.Model):
     """Model for customer inquiries"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=254)
     email = models.EmailField()
     phone_number = models.CharField(max_length=20, null=True, blank=True)
-    order_number_inquiry = models.CharField(max_length=20, null=True, blank=True)
+    order_number_inquiry = models.CharField(
+        max_length=20,
+        null=True,
+        blank=True
+    )
     subject = models.CharField(max_length=200)
     user_message = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
