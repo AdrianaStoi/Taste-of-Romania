@@ -1,10 +1,10 @@
-<script type="text/javascript">
+<script>
 /**
  * Function to display the login modal 
  * by setting its style property to "block"
  */
     function showModal() {
-        const modal = document.getElementById("login-modal");
+        const modal = document.querySelector(".login-modal");
         modal.style.display = "block";
     }
 
@@ -13,7 +13,7 @@
  * by setting its style property to "none"
  */
     function closeModal() {
-        const modal = document.getElementById("login-modal");
+        const modal = document.querySelector(".login-modal");
         modal.style.display = "none";
     }
 </script>
