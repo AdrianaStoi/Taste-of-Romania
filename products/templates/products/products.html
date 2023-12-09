@@ -73,7 +73,7 @@
                                             {% if request.user.is_superuser %}
                                             <small class="ml-1">
                                                 <a href="{% url 'edit_product' product.id %}" class="text-white text-decoration-none" aria-label="Edit">Edit</a> | 
-                                                <a class="text-danger text-decoration-none" href="{% url 'confirm_delete_product' product.id %}" aria-label="Delete">Delete</a>
+                                                <a class="text-danger text-decoration-none font-weight-bold" href="{% url 'confirm_delete_product' product.id %}" aria-label="Delete">Delete</a>
                                             </small>
                                             {% endif %}
                                         </div>
