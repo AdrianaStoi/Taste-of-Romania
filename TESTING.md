@@ -13,6 +13,8 @@
     - [Python](#python)
   - [Testing Responsiveness](#testing-responsiveness)
    - [Responsiveness on devices](#responsiveness-on-devices)
+  - [Bugs](#bugs)
+    - [Fixed Bugs](#fixed-bugs)
 
 
 ## Browser Compatibility
@@ -92,6 +94,7 @@ __Shopping cart page__
 
 ![Shopping cart solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/html_validator_shopping_cart_solved.png)
 
+[Back to table of contents](#table-of-contents)
 
 ### CSS
 
@@ -132,8 +135,48 @@ __Product Administration - Add products__
 
 ![Add_product jshint](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/jshint_add_product_no_errors.png)
 
+### Python
+
+* All python files form all apps were successfully passed through the [PEP8]( https://pep8ci.herokuapp.com/#) official validator. Long lines were present in many files. These lines were shortened and resubmitted to the validator without any errors being detected.
+* The files with unmodified long lines are in the checkout: webhook_handler and webhooks.py related to Stripe. 
+* Another file containing a message is the "settings.py" for the "AUTH_PASSWORD_VALIDATORS".
+
+Below are the rsults for views.py in all apps: 
+
+__Home - views.py__
+
+![Home - views.py](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_home_views_py.png)
+
+__Products - views.py__
+
+![Products - views.py](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_products_views_py.png)
+
+__Cart app - views.py__
+
+![Cart app](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_cart_views.png)
+
+__Checkout - views.py__
+
+![Checkout](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_checkout_views_py.png)
+
+__My Favorites - views.py__
+
+![My Favorites - views.py](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_favorites_views_py.png)
+
+__My inquiries - views.py__
+
+![My inquiries - views.py](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_inquiries_py.png)
+
+__My profile - views.py__
+
+![My profile - views.py](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_profiles_views_py.png)
+
+__Taste of Romania - Settings.py__
+
+![Settings.py](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/pep_validator_settings_py.png)
 
 
+[Back to table of contents](#table-of-contents)
 
 ## Testing Responsiveness
 
@@ -155,5 +198,10 @@ __Product Administration - Add products__
 | Product administration, add, edit, delete product  | Yes             | Yes            | Yes                                         | Yes|
 
 [Back to table of contents](#table-of-contents)
+
+
+## Bugs
+
+
 
 Return to the [README.md](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/README.md) file.
