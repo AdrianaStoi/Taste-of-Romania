@@ -193,14 +193,14 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black-cart rounded my-2">
+                    <a href="{% url 'profile' %}" class="btn btn-black-cart rounded my-2" aria-label=" Navigate to Profile page">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'products' %}" class="btn btn-black-cart rounded my-2">
+                    <a href="{% url 'products' %}" class="btn btn-black-cart rounded my-2" aria-label="Go to Products page">
                         <span class="icon mr-2">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </span>

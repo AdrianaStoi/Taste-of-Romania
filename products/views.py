@@ -10,9 +10,10 @@ from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
+
 def all_products(request):
-    """ 
-    This view shows all products, 
+    """
+    This view shows all products,
     including sorting and search queries.
     The view also gets the product ids that are favorites
     for the logged-in user.
@@ -39,7 +40,7 @@ def all_products(request):
                 products = products.annotate(**{annotated_key: Lower(sortkey)})
 
             if sortkey == 'category':
-               sortkey = 'category__name'
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -57,12 +58,12 @@ def all_products(request):
             if not query:
                 messages.error(request, "No results found.")
                 return redirect(reverse('products'))
-                
+
             queries = (
-                Q(name__icontains=query) | 
-                Q(description__icontains=query) | 
-                Q(excerpt__icontains=query) | 
-                Q(ingredients__icontains=query) | 
+                Q(name__icontains=query) |
+                Q(description__icontains=query) |
+                Q(excerpt__icontains=query) |
+                Q(ingredients__icontains=query) |
                 Q(category__friendly_name__icontains=query)
             )
             products = products.filter(queries)
@@ -71,8 +72,11 @@ def all_products(request):
 
     favorite_product_ids = []
     if request.user.is_authenticated:
-        favorite_product_ids = Favorites.objects.filter(user=request.user).values_list('product__id', flat=True)
-
+        favorite_product_ids = (
+            Favorites.objects
+            .filter(user=request.user)
+            .values_list('product__id', flat=True)
+        )
     context = {
         'products': products,
         'search_term': query,
@@ -85,9 +89,9 @@ def all_products(request):
 
 
 def product_information(request, product_id):
-    """ 
+    """
     This view shows individual product information.
-    It adds comment review if user is loged-in. 
+    It adds comment review if user is loged-in.
     The view also checks if the product is favorite
     for the logged-in user.
     """
@@ -98,14 +102,17 @@ def product_information(request, product_id):
     form = ReviewForm()
 
     if request.user.is_authenticated:
-        user_comment = Review.objects.filter(product=product, user=request.user).first()
-
+        user_comment = (
+            Review.objects
+            .filter(product=product, user=request.user)
+            .first()
+        )
     if request.method == 'POST':
 
         @login_required
         def submit_review(request):
             form = ReviewForm(request.POST)
-            
+
             if form.is_valid():
                 review = form.save(commit=False)
                 review.product = product
@@ -115,28 +122,31 @@ def product_information(request, product_id):
                 extra_context = {'base_message': True}
 
                 messages.success(request, 'Review added successfully')
-                return redirect('product_information', product_id = product_id)
-        
+                return redirect('product_information', product_id=product_id)
+
         return submit_review(request)
 
     else:
         form = ReviewForm()
 
     if request.user.is_authenticated:
-        is_favorite = Favorites.objects.filter(product=product, user=request.user).exists()
+        is_favorite = (
+            Favorites.objects
+            .filter(product=product, user=request.user)
+            .exists()
+        )
     else:
         is_favorite = False
 
     context = {
         'product': product,
         'comments': comments,
-        'user_comment':user_comment,
+        'user_comment': user_comment,
         'form': form,
-        'is_favorite':is_favorite,
+        'is_favorite': is_favorite,
     }
 
     return render(request, 'products/product_information.html', context)
-
 
 
 @login_required
@@ -161,7 +171,7 @@ def edit_comment(request, comment_id):
                     request,
                     'You have edited the comment successfully.'
                 )
-                return redirect('product_information', product_id = product_id)
+                return redirect('product_information', product_id=product_id)
             else:
                 form = review_form
         else:
@@ -170,10 +180,11 @@ def edit_comment(request, comment_id):
     context = {
         'form': form,
         'review': review,
-        'comments':comments,
+        'comments': comments,
         'base_message': True,
     }
     return render(request, 'products/includes/editcomment.html', context)
+
 
 @login_required
 def delete_comment(request, comment_id):
@@ -185,7 +196,7 @@ def delete_comment(request, comment_id):
     review = get_object_or_404(Review, pk=comment_id, user=request.user)
     product_id = review.product.id
     product = get_object_or_404(Product, id=product_id)
-   
+
     if request.method == 'POST':
         if request.user == review.user:
             review.delete()
@@ -193,10 +204,10 @@ def delete_comment(request, comment_id):
                 request,
                 'You have deleted the comment successfully.'
             )
-            return redirect('product_information', product_id = product_id)
-        
+            return redirect('product_information', product_id=product_id)
+
         else:
-            return redirect('product_information', product_id = product_id)
+            return redirect('product_information', product_id=product_id)
 
     context = {
         'review': review,
@@ -204,14 +215,21 @@ def delete_comment(request, comment_id):
         'base_message': True,
     }
 
-    return render(request, 'products/includes/confirm_deletecomment.html', context)
+    return render(
+        request,
+        'products/includes/confirm_deletecomment.html',
+        context
+    )
 
 
 @login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can add new products.')
+        messages.error(
+            request,
+            'Sorry, only store owners can add new products.'
+        )
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -221,7 +239,10 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_information', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.'
+            )
     else:
         form = ProductForm()
     template = 'products/add_product.html'
@@ -232,11 +253,15 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can edit existing products.')
+        messages.error(
+            request,
+            'Sorry, only store owners can edit existing products.'
+        )
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -247,7 +272,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_information', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.'
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -261,25 +289,37 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def confirm_delete_product(request, product_id):
     """Confirm product deletion"""
     product = get_object_or_404(Product, pk=product_id)
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can delete products.')
+        messages.error(
+            request,
+            'Sorry, only store owners can delete products.'
+        )
         return redirect(reverse('home'))
 
-    return render(request, 'products/confirm_delete_product.html', {'product':product, 'base_message': True})
+    return render(
+        request,
+        'products/confirm_delete_product.html',
+        {'product': product, 'base_message': True}
+    )
+
 
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
-    
+
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can delete products.')
+        messages.error(
+            request,
+            'Sorry, only store owners can delete products.'
+        )
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         product = get_object_or_404(Product, pk=product_id)
         context = {'base_message': True}

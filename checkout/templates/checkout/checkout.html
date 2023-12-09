@@ -39,7 +39,7 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-3 mb-1">
-                            <a href="{% url 'product_information' item.product.id %}">
+                            <a href="{% url 'product_information' item.product.id %}" aria-label="link navigates to Product information page">
                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                             </a>
                         </div>
@@ -91,8 +91,8 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="text-info" href="{% url 'account_signup' %}" aria-label="Go to Signup page">Create an account</a> or 
+                                    <a class="text-info" href="{% url 'account_login' %}" aria-label="Go to Login page">login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>
@@ -108,13 +108,13 @@
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_cart' %}" class="btn continue-shop-btn rounded">
+						<a href="{% url 'view_cart' %}" class="btn continue-shop-btn rounded" aria-label="Go to Shopping Cart page">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Cart</span>
 						</a>
-						<button id="submit-button" class="btn btn-black-cart rounded">
+						<button id="submit-button" class="btn btn-black-cart rounded" aria-label="Complete Order button">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>

@@ -26,7 +26,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-black text-muted mt-3 text-center text-md-left">
                             <span class="small">
-                                <a href="{% url 'products' %}" class="text-decoration-none tag p-2 rounded border-1">Products Home</a>
+                                <a href="{% url 'products' %}" class="text-decoration-none tag p-2 rounded border-1" aria-label="Go to Products page">Products Home</a>
                             </span>
                         </p>
                     </div>
@@ -37,12 +37,12 @@
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                                 <div class="card border-0 p-0 h-100 text-white">
                                     {% if favorite.product.image %}
-                                    <a href="{% url 'product_information' favorite.product.id %}">
+                                    <a href="{% url 'product_information' favorite.product.id %}" aria-label="Go to Product information page">
                                         <img class="card-img-top img-product" src="{{ favorite.product.image.url }}"
                                             alt="{{ product.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="{% url 'product_information' favorite.product.id %}">
+                                    <a href="{% url 'product_information' favorite.product.id %}" aria-label="Go to Product information page">
                                         <img class="card-img-top img-fluid img-product" src="{{ MEDIA_URL }}noimage.png"
                                             alt="{{ product.name }}">
                                     </a>
@@ -57,7 +57,7 @@
                                                 {% if favorite.product.category %}
                                                 <p class="small mt-1 mb-2">
                                                     <a class="text-white"
-                                                        href="{% url 'products' %}?category={{ product.category.name }}">
+                                                        href="{% url 'products' %}?category={{ product.category.name }}" aria-label="{{ product.category.name }}">
                                                         <i
                                                             class="fas fa-tag mr-1"></i>{{ favorite.product.category.friendly_name }}
                                                     </a>
@@ -66,9 +66,9 @@
                                                 {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' favorite.product.id %}"
-                                                        class="text-white text-decoration-none">Edit</a> |
+                                                        class="text-white text-decoration-none" aria-label="Go to Edit product">Edit</a> |
                                                     <a class="text-danger text-decoration-none"
-                                                        href="{% url 'delete_product' favorite.product.id %}">Delete</a>
+                                                        href="{% url 'delete_product' favorite.product.id %}" aria-label="Go to Delete product page">Delete</a>
                                                 </small>
                                                 {% endif %}
                                             </div>
@@ -77,7 +77,7 @@
                                                 <form class="d-inline" action="{% url 'addtofavorites' favorite.product.id %}" method="POST"> 
                                                 {% csrf_token %}
                                                 {% if favorite.is_favorite %}
-                                                    <button type="submit" name="product_id" value="{{ favorite.product.id }}" class="btn">
+                                                    <button type="submit" name="product_id" value="{{ favorite.product.id }}" class="btn" aria-label="Delete from Favorites">
                                                         <i class="fa-solid fa-trash-can fa-xl" style="color: #8b181e;"></i>
                                                     </button>
                                                 </form>
@@ -91,7 +91,7 @@
                                                 {% endif %}
                                                 {% endif %}
                                                 <a href="{% url 'product_information' favorite.product.id %}"
-                                                    class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product</a>
+                                                    class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2" aria-label="Go to Product information page"> See Product</a>
                                             </div>
                                         </div>
                                     </div>
@@ -111,8 +111,8 @@
                         {% else %}
                             <div class="col-12 text-center mt-5">
                                 <p>
-                                    <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
-                                    <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}">Register</a>
+                                    <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}" aria-label="Go to Login page">Login</a> or 
+                                    <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}" aria-label="Go to Register page">Register</a>
                                         to save products to your favorites.
                                 </p>
                             </div>

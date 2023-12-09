@@ -13,7 +13,7 @@
                     <form method="post" style="margin-top: 1.3em;">
                         {% csrf_token %}
                         <input type="submit" value="Yes" class="btn btn-danger mt-3 mb-3">
-                        <a href="{% url 'inquiry' inquiry.id %}" class="btn btn-warning mt-3 mb-3" >Cancel</a>
+                        <a href="{% url 'inquiry' inquiry.id %}" class="btn btn-warning mt-3 mb-3" aria-label="Navigate to My Inquiry page">Cancel</a>
                     </form>
                 </div>
             </div>

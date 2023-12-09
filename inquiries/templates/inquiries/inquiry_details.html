@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-right mt-4">
-                <a href="{% url 'inquiries' %}" class="btn btn-black-cart rounded my-2">
+                <a href="{% url 'inquiries' %}" class="btn btn-black-cart rounded my-2" aria-label="Navigate to My Inquiries page">
                     <span class="icon mr-2">
                         <i class="fas fa-angle-left"></i>
                     </span>
@@ -131,13 +131,13 @@
                 <form class="mt-5" action="{% url 'inquiry' inquiry_id=inquiry.id %}" method="POST">
                     {% csrf_token %}
                     {{ user_reply_form | crispy }}
-                    <a class=" text-decoration-none text-uppercase float-left" href="{% url 'delete_inquiry' inquiry.id %}">
+                    <a class=" text-decoration-none text-uppercase float-left" href="{% url 'delete_inquiry' inquiry.id %}" aria-label="Delete Request">
                         <div class="btn btn-danger btn-del-inquiry"> 
                             <i class="fa-solid fa-trash-can fa-lg mr-2" style="color: #ffffff"></i>
                             Delete Request
                         </div>
                     </a>
-                    <button type= "submit" class="btn btn-black-cart rounded text-uppercase float-right reply-button">
+                    <button type= "submit" class="btn btn-black-cart rounded text-uppercase float-right reply-button" aria-label="Reply Request">
                         <span class="icon mr-2"><i class="fa-solid fa-reply"></i></span>
                         Reply request
                     </button>

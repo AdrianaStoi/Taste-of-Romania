@@ -46,12 +46,12 @@
                         {% for user_inquiry in inquiries %}
                             <tr>
                                 <td class="text-black">
-                                    <a href="{% url 'inquiry' user_inquiry.id %}">
+                                    <a href="{% url 'inquiry' user_inquiry.id %}" class="text-black font-weight-bold text-decoration-none" aria-label="Navigate to My Inquiry page">
                                         {{ user_inquiry.id }}
                                     </a>
                                 </td>
                                 <td class="text-black">
-                                    <a href="">
+                                    <a href="" class="text-black font-weight-bold text-decoration-none">
                                         {{ user_inquiry.order_number_inquiry }}
                                     </a>
                                 </td>
