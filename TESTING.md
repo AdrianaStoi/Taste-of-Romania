@@ -30,6 +30,39 @@
 
 [Back to table of contents](#table-of-contents)
 
+
+## Code Validation
+
+### HTML
+
+I passed all html pages through the [W3C](https://validator.w3.org/) official validator. These are the results:
+
+| Page       | Result|
+| ---------- | ----- |
+| Home page  | Pass |
+| Products page | Pass |
+| Products - All products | Pass |
+| Products - Sort by price   | Pass |
+| Products – Sorting by category | Pass |
+| Products - Products by categories  | Pass |
+| Search results | Pass |
+| Product information page  | Pass |
+| Edit comment page  | Pass |
+| Delete comment page  | Pass |
+| Product administration – Add product  | Refer to notes below |
+| Product administration – Edit product   | Refer to notes below |
+| My profile page  | Pass |
+| My Inquiries page   | Pass |
+| My Inquiry page  | Pass |
+| My Favorites page  | Pass |
+| Shopping cart empty  | Pass |
+| Shopping cart page | Refer to notes below |
+| Checkout page  | Pass |
+| Custom Error pages | Pass |
+
+
+
+
 ## Testing Responsiveness
 
 * Chrome DevTools was used for testing responsiveness on desktop, tablets, and smartphones.
