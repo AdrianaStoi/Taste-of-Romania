@@ -5,6 +5,12 @@
 - [Testing](#testing)
   - [Table of contents](#table-of-contents)
   - [Browser Compatibility](#browser-compatibility)
+  - [Lighthouse](#lighthouse)
+  - [Code Validation](#code-validation)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [Javascript](#javascript)
+    - [Python](#python)
   - [Testing Responsiveness](#testing-responsiveness)
    - [Responsiveness on devices](#responsiveness-on-devices)
 
@@ -40,8 +46,7 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 | Page       | Result|
 | ---------- | ----- |
 | Home page  | Pass |
-| Products page | Pass |
-| Products - All products | Pass |
+| Products - All products | Refer to notes below |
 | Products - Sort by price   | Pass |
 | Products – Sorting by category | Pass |
 | Products - Products by categories  | Pass |
@@ -60,7 +65,22 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 | Checkout page  | Pass |
 | Custom Error pages | Pass |
 
+__Products page__
 
+* Error received for the “login-modal” id. For the favorite icon, when the users are not logged in they have a pop-up modal that appears. I used JavaScript to show and close modal, however I used “getElementById” which rendered an error in the HTML validator as this applies to all products. 
+
+* I have changed the “login-modal” to class and changed the JavaScript accordingly. The error is no longer displayed. 
+
+__Product administration – Add product and Edit product__
+
+* Error received for duplicate ID. I could not find the second ID in the code. I found that other colleagues had similar issues with this particular “id”. This error is also shown when editing a product. Refer to [thread](https://code-institute-room.slack.com/archives/C026VTHQDNY/p1677243978633509)
+I was unable to locate the code containing the "id=id_image", and upon removing the id, I can no longer add the image on the site. This error is still displayed. 
+
+
+
+__Shopping cart page__
+
+* I encountered an error indicating a duplicate ID on the shopping cart page, which was also highlighted in the "boutique_ado" walkthrough. To resolve this issue, I modified the ID to a class and adjusted the JavaScript to target the class element. As a result, the error is no longer present.
 
 
 ## Testing Responsiveness
