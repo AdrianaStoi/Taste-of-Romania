@@ -13,7 +13,7 @@
                     <form method="post" action="{% url 'delete_product' product.id %}" style="margin-top: 1.3em;">
                         {% csrf_token %}
                         <input type="submit" value="Yes" class="btn btn-danger mt-3 mb-3">
-                        <a href="{% url 'product_information' product.id %}" class="btn btn-warning mt-3 mb-3" >Cancel</a>
+                        <a href="{% url 'product_information' product.id %}" class="btn btn-warning mt-3 mb-3" aria-label="Cancel">Cancel</a>
                     </form>
                 </div>
             </div>

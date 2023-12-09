@@ -39,7 +39,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-black text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}" class="text-decoration-none tag p-2 rounded border-1">Products Home</a> | </span>
+                                <span class="small"><a href="{% url 'products' %}" class="text-decoration-none tag p-2 rounded border-1" aria-label="Go to Products page">Products Home</a> | </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -72,8 +72,8 @@
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                             <small class="ml-1">
-                                                <a href="{% url 'edit_product' product.id %}" class="text-white text-decoration-none">Edit</a> | 
-                                                <a class="text-danger text-decoration-none" href="{% url 'confirm_delete_product' product.id %}">Delete</a>
+                                                <a href="{% url 'edit_product' product.id %}" class="text-white text-decoration-none" aria-label="Edit">Edit</a> | 
+                                                <a class="text-danger text-decoration-none" href="{% url 'confirm_delete_product' product.id %}" aria-label="Delete">Delete</a>
                                             </small>
                                             {% endif %}
                                         </div>
@@ -82,14 +82,14 @@
                                                 {% if product.id in favorite_product_ids %}
                                                     <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST"> 
                                                         {% csrf_token %}
-                                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
+                                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn" aria-label="Remove favorite">
                                                             <i class="fa-solid fa-heart fa-xl" style="color: #8b181e;"></i>
                                                         </button>
                                                     </form>
                                                 {% else %}
                                                     <form class="d-inline" action="{% url 'addtofavorites' product.id %}" method="POST"> 
                                                         {% csrf_token %}
-                                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn">
+                                                        <button type="submit" name="product_id" value="{{ product.id }}" class="btn" aria-label="Add to favorite">
                                                             <i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i>
                                                         </button>
                                                     </form> 
@@ -98,7 +98,7 @@
                                                 <span class="text-secondary btn" onclick="showModal()"><i class="fa-regular fa-heart fa-xl" style="color: #8b181e;"></i></span>
                                                 {% include 'products/includes/modal.html' %}
                                             {% endif %}
-                                            <a href="{% url 'product_information' product.id %}" class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2"> See Product</a>
+                                            <a href="{% url 'product_information' product.id %}" class="see-product-btn small btn btn-sm mb-0 mt-1 mx-1 mr-2" aria-label="See Product"> See Product</a>
                                         </div>
                                     </div>
                                 </div>
