@@ -150,17 +150,17 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
 22. As a site user, I want to be able to view comments and ratings so that I can view other shoppers’ opinions on the quality of the products.
 23. As a shopper and frequent site user I want to be able to add, edit, delete comments so that I can give my feedback on quality of products and the services offered by the store, edit my comments, and remove mistakes or inaccurate information.
-24. As a shopper I want to be able to rate a product and the store’s services so that I can give my feedback on the quality of a product and the services offered by the store.
+
 
 #### EPIC: Subscribe to Newsletter 
 
-25. As a site user, I want to be able to subscribe to the newsletter so that I can be up to date with the latest offers and products added to the store. 
+24. As a site user, I want to be able to subscribe to the newsletter so that I can be up to date with the latest offers and products added to the store. 
 
 #### EPIC: Front-end Store Administration 
 
-26. As a store owner I want to be able to add a product on from the frontend site so that I can easily add new products to the store without having to access the backend.  
-27. As a store owner I want to be able to edit a product from the frontend site so that I can easily edit products details accordingly without having to access the backend.  
-28. As a store owner I want to be able to delete a product from the frontend site so that I can easily delete products that are no longer available without having to access the backend.  
+25. As a store owner I want to be able to add a product on from the frontend site so that I can easily add new products to the store without having to access the backend.  
+26. As a store owner I want to be able to edit a product from the frontend site so that I can easily edit products details accordingly without having to access the backend.  
+27. As a store owner I want to be able to delete a product from the frontend site so that I can easily delete products that are no longer available without having to access the backend.  
 
 [Back to table of contents](#table-of-contents)
 
@@ -179,6 +179,10 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
     **EPIC : Delivery options**
 
 31. As a shopper I want to be able to choose Express delivery so that I can receive the products earlier than 3 to 5 days. 
+
+  **EPIC: Product Comment and Rating**
+
+32. As a shopper I want to be able to rate a product and the store’s services so that I can give my feedback on the quality of a product and the services offered by the store.
 
 ### Design, colors and typography
 
