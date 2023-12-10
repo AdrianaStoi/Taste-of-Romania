@@ -64,7 +64,12 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 | My Favorites page  | Pass |
 | Shopping cart empty  | Pass |
 | Shopping cart page | Refer to notes below |
-| Checkout page  | Pass |
+| Login page  | Pass |
+| Logout page  | Pass |
+| Register page  | Pass |
+| Forgot Password page  | Pass |
+| Password Reset change page  | Pass |
+| Reset Done page  | Pass |
 | Custom Error pages | Pass |
 
 __Products page__
