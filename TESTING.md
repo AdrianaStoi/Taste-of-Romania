@@ -210,17 +210,17 @@ __My profile - views.py__
 
 [Back to table of contents](#table-of-contents)
 
-## User stories
+## User stories Testing
 
 __EPIC: Back-end Store Administration__
 
-1.	As store owner, I can access an admin panel where I can view users, edit, delete, products, categories, orders, comments, and ratings and filter in the sections so that I can efficiently manage the store.
+_1.	As store owner, I can access an admin panel where I can view users, edit, delete, products, categories, orders, comments, and ratings and filter in the sections so that I can efficiently manage the store._
 
 * The admin can access the admin panel in the backend. In the Admin panel, he can view users, comments, and articles. He can filter each section accordingly.
 
 __EPIC: Store viewing and navigation__
 
-2.	As a site user I want to be able to easily navigate on the site so that I can find the products available.
+_2.	As a site user I want to be able to easily navigate on the site so that I can find the products available._
 
 * The users can easily navigate from page to page using the navigation bar and menu.  
 
@@ -230,120 +230,200 @@ __EPIC: Store viewing and navigation__
 
 * Next to “My Account”, the user can navigate to “My Favorites” page and lastly there is the Shopping cart.
 
+![Navbar](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_myaccount_unregistered.png)
+
+
 * Under this section there is the navigation menu allowing users to access all products or to access them by different categories.  
 
+![Navbar-categorization](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_categorization.png)
 
-3.	As a shopper I want to be able to view a list of products so that I can select the products I would like to purchase.
+_3.	As a shopper I want to be able to view a list of products so that I can select the products I would like to purchase._
 
 * The user can view all products, from the “See products” button on the landing image on home page, or from the navigation by Selecting “All products”.
 
-4.	As a shopper I want to be able to view details of a product so that I can check the price, description, ingredients, comment, rating before buying.
+![Landing image](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/landing_image.png)
+
+![Navbar-categorization](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_categorization.png)
+
+_4.	As a shopper I want to be able to view details of a product so that I can check the price, description, ingredients, comment, rating before buying._
 
 * The shoppers can view product details by clicking on the product image or “See product” button available on the “Product” page. 
 
+![Product information](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_info_page.png)
+
 __EPIC: User Login/Registration and Profile__
 
-5.	As a frequent site user, I can register on the site, so I can have an account to place an order, keep an order history and provide feedback on the products.
+_5.	As a frequent site user, I can register on the site, so I can have an account to place an order, keep an order history and provide feedback on the products._
 
-* The user can register on the site by clicking on “My Account” in the upper right corner. A drop-down menu will be displayed, and they can then select “Register”
+* The user can register on the site by clicking on “My Account” in the upper right corner. A drop-down menu will be displayed, and they can then select “Register”.
+After entering the required details, they will be directed to the "Verify your e-mail" page, indicating they will recieve an email with the link to finalize the signup process.
 
-6.	As a frequent site user, I want to be able to login or logout so that I can access my account information.
+![Navbar](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_myaccount_unregistered.png)
+
+![Register page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/register_page.png)
+
+![Verify email page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/verify_email_page.png)
+
+
+_6.	As a frequent site user, I want to be able to login or logout so that I can access my account information._
 
 * Users can log in and log out from their accounts by clicking on “My Account” and choosing the respective actions: “Login” or “Logout.”
 
-7.	As a frequent site user, I want to be able to recover my password in case I forget it so that I can recover my access account.
+![Login](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/login_page.png)
+
+![Logout](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_logout.png)
+
+
+_7.	As a frequent site user, I want to be able to recover my password in case I forget it so that I can recover my access account._
 
 * Users can recover their password by clicking on “Forgot password”. They will receive an email with a link to confirm the account. Once the user clicks on the link, they are directed to a confirmation page. 
 
-8.	As a registered user, I want to be able to access my user profile page, so that I can save my details for next purchases and view my orders.
+| Reset      |       |
+| ---------- | ----- |
+| ![Password Reset Page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_page.png) | ![]()                         | 
+| ![]()          | ![]()                         | 
+
+
+_8.	As a registered user, I want to be able to access my user profile page, so that I can save my details for next purchases and view my orders._
 
 * Users can access their profile page from the dropdown menu under My Account icon.
 
-9.	As a site user I want to be able to add the products to "Favorites" so that I can save the product in the profile and purchase it later.
+![My Profile](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/myprofile_page.png)
 
-* Users can add products to favorites form the “Products” page or from the “Product information” page, by clicking on the heart icon.
-
-* When the users add a product to their favorites, they are directed to the “My Favorites” page. If they go back to the product page, they can see that the heart icon is solid which indicates the product has been already added to Favorites.
-
-* The users can also remove the product from favorites either from the favorites page or by clicking on the solid heart within the “Product” page or “Product information” page. 
+_9.	As a site user I want to be able to add the products to "Favorites" so that I can save the product in the profile and purchase it later._
 
 * Users can add products to their favorites from either the "Products" page or the "Product Information" page by clicking on the heart icon. 
-* When users add a product to their favorites, they are directed to the "My Favorites" page. If they return to the product page, they can see that the heart icon is now solid, indicating that the product has already been added to favorites. Users can also remove a product from their favorites either on the "Favorites" page or by clicking on the solid heart icon on the "Product" or "Product Information" page.
 
-10.	As a shopper I want to be able to submit an inquiry so that I can ask about my order status or inquiry about products on the site.
+* When users add a product to their favorites, they are directed to the "My Favorites" page. If they return to the product page, they can see that the heart icon is solid, indicating that the product has already been added to favorites. Users can also remove a product from their favorites either on the "Favorites" page or by clicking on the solid heart icon on the "Product" or "Product Information" page.
+
+__Favorites products page__
+
+![Favorites products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_existing_prod_products_page.png)
+
+__Favorites Product information page__
+
+![Favorites Product information page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_existing_prod_info.png)
+
+__Favorites page__
+
+![Favorites page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_product_added.png)
+
+
+_10.	As a shopper I want to be able to submit an inquiry so that I can ask about my order status or inquiry about products on the site._
 
 * Logged in users can create an inquiry, by clicking on account icon in the upper right corner which opens a drop-down menu and the user can select “My Inquiries”.
 * The user can fill out the form and submit the request. They can see an update from Taste of Romania directly in the request and they can also send a “Reply” and ask for updates. 
 
+__My inquiries access__
+![My inquiries](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_loggedin_regular_user.png)
+
+__My inquiries page__
+![My inquiries page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_inquiries_page.png)
+
+__My inquiry page__
+
+![My inquiry details](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_inquiry_details.png)
 
 __EPIC: Product Categorization and Searching__
 
-11.	As a shopper I want to be able to search for a product by name or description so that I can find the product I want to purchase.
+_11.	As a shopper I want to be able to search for a product by name or description so that I can find the product I want to purchase._
 
 * Users can search for products using the Search bar located at the top of the page. The search bar is available on all pages. 
 * On smaller devices the user can access the bar by clicking on the “Search icon” 
 
-12.	As a shopper I want to be able to view products by specific product category so that I can easily find the product I am looking for.
+![Search bar](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar.png)
+![Search bar small devices](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/search_smaller_devices.png)
+
+![Search results](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/search_results.png)
+
+_12.	As a shopper I want to be able to view products by specific product category so that I can easily find the product I am looking for._
 
 * Users can view products by Category. They can click choose the categories from the navigation menu or from the “Choose a category" section. 
 
-13.	As a shopper I want to be able to sort all products so that I can quickly identify the products based on their price, category, or rating.
+![Navbar menu category](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_categorization.png)
+
+![Choose Category](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/choose_category_homepage.png)
+
+_13.	As a shopper I want to be able to sort all products so that I can quickly identify the products based on their price, category, or rating._
 
 * When on the Products page, users have the option to sort products using the dropdown menu located on the top right side.
+
+![Sort by](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_sortby.png)
 
 14.	As a shopper I want to be able to sort an individual product category so that I can find the best priced, rated or sort them by name.
 
 * The shopper can sort products within an individual category from the dropdown menu located on the top right side.
 
+![Category- sort_by](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_category.png)
+
 [Back to table of contents](#table-of-contents)
 
 __EPIC: Ordering and Checkout__
 
-15.	As a shopper I want to be able to view the items and prices when they are added to the cart so that I can always view the total cost.
+_15.	As a shopper I want to be able to view the items and prices when they are added to the cart so that I can always view the total cost._
 
 * When a product is added to the cart, a message is displayed in the upper right corner, beneath the shopping cart icon, showing the added items and the total cost.
 
-16.	As a shopper I want to be able to view the cart so that I can view the items added to the cart and the total cost.
+![Shopping cart alert](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/shopping_cart.png)
+
+_16.	As a shopper I want to be able to view the cart so that I can view the items added to the cart and the total cost._
 
 * The shopper can access the shopping cart, by clicking on the shopping cart icon. 
 
-17.	As a shopper I want to be able to easily adjust the product quantity added to the cart so that I can make the necessary adjustments to my purchase before checkout.
+![Shopping cart page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/shopping_cart_page.png)
+
+_17.	As a shopper I want to be able to easily adjust the product quantity added to the cart so that I can make the necessary adjustments to my purchase before checkout._
 
 * Shoppers can adjust the quantity by changing the number and clicking on “Update”. Additionally, they have the option to remove the product from the shopping cart.
 
-18.	As a shopper I want to be able to place an order without been logged in so that I can place an order without having to create an account.
+![Shopping cart](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/shopping_cart_page.png)
+
+_18.	As a shopper I want to be able to place an order without been logged in so that I can place an order without having to create an account._
 
 * Shoppers have the option to place an order as guest users, eliminating the need to create an account for purchasing products.
 
-19.	As a shopper I want to be able to enter my payment information so that I can check out and place the order allowing me to quickly place the order.
+![Checkout page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/checkout_page.png)
+
+_19.	As a shopper I want to be able to enter my payment information so that I can check out and place the order allowing me to quickly place the order._
 
 * On the checkout page the users can add their contact information and credit card details. 
 
-20.	As a shopper I want to be able to see an order confirmation displayed after completing the checkout so that I can view the order placed.
+![Checkout page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/checkout_page.png)
+
+_20.	As a shopper I want to be able to see an order confirmation displayed after completing the checkout so that I can view the order placed._
 
 * After placing an order, users will be directed to the Order Confirmation page, where they can review the order details. 
 
-21.	As a shopper I want to be able to receive a confirmation email after checking out so that I can have a copy of the order confirmation email for my reference.
+![Order confirmation](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/order_confirmation.png)
+
+_21.	As a shopper I want to be able to receive a confirmation email after checking out so that I can have a copy of the order confirmation email for my reference._
 
 * When placing an order, users will automatically receive an email confirmation with their order details.
 
+![]()
+
 __EPIC: Product Comment and Rating__
 
-22.	As a site user, I want to be able to view comments and ratings so that I can view other shoppers’ opinions on the quality of the products.
+_22.	As a site user, I want to be able to view comments and ratings so that I can view other shoppers’ opinions on the quality of the products._
 
 * All users can view the comments added to a product, which are accessible on the individual product page beneath the product details and image.
 
-23.	As a shopper and frequent site user I want to be able to add, edit, delete comments so that I can give my feedback on quality of products and the services offered by the store, edit my comments, and remove mistakes or inaccurate information.
+![]()
+
+_23.	As a shopper and frequent site user I want to be able to add, edit, delete comments so that I can give my feedback on quality of products and the services offered by the store, edit my comments, and remove mistakes or inaccurate information._
 
 * Registered users can add, edit, delete comments. When the log in the comment form will be displayed on the individual product page under the product details and image.
 * After adding a comment, they will have two buttons, “Edit” and “Delete”. Users can only delete and edit their own comments. 
 
+![]()
 
 __EPIC: Subscribe to Newsletter__
 
-24.	As a site user, I want to be able to subscribe to the newsletter so that I can be up to date with the latest offers and products added to the store.
+_24.	As a site user, I want to be able to subscribe to the newsletter so that I can be up to date with the latest offers and products added to the store._
 
 * Any user can subscribe to the newsletter by providing their email address without having to be a registered user. 
+
+![Subscribe newsletter](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/footer.png)
 
 __EPIC: Front-end Store Administration__
 
@@ -351,16 +431,25 @@ __EPIC: Front-end Store Administration__
 
 * Admins can add a product from the front-end. “Product Administration” features are located under “My account” dropped down menu.
  
+ ![Product Administration-My account](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/myaccount_signed_in_admin.png)
+
+ ![Add product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/add_product_admin.png)
+
 26.	As a store owner I want to be able to edit a product from the frontend site so that I can easily edit products details accordingly without having to access the backend.
 
 * Administrators can edit a product either from the Products page or the Product information page.
 * When logged in, they will see the “Edit” option displayed under the category tag.
 
+![]()
+![]()
 
 27.	As a store owner I want to be able to delete a product from the frontend site so that I can easily delete products that are no longer available without having to access the backend.
 
 * Administrators can delete a product either from the Products page or the Product information page.
 * When logged in, they will see the “Delete” option displayed under the category tag.
+
+![]()
+![]()
 
 [Back to table of contents](#table-of-contents)
 
