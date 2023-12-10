@@ -85,16 +85,22 @@ __Product administration – Add product and Edit product__
 <details>
 
 <summary>Product administration – Edit product duplicate ID</summary>
+
 ![Product administration – Edit product error](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/edit_product_product_admin.png)
 
 </details>
 
 * The first ID was “id="new-image"”, and second ID was coming from the {% include "django/forms/widgets/attrs.html" %} which includes an ID, but I cannot access it (see image below). 
 
+![Double id screenshot-id="id_image](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/html_validator_admin_double_id.png)
+
 * I fixed this issue by removing the {% include "django/forms/widgets/attrs.html" %}. I have added the attribute [“accept=image/*”](https://www.w3schools.com/tags/att_input_accept.asp)
 
 * The error is no longer being displayed for “Add product” and “Edit a product”. 
 
+![Add product - solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/html_validator_add_product_admin_solved.png)
+
+![Edit a product - solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/html_validator_edit_product_admin.png)
 
 
 __Shopping cart page__
@@ -106,6 +112,7 @@ __Shopping cart page__
 ![Shopping cart solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/html_validator_shopping_cart_solved.png)
 
 [Back to table of contents](#table-of-contents)
+
 
 ### CSS
 
@@ -242,7 +249,7 @@ I found a [Stackoverflow thread](https://stackoverflow.com/questions/72266306/i-
 
 __Order History__
 
-* During testing, I noticed that any user could access an order number with the required information and without needing to be logged in. 
+* During testing, I noticed that any user could access an order number attached to a user profile with the required order number without needing to be logged in. 
 
 ![Order History - bug](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/order_history_bug.png)
 

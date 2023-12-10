@@ -218,7 +218,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram.
 
-* The diagram is available [here-Taste of Romania-Lucidchart](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/wireframes/Lucidchart-Taste%20of%20Romania.pdf).
+* The diagram is available [here-Taste of Romania-Lucidchart](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/wireframes/Taste_of_romania_lucidchart.pdf).
 
 * I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three additional custom models besides the ones from the walkthrough (Product, Order Line, Order, Category, User Profile). These new custom models are "Review", "Favorites" and "Inquiry". 
 * I used Allauth library for the user authentication system.
@@ -702,7 +702,7 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 ## Testing
 
-* Testing and results can be found in the [TESTING.md]() file [here]().
+* Testing and results can be found in the [TESTING.md](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/TESTING.md) file [here](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/TESTING.md).
 
 ## Deployment
 
