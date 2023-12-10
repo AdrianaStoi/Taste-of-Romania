@@ -70,10 +70,9 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 __Products page__
 
 * Error received for the “login-modal” id. For the favorite icon, when the users are not logged in they have a pop-up modal that appears. I used JavaScript to show and close modal, however I used “getElementById” which rendered an error in the HTML validator as this applies to all products. 
+* I have changed the “login-modal” to class and changed the JavaScript accordingly. The error is no longer displayed. 
 
 ![Products page error](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/products_page_modal.png)
-
-* I have changed the “login-modal” to class and changed the JavaScript accordingly. The error is no longer displayed. 
 
 ![Products page solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/products_page_modal_solved.png)
 
@@ -138,8 +137,7 @@ __Product Administration - Add products__
 ### Python
 
 * All python files form all apps were successfully passed through the [PEP8]( https://pep8ci.herokuapp.com/#) official validator. Long lines were present in many files. These lines were shortened and resubmitted to the validator without any errors being detected.
-* The files with unmodified long lines are in the checkout: webhook_handler and webhooks.py related to Stripe. 
-* Another file containing a message is the "settings.py" for the "AUTH_PASSWORD_VALIDATORS".
+* The only file containing a message is the "settings.py" for the "AUTH_PASSWORD_VALIDATORS".
 
 Below are the rsults for views.py in all apps: 
 
@@ -206,11 +204,13 @@ __Favorites feature__
 
 * The user could add the products to favorites from both the main products page and the individual product information page. However, there was an issue where the heart icon did not transition from an outline to a solid form. Consequently, users were unable to visually confirm whether a product had been successfully added to their favorites.
 
-* The "add to favorites" functionality was technically functioning, but the corresponding products were not being visually identified as favorites. This was due to a missing condition in both the products and product information views that would mark a product as a favorite. I addressed this by introducing the necessary conditions in the views. I consulted the threads on Stackoverflow: https://stackoverflow.com/questions/8651336/marking-favorites-in-django-object-set and https://stackoverflow.com/questions/67493992/django-add-products-to-favorite-list 
+* The "add to favorites" functionality was technically functioning, but the corresponding products were not being visually identified as favorites. This was due to a missing condition in both the products and product information views that would mark a product as a favorite.
 
 ![Add to favorite - bug](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/add_tofav_bug.png)
 
 ![Add to favorite - bug](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/add_to_fav_product_info_bug.png)
+
+* I addressed this by introducing the necessary conditions in the views. I consulted the threads on Stackoverflow: https://stackoverflow.com/questions/8651336/marking-favorites-in-django-object-set and https://stackoverflow.com/questions/67493992/django-add-products-to-favorite-list 
 
 * As a result, users can now determine which products have been added to their favorites by the presence of a solid heart icon.
 
@@ -218,20 +218,22 @@ __Favorites feature__
 
 __User Reply__
 
-* On the "My Inquiry" page, users could submit the reply form without entering any content. I found a [Stackoverflow thread](https://stackoverflow.com/questions/72266306/i-want-to-place-a-placeholder-in-my-forms-textarea-in-django) on this topic, I implemented the fix by including "required=True" in the UserReply form. 
+* On the "My Inquiry" page, users could submit the reply form without entering any content. 
 
 ![User reply - bug ](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/inquiry_details_user_reply_notrequired_bug.png)
 
-As a result, the user reply field is now mandatory, preventing users from submitting an empty reply.
+I found a [Stackoverflow thread](https://stackoverflow.com/questions/72266306/i-want-to-place-a-placeholder-in-my-forms-textarea-in-django) on this topic, I implemented the fix by including "required=True" in the UserReply form. As a result, the user reply field is now mandatory, preventing users from submitting an empty reply.
 
 ![User reply - solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/inquiry_details_user_reply_notrequired_solved.png)
 
 
 __Order History__
 
-* During testing, I noticed that any user could access an order number with the required information and without needing to be logged in. To address this issue, I applied the "@login_required" decorator. This resolution ensures that users are now obligated to log in before accessing the order.
+* During testing, I noticed that any user could access an order number with the required information and without needing to be logged in. 
 
 ![Order History - bug](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/order_history_bug.png)
+
+* To address this issue, I applied the "@login_required" decorator. This resolution ensures that users are now obligated to log in before accessing the order.
 
 ![Order History - solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/order_history_solved.png)
 
