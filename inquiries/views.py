@@ -44,7 +44,7 @@ def inquiry_details(request, inquiry_id):
     This view displays the inquiry details and
     allows user to add an update/reply
     to the same inquiry.
-    The view checks if the users is the 
+    The view checks if the users is the
     owner of the inquiry
     """
 
@@ -52,7 +52,7 @@ def inquiry_details(request, inquiry_id):
 
     if request.user != inquiry.user:
         messages.error(
-                    request, 
+                    request,
                     "You don't have permission to access this inquiry.")
         return redirect('home')
 
@@ -85,14 +85,14 @@ def inquiry_details(request, inquiry_id):
 def delete_inquiry(request, inquiry_id):
     """
     This deletes the inquiry.
-    The view checks if the users is the 
+    The view checks if the users is the
     owner of the inquiry
     """
     inquiry = get_object_or_404(Inquiry, pk=inquiry_id)
 
     if request.user != inquiry.user:
         messages.error(
-                    request, 
+                    request,
                     "You don't have permission to access this inquiry.")
         return redirect('home')
 
