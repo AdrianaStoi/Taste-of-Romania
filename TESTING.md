@@ -23,6 +23,7 @@
    - [Responsiveness on devices](#responsiveness-on-devices)
   - [Bugs](#bugs)
     - [Fixed Bugs](#fixed-bugs)
+    - [Unfixed Bugs](#Unfixed-Bugs)
 
 
 ## Browser Compatibility
@@ -234,6 +235,7 @@ __My profile - views.py__
 | Privacy Policy link | When clicked, it should open Privacy policy page on a new tab. | Click | When clicked, it opens Privacy policy page on a new tab. ![Privacy Policy](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/privacy_policy.png) |
 | Subscribe to newsletter | When a user enters their email address, a confirmation message should be displayed, indicating “Thank you for subscribing!” | Enter data | When a user enters their email address, a confirmation message is displayed, indicating “Thank you for subscribing!” ![Subscribe newsletter](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/subscribe_newsletter_submitted.png) |
 | Footer - Social media icons Facebook and Instagram | When clicking on Facebook and Instagram, they should redirect to the corresponding site by opening in a new tab. | Click | When clicking on Facebook and Instagram, they redirect to the corresponding site by opening in a new tab. |
+|Error pages: 403,404,500 Error  | These pages should have a “Back to Home” button which should redirect to the “Home” page | Click | When displayed, these error pages have a “Back to Home” buttons which when clicked redirects to the “Home” page. ![404 Page not Found](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/custom_error_page.png) ![500 Server error](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/custom_error.png)|
 
 [Back to table of contents](#table-of-contents)
 
@@ -597,6 +599,8 @@ __EPIC: Front-end Store Administration__
 
 ## Bugs
 
+### Fixed Bugs
+
 __Favorites feature__
 
 * The user could add the products to favorites from both the main products page and the individual product information page. However, there was an issue where the heart icon did not transition from an outline to a solid form. Consequently, users were unable to visually confirm whether a product had been successfully added to their favorites.
@@ -633,6 +637,10 @@ __Order History__
 * To address this issue, I applied the "@login_required" decorator. This resolution ensures that users are now obligated to log in before accessing the order.
 
 ![Order History - solved](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/order_history_solved.png)
+
+### Unfixed Bugs
+
+* I am not aware of any remaining unresolved bugs.
 
 [Back to table of contents](#table-of-contents)
 

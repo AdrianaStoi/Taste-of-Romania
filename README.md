@@ -13,7 +13,7 @@ Customers can easily navigate the site by category, leave reviews, and add produ
 
 Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
-![I am responsive](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_i_am_resonsive.png)
+![I am responsive](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_i_am_responsive.png)
 
 ## Table of contents
 
@@ -186,12 +186,12 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
 31. As a shopper I want to be able to rate a product and the store’s services so that I can give my feedback on the quality of a product and the services offered by the store.
 
-  **EPIC: User Login/Registration and Profile** 
+  **EPIC: User Login Registration and Profile** 
 
 32. As a registered user, when creating a new inquiry, I want to be able to add the order number to the request from a dropdown menu so that I can easily include it in my request.
 
 
-### Design, colors and typography
+### Design colors and typography
 
 The site's choice of black, white, and red is rooted in their significance in Romanian traditional clothing and culture, a palette that extends to the site's logo. 
 
@@ -693,6 +693,20 @@ The users can remove a product from favorites, either by going to the “My Favo
 ![Confirmation Deletion product admin](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_deletion_product_admin.png)
 
 ![Success message product deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/message_deletion_product.png)
+
+### Custom error pages
+
+Custom error pages were created to provide additional error details and give guidance to the user to return to the site.
+
+404 Page not Found – “The page you are looking for does not exist.”
+
+403 Forbidden – “You are not authorized to perform the requested action.”
+
+500 Server Error – “Taste of Romania is currently unable to handle this request.”
+
+![404 Page not Found](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/custom_error_page.png)
+
+![500 Server error](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/custom_error.png)
 
 [Back to table of contents](#table-of-contents)
 
