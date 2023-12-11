@@ -56,28 +56,28 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
     - [Choose a category](#Choose-a-category)
     - [Payment, shipping and return](#Payment,-shipping-and-return)
     - [Footer](#Footer)
-- [Products page](#Products-page)
-- [Product Information page](#Product-Information-page)
+  - [Products page](#Products-page)
+  - [Product Information page](#Product-Information-page)
   - [Reviews - comments](#Reviews-comments)
-- [Login page](#Login-page)
-- [Logout page](#Logout-page)
-- [Register Page](#Register-Page)
-- [Ordering process](#Ordering-process)
-  - [Guest checkout](#Guest-checkout)
-    - [Shopping cart](#Shopping-cart)
-  - [Logged in user](#Logged-in-user)
-- [My Profile page](#My-Profile-page)
-- [My inquiries page](#My-inquiries-page)
-- [Inquiry details page](#Inquiry-details-page)
-  - [User Reply](#User-Reply)
-  - [Admin Reply](#Admin-Reply)
-- [My Favorites page](#My-Favorites-page)
-  - [Logged in user](#Logged-in-user)
-  - [Product added to favorites](#Product-added-to-favorites)
-  - [Existing favorites product:](#Existing-favorites-product)
-  - [Remove product from favorites](#Remove-product-from-favorites)
-  - [Guest users](#Guest-users)
-- [Product Administration page](#Product-Administration-page)
+  - [Login page](#Login-page)
+  - [Logout page](#Logout-page)
+  - [Register Page](#Register-Page)
+  - [Ordering process](#Ordering-process)
+    - [Guest checkout](#Guest-checkout)
+     - [Shopping cart](#Shopping-cart)
+    - [Logged in user](#Logged-in-user)
+  - [My Profile page](#My-Profile-page)
+  - [My inquiries page](#My-inquiries-page)
+  - [Inquiry details page](#Inquiry-details-page)
+    - [User Reply](#User-Reply)
+  -   [Admin Reply](#Admin-Reply)
+  - [My Favorites page](#My-Favorites-page)
+    - [Logged in user](#Logged-in-user)
+    - [Product added to favorites](#Product-added-to-favorites)
+    - [Existing favorites product:](#Existing-favorites-product)
+    - [Remove product from favorites](#Remove-product-from-favorites)
+    - [Guest users](#Guest-users)
+  - [Product Administration page](#Product-Administration-page)
 - [Languages](#Languages)
   - [Frameworks, Libraries and Programs used](#Frameworks,-Libraries-and-Programs-used)
 - [Testing](#Testing)
@@ -106,7 +106,7 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
 ### User stories
 
-* There were created 8 EPICs which were developed into 31 User stories. Out of the 31 stories, four were excluded from the project due to time constraints and were marked as "Won't Have" on the Kanban board on Github.
+* There were created 8 EPICs which were developed into 32 User stories. Out of the 31 stories, four were excluded from the project due to time constraints and were marked as "Won't Have" on the Kanban board on Github. The user stories can be accessed [here-Taste of romania User Stories](https://github.com/users/AdrianaStoi/projects/3)
 
 #### EPIC: Back-end Store Administration 
 
@@ -170,19 +170,24 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
     **EPIC: Store viewing and navigation**
 
-29. As a shopper I want to be able to easily identify discounted products on the site so that I can take advantage of existing discounts. 
+28. As a shopper I want to be able to easily identify discounted products on the site so that I can take advantage of existing discounts. 
 
     **EPIC : Ordering and Checkout**
 
-30. As a site user I want to be able to receive email notifications when a product is out of stock, so that I can be informed when the product becomes available again.
+29. As a site user I want to be able to receive email notifications when a product is out of stock, so that I can be informed when the product becomes available again.
 
     **EPIC : Delivery options**
 
-31. As a shopper I want to be able to choose Express delivery so that I can receive the products earlier than 3 to 5 days. 
+30. As a shopper I want to be able to choose Express delivery so that I can receive the products earlier than 3 to 5 days. 
 
   **EPIC: Product Comment and Rating**
 
-32. As a shopper I want to be able to rate a product and the store’s services so that I can give my feedback on the quality of a product and the services offered by the store.
+31. As a shopper I want to be able to rate a product and the store’s services so that I can give my feedback on the quality of a product and the services offered by the store.
+
+  **EPIC: User Login/Registration and Profile** 
+
+32. As a registered user, when creating a new inquiry, I want to be able to add the order number to the request from a dropdown menu so that I can easily include it in my request.
+
 
 ### Design, colors and typography
 
@@ -233,7 +238,7 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 * The **"Favorite"** model includes a "product" field that serves as a foreign key, linking to the associated product. In addition, there is a "user" field, which acts as another foreign key, linking to the user who marked the product as a favorite. Finally, the model incorporates an "is_favorite" boolean field, which serves to indicate whether the associated product holds the status of a product marked as a favorite by the user.
 
-* The **"Inquiry"** model is designed with fields to capture and manage user queries. It includes a user field, functioning as a Foreign Key and linking to the respective User involved in the inquiry. The profile field is also a Foreign Key, however this field was not used in the functions at this time.
+* The **"Inquiry"** model is designed with fields to capture and manage user queries. It includes a user field, functioning as a Foreign Key and linking to the respective User involved in the inquiry. The profile field is also a Foreign Key.
 
 * Contact details are recorded through the name CharField, email EmailField, and phone_number CharField. The subject CharField allows users to define the topic of their inquiry, while the message TextField accommodates detailed information. The order_number CharField is available for users to associate inquiries with specific orders. Admin responses are stored in the admin_reply TextField, facilitating communication between users and administrators. Additionally, the user_reply TextField offers the option for users to respond or provide further information. This comprehensive model ensures a structured approach to managing and responding to user inquiries effectively.
 
@@ -427,6 +432,10 @@ As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pair
 
 ![Footer](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/footer.png)
 
+* When the user clicks on the "Privacy Policy" the correspoding Privacy Policy terms for Taste of Romania will open in a separate tab.
+
+![Privacy Policy](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/privacy_policy.png)
+
 [Back to table of contents](#table-of-contents)
 
 ### Products page 
@@ -507,7 +516,11 @@ __Forgot password__
 
 Users can reset their passwords when needed. When clicking on "Forget password" option on the “Login” page, they will be redirected to the “Password Reset” page. Subsequently, a link is sent to their email address, enabling them to change the password:
 
-![Password reset](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_page.png)
+| Reset      |       |
+| ---------- | ----- |
+| ![Password Reset Page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_page.png) | ![Password reset sent](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_sent.png)|
+|       |       |
+| ![Change password](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/change_password_page.png) | ![Reset Done](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_done.png) | 
 
 * When users are logged in, at the top right corner their user name is displayed.
 
