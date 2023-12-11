@@ -13,6 +13,8 @@ Customers can easily navigate the site by category, leave reviews, and add produ
 
 Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
+![I am responsive](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/taste_of_romania_i_am_resonsive.png)
+
 ## Table of contents
 
 - [Taste of Romania](#Taste-of-Romania)
@@ -23,14 +25,14 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
   - [User stories](#User-stories)
     - [EPIC: Back-end Store Administration](#EPIC-Back-end-Store-Administration)
     - [EPIC: Store viewing and navigation](#EPIC-Store-viewing-and-navigation)
-    - [EPIC: User Login/Registration and Profile ](#EPIC-User-Login/Registration-and-Profile)
+    - [EPIC: User Login Registration and Profile ](#EPIC-User-Login-Registration-and-Profile)
     - [EPIC: Product Categorization and Searching](#EPIC-Product-Categorization-and-Searching)
     - [EPIC: Ordering and Checkout](#EPIC-Ordering-and-Checkout)
     - [EPIC: Product Comment and Rating](#EPIC-Product-Comment-and-Rating)
     - [EPIC: Subscribe to Newsletter ](#EPIC-Subscribe-to-Newsletter )
     - [EPIC: Front-end Store Administration ](#EPIC-Front-end-Store-Administration)
   - [Future Features](#Future-Features)
-  - [Design, colors and typography](#Design,-colors-and-typography)
+  - [Design, colors and typography](#Design-colors-and-typography)
 - [Agile Methodology](#Agile-Methodology)
 - [Wireframes and Database schema](#Wireframes-and-Database-schema)
   - [Wireframe](#Wireframe)
@@ -39,7 +41,7 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 - [Marketing Strategies](#Marketing-Strategies)
   - [SEO](#SEO)
     - [Keywords](#Keywords)
-    - [Robots.txt and Sitemaps](#Robots.txt-and-Sitemaps)
+    - [Robotstxt and Sitemaps](#Robotstxt-and-Sitemaps)
   - [Content Marketing](#Content-Marketing)
   - [Social Media Marketing](#Social-Media-Marketing)
   - [Email Marketing](#Email-Marketing)
@@ -54,11 +56,11 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
     - [Landing image](#Landing-image)
     - [About us](#About-us)
     - [Choose a category](#Choose-a-category)
-    - [Payment, shipping and return](#Payment,-shipping-and-return)
+    - [Payment, shipping and return](#Payment-shipping-and-return)
     - [Footer](#Footer)
   - [Products page](#Products-page)
   - [Product Information page](#Product-Information-page)
-  - [Reviews - comments](#Reviews-comments)
+  - [Reviews](#Reviews)
   - [Login page](#Login-page)
   - [Logout page](#Logout-page)
   - [Register Page](#Register-Page)
@@ -79,13 +81,13 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
     - [Guest users](#Guest-users)
   - [Product Administration page](#Product-Administration-page)
 - [Languages](#Languages)
-  - [Frameworks, Libraries and Programs used](#Frameworks,-Libraries-and-Programs-used)
+  - [Frameworks Libraries and Programs used](#Frameworks-Libraries-and-Programs-used)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
   - [Gitpod](#Gitpod)
   - [Database](#Database)
     - [Attach the Database](#Attach-the-Database)
-  - [Set up the environment and settings.py file](#Set-up-the-environment-and-settings.py-file)
+  - [Set up the environment and settingspy file](#Set-up-the-environment-and-settings-py-file)
   - [Store images to AWS](#Store-images-to-AWS)
   - [Identify and Access Management (IAM)](#Identify-and-Access-Management-(IAM))
   - [Connecting S3 to Django](#Connecting-S3-to-Django)
@@ -296,7 +298,7 @@ As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pair
     * Romanian grocery online
     * Romanian products near me
 
-#### Robots.txt and Sitemaps
+#### Robotstxt and Sitemaps
 
 * A robots.txt file was created for the site to instruct search engines about areas they should avoid while navigating on the site. This file is used for enhancing the site’s SEO ranking.
 
@@ -465,7 +467,7 @@ As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pair
 
 ![Product page clothing](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_page_clothing.png)
 
-#### Reviews - comments
+#### Reviews
 
 * Under the product information page there is the reviews section, which at the moment includes the Comments section. The rating feature has not been implemented at this time. 
 In the Comments section, users who are not logged in will have read access to view the comments.
@@ -698,7 +700,7 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 * Skillset used for the project was HTML, CSS, JavaScript and Python.
 
-### Frameworks, Libraries and Programs used
+### Frameworks Libraries and Programs used
 
 * [Gitpod](https://www.gitpod.io/) was used as the editor for developing the site.
 * Django was used as Python framework in the development of the project.
@@ -768,7 +770,7 @@ The users can remove a product from favorites, either by going to the “My Favo
 * Set environment variables : “os.environ["DATABASE_URL"] = "Paste in ElephantSQL database URL"
 * Add in secret key : “os.environ["SECRET_KEY"] = "Make up own randomSecretKey"
 
-### Set up the environment and settings.py file
+### Set up the environment and settingspy file
 
 * In "settings.py" file in Gitpod:
   * Reference env.py
@@ -937,14 +939,14 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 ## Credits
 
-I used [Code Institute – Gitpod Template](https://github.com/Code-Institute-Org/gitpod-full-template)  for the deployable application.
-Fonts were taken from [Google Fonts](https://fonts.google.com/)
-The icons in the footer were sourced from [Font Awesome](https://fontawesome.com/)
-To create diagram for custom modelI used [Lucidchart](https://www.lucidchart.com/pages/)
-To create the wireframes I used [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE)
-For logo creation I used the site [Logo](https://logo.com/)
-Font Pairing suggestion was taken from [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pairings/)
-To generate Privacy Policy I used [Privacy Policy Generator](https://www.privacypolicygenerator.info/) 
+* I used [Code Institute – Gitpod Template](https://github.com/Code-Institute-Org/gitpod-full-template)  for the deployable application.
+* Fonts were taken from [Google Fonts](https://fonts.google.com/)
+* The icons in the footer were sourced from [Font Awesome](https://fontawesome.com/)
+* To create diagram for custom modelI used [Lucidchart](https://www.lucidchart.com/pages/)
+* To create the wireframes I used [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE)
+* For logo creation I used the site [Logo](https://logo.com/)
+* Font Pairing suggestion was taken from [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pairings/)
+* To generate Privacy Policy I used [Privacy Policy Generator](https://www.privacypolicygenerator.info/) 
 
 ### Tutorials:
 

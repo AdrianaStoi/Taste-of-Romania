@@ -13,10 +13,10 @@
     - [Python](#python)
   - [Manual Testing](#manual-testing)
     - [Home page Features](#Home-page-Features) 
-    - [Register, login, logout and Reset password](#Register,-login,-logout-and-Reset-password)
-    - [Products, Product information page](#Products,-Product-information-page)
+    - [Register Login Logout and Reset password](#Register-login-logout-and-Reset-password)
+    - [Products and Product information page](#Products-and-Product-information-page)
     - [Checkout](#Checkout)
-    - [My Profile, My inquiries and My Favorites pages](#My-Profile,-My-inquiries-and-My-Favorites-pages)
+    - [My Profile My inquiries and My Favorites pages](#My-Profile-My-inquiries-and-My-Favorites-pages)
     - [Product administration](#Product-administration) 
   - [User Story Testing](#user-story-testing)
   - [Testing Responsiveness](#testing-responsiveness)
@@ -238,7 +238,7 @@ __My profile - views.py__
 [Back to table of contents](#table-of-contents)
 
 
-### Register, login, logout and Reset password
+### Register Login Logout and Reset password
 
 |     Feature       |        Expectation          |        Action        |       Outcome      |
 | ----------------- | --------------------------- | -------------------- | ------------------ |
@@ -255,7 +255,7 @@ __My profile - views.py__
 [Back to table of contents](#table-of-contents)
 
 
-### Products, Product information page 
+### Products and Product information page 
 
 |     Feature       |        Expectation          |        Action        |       Outcome      |
 | ----------------- | --------------------------- | -------------------- | ------------------ |
@@ -289,7 +289,7 @@ __My profile - views.py__
 [Back to table of contents](#table-of-contents)
 
 
-### My Profile, My inquiries and My Favorites pages 
+### My Profile My inquiries and My Favorites pages 
 
 |     Feature       |        Expectation          |        Action        |       Outcome      |
 | ----------------- | --------------------------- | -------------------- | ------------------ |
