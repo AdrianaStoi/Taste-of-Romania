@@ -203,7 +203,7 @@ The image on the landing page, with Romanian traditional motifs, offer a sense o
 * The color choices for the navigation bar, menu the different site sections and pages was selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme. 
 
 Google fonts ‘'Amaranth’ and ‘Open Sans' were used. Specifically, ‘'Amaranth’ was employed for headings, navbar and buttons and ‘'Open Sans' was used for paragraphs. 
-As per the [site-vandelaydesign] https://www.vandelaydesign.com/google-font-pairings/ these two fonts complement each other well. 
+As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pairings/) these two fonts complement each other well. 
 
 [Back to table of contents](#table-of-contents)
 
@@ -937,7 +937,85 @@ The users can remove a product from favorites, either by going to the “My Favo
 
 ## Credits
 
+I used [Code Institute – Gitpod Template](https://github.com/Code-Institute-Org/gitpod-full-template)  for the deployable application.
+Fonts were taken from [Google Fonts](https://fonts.google.com/)
+The icons in the footer were sourced from [Font Awesome](https://fontawesome.com/)
+To create diagram for custom modelI used [Lucidchart](https://www.lucidchart.com/pages/)
+To create the wireframes I used [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE)
+For logo creation I used the site [Logo](https://logo.com/)
+Font Pairing suggestion was taken from [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pairings/)
+To generate Privacy Policy I used [Privacy Policy Generator](https://www.privacypolicygenerator.info/) 
+
+### Tutorials:
+
+* The [Code Institute Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) walkthrough served as a boilerplate and I adapted and customized it accordingly. Specifically, the Stripe payment deployment with the checkout process bag were followed using the walkthrough.
+
+* To solve different bugs, I used guidance found on stackoverflow threads. For the favorites function and bug, I used as guidance the [Stackoverflow thread – marking favorites in Django Object set](https://stackoverflow.com/questions/8651336/marking-favorites-in-django-object-set)  and [Stackoverflow thread Sjango add products to favorite list](https://stackoverflow.com/questions/67493992/django-add-products-to-favorite-list)  and adapt it accordingly.
+
+* I used this [Stackoverflow thread](https://stackoverflow.com/questions/72266306/i-want-to-place-a-placeholder-in-my-forms-textarea-in-django) to make the reply field available on the “My inquiry” page. 
+
+### Content 
+
+The product ingredients were sourced from Romanian site [emag](https://www.emag.ro/) solely for educational purposes. 
+
+### Images 
+
+Some of the product images included personal photos, while the remaining majority were sourced from [Shutterstock](https://www.shutterstock.com/) and [Adobe Stock](https://stock.adobe.com/ie/) for educational purposes as follows: 
+
+
+* [Romanian pottery By VladAndrei](https://stock.adobe.com/ie/images/romanian-pottery/166261891)
+
+* [Traditional Romanian handmade ceramics market at the potters fair from Sibiu, Romania By Roberto Sorin](https://stock.adobe.com/ie/376534018)
+
+* [Landing image Romanian ornament By Richard Laschon](https://stock.adobe.com/ie/360609131)
+
+* [Beer bottle on table, Azuga unpasteurized, By Gudellaphoto](https://stock.adobe.com/ie/659649830)
+
+* [Bottle of Ciucas beer isolated on white By emilio100](https://stock.adobe.com/ie/414204200)
+
+* [Bucegi chicken pate in tin can on white background with romanian label. By Alpar](https://stock.adobe.com/ie/365272550)
+
+* [ROM chocolate bar, marketed by Kandia Dulce since 1964 By emilio100](https://stock.adobe.com/ie/392111315)
+
+* [Heidi Grand'or, dark chocolate bar with hazelnuts, isolated on white By emilio100](https://stock.adobe.com/ie/397783060)
+
+* [By axentevlad](https://stock.adobe.com/ie/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aaudio%5D=0&filters%5Binclude_stock_enterprise%5D=0&filters%5Bis_editorial%5D=0&filters%5Bfree_collection%5D=0&order=relevance&serie_id=54297846&asset_id=54297881)
+
+* [Caramele glazurate Rom 195g](https://www.bringo.ro/en/carrefour_unirii/products/963520-en/5524035) 
+
+* [Romanian Timisoreana beer isolated, close up of glass beer bottle. Alba Iulia, Romania, 2021 by Vlad Ispas](https://www.shutterstock.com/image-photo/romanian-timisoreana-beer-isolated-close-glass-1955348323)
+
+* [Branza de burduf, traditional sheep's milk cheese from south of Transilvania, Romanian cheese by Alexe](https://stock.adobe.com/de/search?k=%22romanian+cheese%22&asset_id=346819819)
+
+* [Telemea - Romanian cheese by  Sebastian Studio](https://stock.adobe.com/de/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aimage%5D=1&k=romanian+sheep+telemea+cheese&order=relevance&safe_search=1&limit=100&search_page=1&search_type=usertyped&acp=&aco=romanian+sheep+telemea+cheese&get_facets=0&asset_id=165264723)
+
+* [Jidvei Romanian wine bottles. By MoiraM](https://stock.adobe.com/ie/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aaudio%5D=0&filters%5Bcontent_type%3Aimage%5D=1&filters%5Binclude_stock_enterprise%5D=0&filters%5Bis_editorial%5D=0&k=jidvei&order=relevance&safe_search=1&search_page=1&search_type=usertyped&acp=&aco=jidvei&get_facets=0&asset_id=430939933)
+
+* [Raureni Natural Jam of Roses with 25% Rose Petals made in Romania 350g by Haelen Haagen](https://www.shutterstock.com/image-photo/march-2021-bucharest-romania-raureni-natural-1929100682)
+
+* [Romanian special By cristi lucaci](https://stock.adobe.com/ie/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aimage%5D=1&k=romanian+brandy&order=relevance&safe_search=1&limit=100&search_page=1&search_type=usertyped&acp=&aco=romanian+brandy&get_facets=0&asset_id=26107473)
+
+* [Mici By czamfir](https://stock.adobe.com/ie/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aimage%5D=1&k=sausage+romania+&order=relevance&safe_search=1&limit=100&search_page=1&search_type=usertyped&acp=&aco=sausage+romania+&get_facets=0&asset_id=112119568)
+
+
+* [Traditional Romanian sausage By Gaman Mihai-Radu](https://stock.adobe.com/ie/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aimage%5D=1&k=sausage+romania+&order=relevance&safe_search=1&limit=100&search_page=1&search_type=usertyped&acp=&aco=sausage+romania+&get_facets=0&asset_id=37115630)
+
+
+* [Traditional salami By ecstk22](https://stock.adobe.com/ie/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aaudio%5D=0&filters%5Binclude_stock_enterprise%5D=0&filters%5Bis_editorial%5D=0&filters%5Bfree_collection%5D=0&filters%5Bcontent_type%3Aimage%5D=1&k=romanian+salami&order=relevance&safe_search=1&limit=100&search_type=usertyped&search_page=1&acp=&aco=romanian+salami&get_facets=0&asset_id=52518004)
+
+* [Wine cellar with wine bottle and glasses by  kishivan](https://stock.adobe.com/de/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aimage%5D=1&order=relevance&safe_search=1&limit=100&search_page=1&search_type=usertyped&acp=&aco=drinks+botles+romania&k=drinks+botles+romania&get_facets=0&asset_id=674911701)
+
+* Photo for sweets and savory category on home page I used for educational purposes from [flickr](https://www.flickr.com/photos/ioana_cis/15898359561/in/photostream/) 
+
+* [Traditional romanian pottery By  Gabriela](https://stock.adobe.com/de/images/traditional-romanian-pottery/24833314)
+
+* [Traditional romanian pottery By pergamepaper](https://stock.adobe.com/ie/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aimage%5D=1&k=romanian+pottery&order=relevance&safe_search=1&limit=100&search_type=usertyped&search_page=1&acp=&aco=romanian+pottery&get_facets=0&asset_id=79263072)
+
+* [Traditional Romanian folk costume with embroidery By romeof](https://stock.adobe.com/ie/images/blonde-european-girl-in-traditional-romanian-folk-costume-with-embroidery-romanian-folklore/373432977?asset_id=373433081)
+
+
 ## Acknowledgments
 
+* Many thanks to My Mentor Rohit Sharma for his support, valuable feedback, and guidance. 
 
 [Back to table of contents](#table-of-contents)
