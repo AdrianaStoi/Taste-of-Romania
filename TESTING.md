@@ -12,6 +12,12 @@
     - [Javascript](#javascript)
     - [Python](#python)
   - [Manual Testing](#manual-testing)
+    - [Home page Features](#Home-page-Features) 
+    - [Register, login, logout and Reset password](#Register,-login,-logout-and-Reset-password)
+    - [Products, Product information page](#Products,-Product-information-page)
+    - [Checkout](#Checkout)
+    - [My Profile, My inquiries and My Favorites pages](#My-Profile,-My-inquiries-and-My-Favorites-pages)
+    - [Product administration](#Product-administration) 
   - [User Story Testing](#user-story-testing)
   - [Testing Responsiveness](#testing-responsiveness)
    - [Responsiveness on devices](#responsiveness-on-devices)
@@ -35,7 +41,7 @@
 
 * I tested performance, accessibility, best practice, and SEO using Lighthouse accessed via DevTools and here are the results:
 
-
+![Lighoutse-Taste of Romania](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/lighthouse_report_taste_of_romania.png)
 
 
 [Back to table of contents](#table-of-contents)
@@ -313,15 +319,14 @@ __My profile - views.py__
 | Select image button (on Add product and Edit product)  | When the admin clicks on the “Select Image'” button, they should be able to choose and upload an image. Upon selecting the image, a notification should appear below the button stating “Image will be set to:...” | Click | When the admin clicks on the “Select Image'” button, they are able to choose and upload an image. Upon selecting the image, a notification appears below the button stating “Image will be set to:...”  ![Select image](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/select_image_admin.png)|
 | Cancel button (on Add product and Edit product page) | When clicking on “Cancel” button, the admin should be redirected back to “Products” page. | Click | When clicking on “Cancel” button, the admin is redirected back to “Products” page. |
 | Add Product button  | When clicking on “Add Product”, the admin should be directed to the Product Information page for the product they just added. | Click | When the admin clicks on “Add Product”, they are redirected to the Product Information page for the product they just added. |
-| Edit product | The edit link should be displayed either on the Products page on all products and on the Product details page of the respective product when the admin is logged in on the site. When logged in, they will see the “Edit” option displayed under the category tag. Admins should have the capability to edit a product from the frontend by adjusting the existing form. The “Category “and “Has Sizes” fields should be presented as dropdowns, allowing the admin to conveniently select existing options. 
-At the bottom of the form, the “Current image” should be displayed. The admin should have a checkbox to “Remove” the existing image. If this box is checked and the form submitted, the image should be removed. Mandatory fields must include a placeholder marked by " * ". The submission of the inquiry should be restricted until valid data is provided in all the required fields.| Click | Administrators can edit a product either from the Products page or the Product information page. When logged in, they will see the “Edit” option displayed under the category tag. ![Edit product - products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_edit_product_admin.png) ![Edit product - product details page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_info_edit_product_admin.png) Admins can add a product from the frontend by completing the form. The “Category” and “Has Sizes “fields are presented as dropdowns, allowing the admin to conveniently select existing options. At the bottom of the form, the “Current image” is displayed. The admin has a checkbox to “Remove” the existing image. If this box is checked and the form submitted, the image is removed. ![Edit product - current image](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/select_image_admin.png) Mandatory fields must include a placeholder marked by “*”. The submission of the inquiry restricted until valid data is provided in all the required fields. |
+| Edit product | The edit link should be displayed either on the Products page on all products and on the Product details page of the respective product when the admin is logged in on the site. When logged in, they will see the “Edit” option displayed under the category tag. Admins should have the capability to edit a product from the frontend by adjusting the existing form. The “Category “and “Has Sizes” fields should be presented as dropdowns, allowing the admin to conveniently select existing options. At the bottom of the form, the “Current image” should be displayed. The admin should have a checkbox to “Remove” the existing image. If this box is checked and the form submitted, the image should be removed. Mandatory fields must include a placeholder marked by " * ". The submission of the inquiry should be restricted until valid data is provided in all the required fields.| Input data | Administrators can edit a product either from the Products page or the Product information page. When logged in, they will see the “Edit” option displayed under the category tag. ![Edit product - products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_edit_product_admin.png) ![Edit product - product details page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_info_edit_product_admin.png) Admins can add a product from the frontend by completing the form. The “Category” and “Has Sizes “fields are presented as dropdowns, allowing the admin to conveniently select existing options. At the bottom of the form, the “Current image” is displayed. The admin has a checkbox to “Remove” the existing image. If this box is checked and the form submitted, the image is removed. ![Edit product - current image](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/select_image_admin.png) Mandatory fields must include a placeholder marked by “*”. The submission of the inquiry restricted until valid data is provided in all the required fields. |
 | Update Product button | When clicking on “Edit Product”, the admin should be directed to the Product Information page for the product they just edited. | Click | When the admin clicks on “Edit Product”, they are redirected to the Product Information page for the product they just edited. |
 | Delete product  | The delete link should be displayed either on the Products page on all products and on the Product details page of the respective product when the admin is logged in on the site. When logged in, they should see the “Delete” option displayed under the category tag. Upon clicking on “Delete” the admin should be redirected to the confirmation deletion page. If confirmed, the product should be deleted, and a success message alert should be displayed in the upper right corner. | Click | Administrators can delete a product either from the Products page or the Product information page. When logged in, they see the “Delete” option displayed under the category tag. Upon clicking on “Delete” the admin is redirected to the confirmation deletion page. ![Delete product-confirm deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/confirm_deletion_product_admin.png) If confirmed, the product is deleted, and a success message alert is displayed in the upper right corner. |
 
 [Back to table of contents](#table-of-contents)
 
 
-## User stories Testing
+## User story Testing
 
 __EPIC: Back-end Store Administration__
 
@@ -395,6 +400,7 @@ _7.	As a frequent site user, I want to be able to recover my password in case I 
 |       |       |
 | ![Change password](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/change_password_page.png) | ![Reset Done](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_done.png) | 
 
+[Back to table of contents](#table-of-contents)
 
 _8.	As a registered user, I want to be able to access my user profile page, so that I can save my details for next purchases and view my orders._
 
@@ -512,7 +518,8 @@ _21.	As a shopper I want to be able to receive a confirmation email after checki
 
 * When placing an order, users will automatically receive an email confirmation with their order details.
 
-![]()
+
+[Back to table of contents](#table-of-contents)
 
 __EPIC: Product Comment and Rating__
 
