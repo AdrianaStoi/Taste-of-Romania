@@ -639,7 +639,7 @@ The users have also the option to delete the request. When clicking on “Delete
 
 ##### Remove product from favorites
 
-The users can remove a product from favorites, either by going to the “My Favorites” page and click on the trash icon or from the “Products” or “Product information” page by clicking on the solid red colored heart. This action will automatically remove the product from the “My favorites” page. 
+The users can remove a product from favorites, either by going to the “My Favorites” page and click on the trash can icon or from the “Products” or “Product information” page by clicking on the solid red colored heart. This action will automatically remove the product from the “My favorites” page. 
 
 ![Remove favorites](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_remove.png)
 ![Favorites removed](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/my_favorites_removed.png)
