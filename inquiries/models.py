@@ -11,7 +11,7 @@ class Inquiry(models.Model):
     email = models.EmailField()
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     order_number_inquiry = models.CharField(
-        max_length=20,
+        max_length=100,
         null=True,
         blank=True
     )

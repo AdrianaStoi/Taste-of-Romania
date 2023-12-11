@@ -280,8 +280,9 @@ _7.	As a frequent site user, I want to be able to recover my password in case I 
 
 | Reset      |       |
 | ---------- | ----- |
-| ![Password Reset Page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_page.png) | ![]()                         | 
-| ![]()          | ![]()                         | 
+| ![Password Reset Page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_page.png) | ![Password reset sent](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_sent.png)|
+|       |       |
+| ![Change password](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/change_password_page.png) | ![Reset Done](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/password_reset_done.png) | 
 
 
 _8.	As a registered user, I want to be able to access my user profile page, so that I can save my details for next purchases and view my orders._
@@ -408,14 +409,14 @@ _22.	As a site user, I want to be able to view comments and ratings so that I ca
 
 * All users can view the comments added to a product, which are accessible on the individual product page beneath the product details and image.
 
-![]()
+![View Review](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/view_review_unregistered_user.png)
 
 _23.	As a shopper and frequent site user I want to be able to add, edit, delete comments so that I can give my feedback on quality of products and the services offered by the store, edit my comments, and remove mistakes or inaccurate information._
 
 * Registered users can add, edit, delete comments. When the log in the comment form will be displayed on the individual product page under the product details and image.
 * After adding a comment, they will have two buttons, “Edit” and “Delete”. Users can only delete and edit their own comments. 
 
-![]()
+![Comments submit](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/reviews_comment_loggedin_user.png)
 
 __EPIC: Subscribe to Newsletter__
 
@@ -440,16 +441,17 @@ __EPIC: Front-end Store Administration__
 * Administrators can edit a product either from the Products page or the Product information page.
 * When logged in, they will see the “Edit” option displayed under the category tag.
 
-![]()
-![]()
+![Edit product - products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_edit_product_admin.png)
+![Edit product - product info](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_info_edit_product_admin.png)
 
 27.	As a store owner I want to be able to delete a product from the frontend site so that I can easily delete products that are no longer available without having to access the backend.
 
 * Administrators can delete a product either from the Products page or the Product information page.
 * When logged in, they will see the “Delete” option displayed under the category tag.
 
-![]()
-![]()
+![Delete product - products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/products_edit_product_admin.png)
+![Delete product - product info](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/product_info_edit_product_admin.png)
+
 
 [Back to table of contents](#table-of-contents)
 

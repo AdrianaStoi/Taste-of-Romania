@@ -10,6 +10,9 @@ class Favorites(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     is_favorite = models.BooleanField(default=False)
 
+    class Meta:
+        verbose_name_plural = 'Favorites'
+        
     def mark_as_favorite(self):
         self.is_favorite = not self.is_favorite
         self.save()
