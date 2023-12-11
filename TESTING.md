@@ -208,6 +208,31 @@ __My profile - views.py__
 
 ## Manual Testing 
 
+* I have thoroughly tested all functions and features, confirming their proper functionality as expected.
+
+### Home page Features 
+
+|     Feature       |        Expectation          |        Action        |       Outcome      |
+| ----------------- | --------------------------- | -------------------- | ------------------ |
+| Logo name (upper left corner)| When clicked should bring back to Home page.| Click | When clicked it leads to Home page. ![Navbar](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar.png)|
+| My Account icon (upper right corner) |When clicking on it, a dropdown should be displayed with the options “Login” and “Register”. Users who logged in should see “My Profile”, My Inquiries” and “Logout”. The admin should additionally see “Product Administration. | Click | When clicking on it, a dropdown is displayed with the options “Login” and “Register”. ![Navbar-guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_myaccount_unregistered.png) Users who logged in see “My Profile”, My Inquiries” and “Logout”. ![Navbar-logged in user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_loggedin_regular_user.png) The admin can also see “Product Administration. ![Navbar-admin](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/myaccount_signed_in_admin.png) |
+|My Favorites icon (upper right corner)  | When clicking on it, users should be directed to Favorites page. | Click | When clicking on it, users are directed to Favorites page. |
+|Shopping cart icon (upper right corner) | When clicked it should lead to the Shopping cart page. | Click | When clicked, it leads to Shopping cart page. |
+|Search bar function  | When entering product names or entering a word that is included in the product description, the user should be redirected to an results page with the corresponding products, if any products are found. Otherwise , there should be a message stating “0  products found” | Enter query | When entering product names or entering a word that is included in the product description, the user should be redirected to a results page with the corresponding products, if any products are found. Otherwise, there should be a message stating “0  products found”. ![Search results](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/search_results.png)|
+| All products dropdown menu | When clicking on “All products”, and then on any of the three options “By Price”, “By Category” and “All products” users should be directed to the corresponding page with products sorted accordingly. | Click | When clicking on “All products”, and then on any of the three options “By Price”, “By Category” and “All products” users are directed to the corresponding page with products sorted accordingly.![All products menu](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/navbar_menu_categorization.png) |
+|Romanian specialties dropdown menu  | When clicking on “Romanian specialties”, and then on any of the options “Cheese”, “Meat Products”, “Sweets”, “Snacks” etc. users should be directed to the corresponding page with products sorted accordingly. | Click | When clicking on “Romanian specialties”, and then on any of the options “Cheese”, “Meat Products”, “Sweets”, “Snacks” etc. users are directed to the corresponding page with products sorted accordingly. |
+|Drinks link | When clicking on “Drinks” users should be directed to the corresponding “Drinks” page. | Click | When clicking on “Drinks” users are directed to the corresponding “Drinks” page. |
+|Artisanal products dropdown menu | When clicking on “Artisanal products”, and then on any of the options “Traditional clothing”, “Handmade pottery”, “Handmade bracelet”, or “All Artisanal products” etc. users should be directed to the corresponding page with products sorted accordingly. | Click | When clicking on “Artisanal products”, and then on any of the options “Traditional clothing”, “Handmade pottery”, “Handmade bracelet”, or “All Artisanal products” etc. users are directed to the corresponding page with products sorted accordingly. |
+|See all products button | When clicked, it should direct to the Product page. | Click | When clicked, it directs to the Product page. |
+|Choose a Category section with links “Sweet and Savory”, “Alcoholic Drinks”, “Clothing and Handmade pottery” | When clicking on each of the three categories, users should be directed to the Products page displaying the respective products. | Click | When clicking on each of the three categories, users are directed to the Products page displaying the respective products. |
+| Privacy Policy link | When clicked, it should open Privacy policy page on a new tab. | Click | When clicked, it opens Privacy policy page on a new tab. ![Privacy Policy](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/privacy_policy.png) |
+| Subscribe to newsletter | When a user enters their email address, a confirmation message should be displayed, indicating “Thank you for subscribing!” | Enter data | When a user enters their email address, a confirmation message is displayed, indicating “Thank you for subscribing!” ![Subscribe newsletter](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/subscribe_newsletter_submitted.png) |
+| Footer - Social media icons Facebook and Instagram | When clicking on Facebook and Instagram, they should redirect to the corresponding site by opening in a new tab. | Click | When clicking on Facebook and Instagram, they redirect to the corresponding site by opening in a new tab. |
+
+
+
+
+
 [Back to table of contents](#table-of-contents)
 
 ## User stories Testing
