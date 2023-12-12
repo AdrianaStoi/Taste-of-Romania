@@ -21,6 +21,15 @@
   - [User Story Testing](#user-story-testing)
   - [Testing Responsiveness](#testing-responsiveness)
    - [Responsiveness on devices](#responsiveness-on-devices)
+    - [Samsung Galaxy S8](#Samsung-Galaxy-S8)
+      - [Home Page](#Home-Page)
+      - [Products page](#Products-page)
+      - [Product information page](#Product-information-page)
+      - [My Favorites](#My-Favorites)
+      - [Checkout](#Checkout)
+      - [My Profile](#My-Profile)
+      - [My Inquiries page](#My-Inquiries-page)
+      - [Product Administration](#Product-Administration)
   - [Bugs](#bugs)
     - [Fixed Bugs](#fixed-bugs)
     - [Unfixed Bugs](#Unfixed-Bugs)
@@ -596,10 +605,103 @@ __EPIC: Front-end Store Administration__
 
 [Back to table of contents](#table-of-contents)
 
-#### Samsung Galaxy S8+
+#### Samsung Galaxy S8
 
-For instance, the website maintains a uniform layout when viewed on a Samsung Galaxy S8+ with a screen resolution of 360x740, ensuring that all functionalities are correctly displayed, as illustrated below:
+* For instance, the website maintains a uniform layout when viewed on a Samsung Galaxy S8+ with a screen resolution of 360x740, ensuring that all functionalities are correctly displayed, as illustrated below:
 
+<details>
+<summary> Home page </summary>
+
+##### Home Page
+
+![Home page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_home_page.png) ![Search bar](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_search_bar.png) ![About us](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_home_about_us.png) ![Choose a category](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_home_choose_category.png) ![Footer](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_footer.png)
+
+</details>
+
+<details>
+<summary> Products and product information page </summary>
+
+##### Products page 
+
+![Products top page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_products_page.png) ![Products](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_products.png) ![Products sort by category name](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_products_sort_category_name.png)
+
+##### Product information page
+
+![Product information page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_product_information_page.png)![Product quantity details and reviews section](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_product_info_reviews_guest_user.png)
+
+__Product quantity details and reviews logged in user__
+
+![Reviews section logged in user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_product_info_reviews_logged_in.png)![Review alert](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_alert.png)![Review added](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_added.png)
+![Review edit](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_edit.png)
+![Review deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_deletion.png)
+
+</details>
+
+<details>
+<summary> My Favorites page </summary>
+
+##### My Favorites
+
+__Product added to favorites - Logged in user__
+
+![Product added to favorites](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorite_product.png)![Product added to favorites products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_products_page.png)
+![Favorites page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_page.png)
+
+__Guest user when trying to add to favorites__
+![Favorites guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_guest_user.png) ![Favorites page guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_page_guest_user.png)
+
+</details>
+
+<details>
+<summary> Checkout </summary>
+
+##### Checkout
+
+![Add to cart](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_add_cart.png)![Shopping cart](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_shopping_cart.png)![Shopping cart total](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_shopping_cart_total.png)![Secure checkout](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_secure_checkout.png)![Secure checkout payment](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_secure_checkout_payment.png)![Order confirmation](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_order_confirmation.png)![Order history](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_order_history.png)
+
+</details>
+
+<details>
+<summary> My Profile </summary>
+
+##### My Profile
+
+![My Profile](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_profile_page_form.png)
+![My Profile page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_profile_page.png)
+
+</details>
+
+<details>
+<summary> My Inquiries </summary>
+
+##### My Inquiries page
+
+![My Inquiries page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_my_inquriries_page.png) ![Inquiries history](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_inquiry_history.png)
+
+__My inquiry details__
+
+![My inquiry details](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_inquiry_details.png)![Inquiry message and replies](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_inquiry_user_and_admin_reply.png) ![Delete inquiry](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_delete_inquiry.png)
+
+</details>
+
+<details>
+<summary> Product Administration </summary>
+
+##### Product Administration
+
+![Product Administration nav](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_product_administration_nav.png)
+![Add product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_admin_add_product.png)
+
+__Edit and delete options on products pages__
+
+![Edit and delete options](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_edit_delete_products_page.png)
+![Edit and delete options product info](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_edit_delete_product_info_page.png)
+![Edit product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_edit_product_form.png)
+![Confirm product deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_delete_product_confirmation.png)
+
+</details>
+
+[Back to table of contents](#table-of-contents)
 
 ## Bugs
 
