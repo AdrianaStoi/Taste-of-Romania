@@ -29,7 +29,7 @@
       - [Checkout](#Checkout)
       - [My Profile](#My-Profile)
       - [My Inquiries page](#My-Inquiries-page)
-      - [Product Administration](#Product-Administration)
+      - [Product Administration page](#Product-Administration-page)
   - [Bugs](#bugs)
     - [Fixed Bugs](#fixed-bugs)
     - [Unfixed Bugs](#Unfixed-Bugs)
@@ -631,7 +631,7 @@ __EPIC: Front-end Store Administration__
 
 __Product quantity details and reviews logged in user__
 
-![Reviews section logged in user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_product_info_reviews_logged_in.png)![Review alert](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_alert.png)![Review added](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_added.png)
+![Reviews section logged in user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_product_info_reviews_logged_in.png) ![Review alert](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_alert.png) ![Review added](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_added.png)
 ![Review edit](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_edit.png)
 ![Review deletion](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_review_deletion.png)
 
@@ -644,11 +644,12 @@ __Product quantity details and reviews logged in user__
 
 __Product added to favorites - Logged in user__
 
-![Product added to favorites](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorite_product.png)![Product added to favorites products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_products_page.png)
+![Product added to favorites](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorite_product.png) ![Product added to favorites products page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_products_page.png)
 ![Favorites page](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_page.png)
 
 __Guest user when trying to add to favorites__
-![Favorites guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_guest_user.png) ![Favorites page guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_page_guest_user.png)
+
+![Favorites guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_guest_user.png) ![Favorites page guest user](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_favorites_page_guest.png)
 
 </details>
 
@@ -685,9 +686,9 @@ __My inquiry details__
 </details>
 
 <details>
-<summary> Product Administration </summary>
+<summary> Product Administration page </summary>
 
-##### Product Administration
+##### Product Administration page
 
 ![Product Administration nav](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_product_administration_nav.png)
 ![Add product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/responsiveness/samsung_galaxy_admin_add_product.png)
