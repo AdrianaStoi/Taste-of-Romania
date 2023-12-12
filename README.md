@@ -104,11 +104,11 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 
 ### The goal of the external user
 
-* End customers aim to access and explore a varied range of Romanian products through a site that guarantees a user-friendly shopping experience for those interested in discovering and enjoying authentic Romanian products.
+* End customers aim to access and explore a varied range of Romanian products through a site with a user-friendly shopping experience for those interested in discovering and enjoying authentic Romanian products.
 
 ### User stories
 
-* There were created 8 EPICs which were developed into 32 User stories. Out of the 31 stories, four were excluded from the project due to time constraints and were marked as "Won't Have" on the Kanban board on Github. The user stories can be accessed [here-Taste of romania User Stories](https://github.com/users/AdrianaStoi/projects/3)
+* There were created 8 EPICs which were developed into 32 User stories. Out of the 32 stories, four were excluded from the project due to time constraints and were marked as "Won't Have" on the Kanban board on Github. The user stories can be accessed [here-Taste of romania User Stories](https://github.com/users/AdrianaStoi/projects/3)
 
 #### EPIC: Back-end Store Administration 
 
@@ -120,7 +120,7 @@ Visit deployed site here : https://taste-of-romania-5dd5a29030c4.herokuapp.com/
 3. As a shopper I want to be able to view a list of products so that I can select the products I would like to purchase.
 4. As a shopper I want to be able to view details of a product so that I can check the price, description, ingredients, comment, rating before buying. 
 
-#### EPIC: User Login/Registration and Profile 
+#### EPIC: User Login Registration and Profile 
 
 5. As a frequent site user, I can register on the site, so I can have an account to place an order, keep an order history and provide feedback on the products. 
 6. As a frequent site user I want to be able to login or logout so that I can access my account information.
@@ -202,7 +202,7 @@ The image on the landing page, with Romanian traditional motifs, offer a sense o
 
 * On the buttons I alternated and used the three colors 
 
-* The color choices for the navigation bar, menu the different site sections and pages was selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme. 
+* The color choices for the navigation bar, menu, the different site sections and pages was selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme. 
 
 Google fonts ‘'Amaranth’ and ‘Open Sans' were used. Specifically, ‘'Amaranth’ was employed for headings, navbar and buttons and ‘'Open Sans' was used for paragraphs. 
 As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pairings/) these two fonts complement each other well. 
@@ -214,7 +214,7 @@ As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pair
 * The development process, following an agile methodology, was managed using the GitHub Project.
 * The link to the Project Kanban board can be accessed [here-Taste of romania User Stories](https://github.com/users/AdrianaStoi/projects/3). 
 * Each user story was translated into a GitHub Issue, incorporating the EPIC, Acceptance Criteria, and Tasks. 
-* To ensure clarity, every User Story includes well-defined acceptance criteria, further broken down into tasks for seamless execution. 
+* To ensure clarity, every User Story includes well-defined acceptance criteria, further broken down into tasks for effective execution. 
 * Employing the MoSCoW prioritization technique, the User Stories were categorized from highest to lowest priority: "Must Have," "Should Have," "Could Have," and "Won't Have." 
 * These stories were then assigned to corresponding milestones aligned with the project's sprint cycles.
 
@@ -222,7 +222,7 @@ As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pair
 
 ### Wireframe
 
-* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found [here-Taste of Romania-balsamiq wireframes](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/wireframes/Taste_of_romania_wireframes.pdf): 
+* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found [here-Taste of Romania-balsamiq wireframes](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/wireframes/Taste_of_romania_wireframes.pdf).
 * The layout of the site has changed throughout the project development due to time constraints. As a result, some of the features originally outlined in the wireframe as the User Profile page are to be implemented in the future.
 
 ### Database schema
@@ -234,7 +234,7 @@ As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pair
 * I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three additional custom models besides the ones from the walkthrough (Product, Order Line, Order, Category, User Profile). These new custom models are "Review", "Favorites" and "Inquiry". 
 * I used Allauth library for the user authentication system.
 
-* The **"Review"** model enables logged in users to comment on products. The Review comment model includes the fields "Comment" and "Rating". The "Product" custom model is linked as a Foreign Key ensuring that each comment is associated with a specific product.  Also, the ‘User’ built in model serves as a Foreign Key, as each comment is attributed to a single user.
+* The **"Review"** model enables logged in users to comment on products. The Review model includes the fields "Comment" and "Rating". The "Product" custom model is linked as a Foreign Key ensuring that each comment is associated with a specific product.  Also, the ‘User’ built in model serves as a Foreign Key, as each comment is attributed to a single user.
 
 * The "rating" field was not implemented in the project at this time due to time constraints. This feature is to be added at a later time.  
 
@@ -250,7 +250,7 @@ As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pair
 
 ## Business Model
 
-* Taste of Romania has a Business to Consumer (B2C) Business Model with products sold directly from the shop to end consumers. This is a specialized online shop addressing a niche market. The typical customer of Taste of Romania is expected to be individuals who are Romanians residing abroad, those who have visited Romania, or individuals with Romanian friends and acquaintances. 
+* Taste of Romania has a Business to Consumer (B2C) Business Model with products sold from the shop to end consumers. This is a specialized online shop addressing a niche market. The typical customers of Taste of Romania are expected to be individuals who are Romanians residing abroad, those who have visited Romania, or individuals with Romanian friends and acquaintances.
 
 ## Marketing Strategies
 
@@ -405,7 +405,7 @@ As per the [site-vandelaydesign](https://www.vandelaydesign.com/google-font-pair
 #### Landing image 
 
 * The home page includes an image with Romanian motifs and a color palette predominantly composed of red, black, and white tones, aligning with the overall design aesthetics of the website.
-*  Additionally, a welcoming message is displayed on the homepage and a button ‘See all products’ inviting the users to explore the shop.
+*  Additionally, a welcoming message is displayed on the homepage and a button "See all products" inviting the users to explore the shop.
 
 ![Landing image](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/readmeimages/landing_image.png)
 

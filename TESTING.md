@@ -101,7 +101,7 @@ __Products page__
 
 __Product administration – Add product and Edit product__
 
-* Error received for duplicate ID. 
+* Error received for duplicate ID in both “Add product” and “Edit a product”. 
 
 ![Product administration – Add product](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/html_validator_product_administration.png)
 
@@ -718,7 +718,7 @@ __Favorites feature__
 
 ![Add to favorite - bug](https://github.com/AdrianaStoi/Taste-of-Romania/blob/main/documentation/testingimages/add_to_fav_product_info_bug.png)
 
-* I addressed this by introducing the necessary conditions in the views. I consulted the threads on Stackoverflow: https://stackoverflow.com/questions/8651336/marking-favorites-in-django-object-set and https://stackoverflow.com/questions/67493992/django-add-products-to-favorite-list 
+* I addressed this by introducing the necessary conditions in the views. I consulted the [Stackoverflow thread – marking favorites in Django Object set](https://stackoverflow.com/questions/8651336/marking-favorites-in-django-object-set)  and [Stackoverflow thread Sjango add products to favorite list](https://stackoverflow.com/questions/67493992/django-add-products-to-favorite-list)
 
 * As a result, users can now determine which products have been added to their favorites by the presence of a solid heart icon.
 
