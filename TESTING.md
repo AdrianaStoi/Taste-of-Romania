@@ -596,6 +596,10 @@ __EPIC: Front-end Store Administration__
 
 [Back to table of contents](#table-of-contents)
 
+#### Samsung Galaxy S8+
+
+For instance, the website maintains a uniform layout when viewed on a Samsung Galaxy S8+ with a screen resolution of 360x740, ensuring that all functionalities are correctly displayed, as illustrated below:
+
 
 ## Bugs
 
